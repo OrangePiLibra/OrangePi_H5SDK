@@ -446,21 +446,6 @@ static void geth_adjust_link(struct net_device *ndev)
 			priv->link = phydev->link;
 		}
 
-#if 0
-		/* Fix the A version chip mode, it not work at 1000M mode */
-		if (priv->speed == SPEED_1000
-				&& phydev->link == 1){
-			priv->speed = 0;
-			priv->link = 0;
-			priv->duplex = -1;
-			phydev->speed = SPEED_100;
-			phydev->autoneg = AUTONEG_DISABLE;
-			phydev->advertising &= ~ADVERTISED_Autoneg;
-			phydev->state = PHY_UP;
-			new_state = 0;
-		}
-#endif
-
 		if (new_state)
 			sunxi_set_link_mode(priv->base, priv->duplex, priv->speed);
 
