@@ -220,4 +220,7 @@ elif [ $OPTION = 'b' ]; then
 	echo -e "\e[1;31m Updating SDK from Github \e[0m"
 	git push origin
 	exit 0
+else
+	echo -e "\e[1;31m Pls select corrent option \e[0m"
+	exit 0
 fi
