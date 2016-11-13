@@ -212,10 +212,12 @@ elif [ $OPTION = '8' ]; then
 	exit 0
 elif [ $OPTION = 'a' ]; then
 	clear
+	echo -e "\e[1;31m Updating SDK to Github \e[0m"
 	git push -u origin master
 	exit 0
 elif [ $OPTION = 'b' ]; then
 	clear
+	echo -e "\e[1;31m Updating SDK from Github \e[0m"
 	git push origin
 	exit 0
 fi
