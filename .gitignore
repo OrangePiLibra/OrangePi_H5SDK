@@ -104,6 +104,8 @@ rootfs.cpio.gz
 # OrangePi SDK ignore
 # basic rootfs
 /external/jessie-base-arm64.tar.gz
+/external/ArchLinuxARM-aarch64-latest.tar.gz
+/external/xenial-base-arm64.tar.gz
 !/external/uboot.bin
 !/external/boot0.bin
 
