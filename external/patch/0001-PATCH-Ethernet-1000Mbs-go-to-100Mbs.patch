@@ -1,0 +1,36 @@
+From 9867d56412ff0b46c5143b12702d203fbfff6c15 Mon Sep 17 00:00:00 2001
+From: BuddyZhang1 <buddy.d.zhang@gmail.com>
+Date: Sun, 13 Nov 2016 19:43:17 +0800
+Subject: [PATCH] [PATCH] Ethernet: 1000Mbs go to 100Mbs
+
+---
+ kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+diff --git a/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c b/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c
+index 263b63f..5f81b08 100644
+--- a/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c
++++ b/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c
+@@ -446,6 +446,19 @@ static void geth_adjust_link(struct net_device *ndev)
+ 			priv->link = phydev->link;
+ 		}
+ 
++        /* Fix the A version chip mode, it not work at 1000M mode */
++        if (priv->speed == SPEED_1000
++                && phydev->link == 1){
++	            priv->speed = 0;
++	            priv->link = 0;
++	            priv->duplex = -1;
++	            phydev->speed = SPEED_100;
++	            phydev->autoneg = AUTONEG_DISABLE;
++	            phydev->advertising &= ~ADVERTISED_Autoneg;
++	            phydev->state = PHY_UP;
++	            new_state = 0;
++	    }
++
+ 		if (new_state)
+ 			sunxi_set_link_mode(priv->base, priv->duplex, priv->speed);
+ 
+-- 
+2.7.4
+

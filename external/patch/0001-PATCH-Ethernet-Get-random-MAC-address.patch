@@ -1,0 +1,32 @@
+From 4839eb60ece05fed5a4a1aa23a8ad1b666abd823 Mon Sep 17 00:00:00 2001
+From: BuddyZhang1 <buddy.d.zhang@gmail.com>
+Date: Sun, 13 Nov 2016 19:47:18 +0800
+Subject: [PATCH] [PATCH] Ethernet: Get random MAC address
+
+---
+ kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c b/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c
+index 5f81b08..1659ed5 100644
+--- a/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c
++++ b/kernel/drivers/net/ethernet/allwinner/sunxi-gmac.c
+@@ -935,12 +935,12 @@ static void geth_check_addr(struct net_device *ndev, unsigned char *mac)
+ 			ndev->dev_addr[i] = simple_strtoul(p, &p, 16);
+ 
+ 		if (!is_valid_ether_addr(ndev->dev_addr)) {
+-			geth_chip_hwaddr(ndev->dev_addr);
++			random_ether_addr(ndev->dev_addr);
++			printk(KERN_WARNING "%s: Use random mac address\n", ndev->name);
+ 		}
+ 
+ 		if (!is_valid_ether_addr(ndev->dev_addr)) {
+-			random_ether_addr(ndev->dev_addr);
+-			printk(KERN_WARNING "%s: Use random mac address\n", ndev->name);
++			geth_chip_hwaddr(ndev->dev_addr);
+ 		}
+ 	}
+ }
+-- 
+2.7.4
+
