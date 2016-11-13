@@ -180,6 +180,7 @@ elif [ $OPTION = "5" ]; then
 	root_check
 	UBOOT_check
 	clear
+	echo -e "\e[1;31m Downloading Image into SDcard...... \e[0m"
 	dd bs=1M if=$ROOT/output/${PLATFORM}.img of=$UBOOT_PATH && sync
 	clear
 	echo -e "\e[1;31m =================================== \e[0m"
