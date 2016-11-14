@@ -111,4 +111,4 @@ rootfs.cpio.gz
 
 # Build file
 output/
-
+!/external/patch/*.patch
