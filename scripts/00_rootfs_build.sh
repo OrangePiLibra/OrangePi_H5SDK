@@ -9,8 +9,10 @@ if [ -z $ROOT ]; then
 	ROOT=`cd .. && pwd`
 fi
 
-if [ -z $DISTRO ]; then
+if [ -z $1 ]; then
 	DISTRO="jessie"
+else
+	DISTRO=$1
 fi
 
 BUILD="$ROOT/external"

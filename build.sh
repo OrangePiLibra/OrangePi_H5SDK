@@ -128,6 +128,7 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 	sudo echo ""
 	clear
 	TMP=$OPTION
+	TMP_DISTRO=""
 	echo -e "\e[1;31m =========================================== \e[0m"
 	echo -e "\e[1;31m Pls Select Release Version \e[0m"
 	echo -e "\e[1;32m 0. ArchLinux \e[0m"
@@ -150,19 +151,24 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		cd -
 	fi
 	if [ $OPTION = "0" ]; then
-		export DISTRO="arch"
+		TMP_DISTRO="arch"
 	elif [ $OPTION = "1" ]; then
-		export DISTRO="xenial"	
+		TMP_DISTRO="xenial"	
 	elif [ $OPTION = "2" ]; then
-		export DISTRO="sid"
+		TMP_DISTRO="sid"
 	elif [ $OPTION = "3" ]; then
-		export DISTRO="jessie"
+		TMP_DISTRO="jessie"
 	elif [ $OPTION = "4" ]; then
-		export DISTRO="centeros"
+		TMP_DISTRO="centeros"
 	fi
 	cd $SCRIPTS
-	sudo ./00_rootfs_build.sh
-	./01_rootfs_build.sh
+	DISTRO=$TMP_DISTRO
+	echo "DISTRO $DISTRO"
+	sudo ./00_rootfs_build.sh $DISTRO
+	./01_rootfs_build.sh $DISTRO
+	./02_rootfs_build.sh $DISTRO
+	sudo ./03_rootfs_build.sh $DISTRO
+	exit 0
 	if [ $TMP = "0" ]; then 
 		sudo ./build_image.sh
 		echo -e "\e[1;31m ================================== \e[0m"
