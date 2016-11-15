@@ -93,6 +93,16 @@ else
 	exit 0
 fi
 clear
+
+## Check cross tools
+if [ ! -d $ROOT/toolchain ]; then
+	cd $SCRIPTS
+	echo -e "\e[1;31m Install Cross toolchain... \e[0m"
+	./install_toolchain.sh
+	cd -
+	clear
+fi
+
 echo -e "\e[1;31m ================================== \e[0m"
 echo -e "\e[1;31m Pls select build option \e[0m"
 echo -e "\e[1;31m ================================== \e[0m"
@@ -115,9 +125,9 @@ read OPTION
 clear
 
 if [ $OPTION = "0" -o $OPTION = "1" ]; then
+	sudo echo ""
 	clear
 	TMP=$OPTION
-	root_check
 	echo -e "\e[1;31m =========================================== \e[0m"
 	echo -e "\e[1;31m Pls Select Release Version \e[0m"
 	echo -e "\e[1;32m 0. ArchLinux \e[0m"
@@ -151,9 +161,10 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		export DISTRO="centeros"
 	fi
 	cd $SCRIPTS
-	./rootfs_build.sh
+	sudo ./00_rootfs_build.sh
+	./01_rootfs_build.sh
 	if [ $TMP = "0" ]; then 
-		./build_image.sh
+		sudo ./build_image.sh
 		echo -e "\e[1;31m ================================== \e[0m"
 		echo -e "\e[1;31m Succeed to build Image \e[0m"
 		echo -e "\e[1;31m ================================== \e[0m"
@@ -176,40 +187,39 @@ elif [ $OPTION = "4" ]; then
 	./kernel_compile.sh
 	exit 0
 elif [ $OPTION = "5" ]; then
+	sudo echo ""
 	clear
-	root_check
 	UBOOT_check
 	clear
 	echo -e "\e[1;31m Downloading Image into SDcard...... \e[0m"
-	dd bs=1M if=$ROOT/output/${PLATFORM}.img of=$UBOOT_PATH && sync
+	sudo dd bs=1M if=$ROOT/output/${PLATFORM}.img of=$UBOOT_PATH && sync
 	clear
 	echo -e "\e[1;31m =================================== \e[0m"
 	echo -e "\e[1;31m Succeed Download Image into SDcard \e[0m"
 	echo -e "\e[1;31m =================================== \e[0m"
 	exit 0
 elif [ $OPTION = '6' ]; then
+	sudo echo ""
 	clear 
-	root_check
 	BOOT_check
 	clear
 	cd $SCRIPTS
-	./kernel_update.sh $BOOT_PATH
+	sudo ./kernel_update.sh $BOOT_PATH
 	exit 0
 elif [ $OPTION = '7' ]; then
+	sudo echo ""
 	clear 
-	root_check
 	ROOTFS_check
 	clear
 	cd $SCRIPTS
-	./modules_update.sh $ROOTFS_PATH
+	sudo ./modules_update.sh $ROOTFS_PATH
 	exit 0
 elif [ $OPTION = '8' ]; then
 	clear
-	root_check
 	UBOOT_check
 	clear
 	cd $SCRIPTS
-	./uboot_update.sh $UBOOT_PATH
+	sudo ./uboot_update.sh $UBOOT_PATH
 	exit 0
 elif [ $OPTION = 'a' ]; then
 	clear
