@@ -163,12 +163,29 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 	fi
 	cd $SCRIPTS
 	DISTRO=$TMP_DISTRO
-	echo "DISTRO $DISTRO"
-	sudo ./00_rootfs_build.sh $DISTRO
-	./01_rootfs_build.sh $DISTRO
-	./02_rootfs_build.sh $DISTRO
-	sudo ./03_rootfs_build.sh $DISTRO
-	exit 0
+	if [ -d $ROOT/output/${DISTRO}_rootfs ]; then
+		echo -e "\e[1;31m ${DISTRO}'s rootfs has exist! Do you want use it?(yes/no) \e[0m"
+		read OP_ROOTFS
+		if [ $OP_ROOTFS = "y" -o $OP_ROOTFS = "yes" ]; then
+			sudo cp -rf $ROOT/output/${DISTRO}_rootfs $ROOT/output/tmp
+			if [ -d $ROOT/output/rootfs ]; then
+				sudo rm -rf $ROOT/output/rootfs
+			fi
+			sudo mv $ROOT/output/tmp $ROOT/output/rootfs
+			echo -e "\e[1;31m Creating Rootfs \e[0m"
+		else
+			sudo ./00_rootfs_build.sh $DISTRO
+			./01_rootfs_build.sh $DISTRO
+			./02_rootfs_build.sh $DISTRO
+			sudo ./03_rootfs_build.sh $DISTRO
+
+		fi
+	else
+		sudo ./00_rootfs_build.sh $DISTRO
+		./01_rootfs_build.sh $DISTRO
+		./02_rootfs_build.sh $DISTRO
+		sudo ./03_rootfs_build.sh $DISTRO
+	fi
 	if [ $TMP = "0" ]; then 
 		sudo ./build_image.sh
 		echo -e "\e[1;31m ================================== \e[0m"
