@@ -30,7 +30,10 @@ LINUX=$ROOT/kernel
 TOOLS=$ROOT/toolchain/gcc-linaro-aarch/bin/aarch64-linux-gnu-
 # OUTPUT DIRECT
 BUILD=$ROOT/output
-# mkimage
+
+if [ ! -d $BUILD ]; then
+	mkdir -p $BUILD
+fi 
 
 # Perpare souce code
 if [ -d $LINUX ]; then

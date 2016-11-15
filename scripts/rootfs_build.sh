@@ -305,13 +305,13 @@ case $DISTRO in
 		cp /etc/resolv.conf "$DEST/etc/resolv.conf"
 		if [ "$DISTRO" = "xenial" ]; then
 			DEB=ubuntu
-			DEBUSER=ubuntu
+			DEBUSER=orangepi
 			EXTRADEBS="software-properties-common zram-config ubuntu-minimal"
 			ADDPPACMD=
 			DISPTOOLCMD="apt-get -y install sunxi-disp-tool"
 		elif [ "$DISTRO" = "sid" -o "$DISTRO" = "jessie" ]; then
 			DEB=debian
-			DEBUSER=debian
+			DEBUSER=orangepi
 			EXTRADEBS="sudo"
 			ADDPPACMD=
 			DISPTOOLCMD=
@@ -331,6 +331,7 @@ $ADDPPACMD
 apt-get -y update
 $DISPTOOLCMD
 adduser --gecos $DEBUSER --disabled-login $DEBUSER --uid 1000
+adduser --gecos root --disabled-login root --uid 0
 chown -R 1000:1000 /home/$DEBUSER
 echo "$DEBUSER:$DEBUSER" | chpasswd
 usermod -a -G sudo,adm,input,video,plugdev $DEBUSER

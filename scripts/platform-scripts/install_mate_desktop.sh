@@ -23,7 +23,7 @@ apt-get -y --no-install-recommends install \
 
 cat > "/etc/X11/xorg.conf" <<EOF
 Section "Device"
-        Identifier      "Allwinner A10/A13 FBDEV"
+        Identifier      "Allwinner H5 FBDEV"
         Driver          "fbturbo"
         Option          "fbdev" "/dev/fb0"
 
