@@ -175,19 +175,19 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 			echo -e "\e[1;31m Creating Rootfs \e[0m"
 		else
 			sudo ./00_rootfs_build.sh $DISTRO
-			./01_rootfs_build.sh $DISTRO
-			./02_rootfs_build.sh $DISTRO
+			sudo ./01_rootfs_build.sh $DISTRO
+			sudo ./02_rootfs_build.sh $DISTRO
 			sudo ./03_rootfs_build.sh $DISTRO
 
 		fi
 	else
 		sudo ./00_rootfs_build.sh $DISTRO
-		./01_rootfs_build.sh $DISTRO
-		./02_rootfs_build.sh $DISTRO
+		sudo ./01_rootfs_build.sh $DISTRO
+		sudo ./02_rootfs_build.sh $DISTRO
 		sudo ./03_rootfs_build.sh $DISTRO
 	fi
 	if [ $TMP = "0" ]; then 
-		sudo ./build_image.sh
+		sudo ./build_image.sh $PLATFORM
 		echo -e "\e[1;31m ================================== \e[0m"
 		echo -e "\e[1;31m Succeed to build Image \e[0m"
 		echo -e "\e[1;31m ================================== \e[0m"

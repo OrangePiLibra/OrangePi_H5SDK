@@ -10,6 +10,12 @@ if [ -z $ROOT ]; then
 	ROOT=`cd .. && pwd`
 fi
 
+if [ -z $1 ]; then
+	PLATFORM="OrangePiH5_PC2"
+else
+	PLATFORM=$1
+fi
+
 BUILD="$ROOT/external"
 OUTPUT="$ROOT/output"
 IMAGE="$OUTPUT/${PLATFORM}.img"
