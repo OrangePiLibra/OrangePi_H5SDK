@@ -59,3 +59,4 @@ obj-$(CONFIG_KEYBOARD_W90P910)		+= w90p910_keypad.o
 obj-$(CONFIG_KEYBOARD_SUNXI)		+= sunxi-keyboard.o
 obj-$(CONFIG_KEYPAD_SUNXI)			+= sunxi-keypad.o
 obj-$(CONFIG_KEYACC_SUNXI)			+= sunxi-keyacc.o
+obj-m								+= sunxi-gpiokey.o
