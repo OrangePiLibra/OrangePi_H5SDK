@@ -1804,7 +1804,7 @@
 			reg = <0x0 0x1f02800 0x0 0x400>;
 			interrupts = <0x0 0x26 0x4>;
 			pinctrl-names = "default";
-			status = "okay";
+			status = "disabled";
 			device_type = "s_uart0";
 			pinctrl-0 = <0xc9>;
 		};
@@ -1984,8 +1984,8 @@
 			rndis_wceis = <0x1>;
 			status = "okay";
 			usb_detect_mode = <0x0>;
-			usb_id_gpio = <0x3a 0x0 0x15 0x0 0x1 0xffffffff 0xffffffff>;
-			usb_det_vbus_gpio = <0x3a 0x0 0x15 0x0 0x1 0xffffffff 0xffffffff>;
+			usb_id_gpio = <0x3a 0x6 0xc 0x0 0x1 0xffffffff 0xffffffff>;
+			usb_det_vbus_gpio = <0x3a 0x6 0xc 0x0 0x1 0xffffffff 0xffffffff>;
 			usb_drv_vbus_gpio = <0x9e 0xb 0x2 0x1 0x0 0xffffffff 0x0>;
 		};
 
@@ -2194,7 +2194,7 @@
 			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <0x43>;
 			pinctrl-1 = <0x44>;
-			status = "okay";
+			status = "disabled";
 			linux,phandle = <0x4a>;
 			phandle = <0x4a>;
 			device_type = "spdif";
@@ -2232,7 +2232,7 @@
 		sound@4 {
 			compatible = "allwinner,sunxi-spdif-machine";
 			sunxi,spdif-controller = <0x4a>;
-			status = "okay";
+			status = "disabled";
 			device_type = "sndspdif";
 		};
 
@@ -2337,7 +2337,7 @@
 			sunxi-dly-52M-ddr4 = <0x1 0x0 0x0 0x0 0x2>;
 			sunxi-dly-104M = <0x1 0x0 0x0 0x0 0x1>;
 			sunxi-dly-208M = <0x1 0x0 0x0 0x0 0x1>;
-			status = "okay";
+			status = "disabled";
 			pinctrl-0 = <0xc7>;
 			sd-uhs-sdr50;
 			sd-uhs-ddr50;
@@ -3069,7 +3069,7 @@
 			card_high_speed = <0x1>;
 			card_line = <0x8>;
 			pinctrl-0 = <0xa0 0xa1>;
-			sdc_ex_dly_used = <0x0>;
+			sdc_ex_dly_used = <0x2>;
 		};
 
 		twi_para {
@@ -3165,7 +3165,7 @@
 
 		tvout_para {
 			device_type = "tvout_para";
-			tvout_used = <0x1>;
+			tvout_used;
 			tvout_channel_num;
 			tv_en;
 		};
@@ -3192,9 +3192,11 @@
 			device_type = "gpio_para";
 			compatible = "allwinner,sunxi-init-gpio";
 			gpio_used = <0x1>;
-			gpio_num = <0x0>;
-			normal_led = <0x9e 0xb 0xa 0x1 0xffffffff 0xffffffff 0x1>;
-			standby_led = <0x3a 0x0 0x14 0x1 0xffffffff 0xffffffff 0x1>;
+			gpio_num = <0x2>;
+			gpio_pin_1 = <0x9e 0xb 0xa 0x1 0xffffffff 0xffffffff 0x0>;
+			gpio_pin_2 = <0x3a 0x0 0x14 0x1 0xffffffff 0xffffffff 0x1>;
+			normal_led = "gpio_pin_1";
+			standby_led = "gpio_pin_2";
 		};
 
 		serial_feature {
@@ -3506,7 +3508,7 @@
 		clock-names = "pll_ddr";
 		dram_clk = <0x2a0>;
 		dram_type = <0x3>;
-		dram_zq = <0x3b3b3b>;
+		dram_zq = <0x3b3bf9>;
 		dram_odt_en = <0x1>;
 		dram_para1 = <0x10f410f4>;
 		dram_para2 = <0x0>;
@@ -3525,7 +3527,7 @@
 		dram_tpr8 = <0x0>;
 		dram_tpr9 = <0x0>;
 		dram_tpr10 = <0x2535>;
-		dram_tpr11 = <0x68660000>;
+		dram_tpr11 = <0x23330000>;
 		dram_tpr12 = <0x8897>;
 		dram_tpr13 = <0x4002910>;
 		device_type = "dram";
@@ -3635,11 +3637,11 @@
 		wlan_power = "vcc-wifi";
 		wlan_io_regulator = "vcc-wifi-io";
 		wlan_busnum = <0x1>;
-		status = "okay";
+		status = "disabled";
 		device_type = "wlan";
 		wlan_usbnum = <0x3>;
 		wlan_regon = <0x3a 0x2 0xe 0x1 0xffffffff 0xffffffff 0x0>;
-		wlan_hostwake = <0x9e 0xb 0x7 0x6 0xffffffff 0xffffffff 0x0>;
+		wlan_hostwake = <0x9e 0xb 0x7 0x0 0xffffffff 0xffffffff 0x0>;
 	};
 
 	bt {
@@ -3647,7 +3649,7 @@
 		clocks = <0x9d>;
 		bt_power = "vcc-wifi";
 		bt_io_regulator = "vcc-wifi-io";
-		status = "okay";
+		status = "disabled";
 		device_type = "bt";
 		bt_rst_n = <0x3a 0x2 0x10 0x1 0xffffffff 0xffffffff 0x0>;
 	};
@@ -3655,7 +3657,7 @@
 	btlpm {
 		compatible = "allwinner,sunxi-btlpm";
 		uart_index = <0x1>;
-		status = "okay";
+		status = "disabled";
 		device_type = "btlpm";
 		bt_wake = <0x3a 0x2 0xf 0x1 0xffffffff 0xffffffff 0x1>;
 		bt_hostwake = <0x9e 0xb 0x6 0x6 0xffffffff 0xffffffff 0x0>;
