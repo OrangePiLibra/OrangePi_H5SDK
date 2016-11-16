@@ -33,7 +33,7 @@ fi
 
 # Update kernel and DTB
 cp -rfa $ROOT/output/uImage			$KERNEL_PATH/orangepi/
-cp -rfa $ROOT/output/Image.version  $KERNEL_PATH/
+#cp -rfa $ROOT/output/Image.version  $KERNEL_PATH/
 cp -rfa $ROOT/output/initrd.img		$KERNEL_PATH/
 cp -rfa $ROOT/output/uEnv.txt		$KERNEL_PATH/
 cp -rfa $ROOT/output/OrangePiH5.dtb $KERNEL_PATH/orangepi/OrangePiH5orangepi.dtb

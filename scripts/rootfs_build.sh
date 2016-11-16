@@ -306,7 +306,7 @@ case $DISTRO in
 		if [ "$DISTRO" = "xenial" ]; then
 			DEB=ubuntu
 			DEBUSER=orangepi
-			EXTRADEBS="software-properties-common zram-config ubuntu-minimal"
+			EXTRADEBS="software-properties-common zram-config ubuntu-minimal sudo"
 			ADDPPACMD=
 			DISPTOOLCMD="apt-get -y install sunxi-disp-tool"
 		elif [ "$DISTRO" = "sid" -o "$DISTRO" = "jessie" ]; then
