@@ -25,14 +25,5 @@ TOOLCHAIN="$ROOT/toolchain/gcc-linaro-aarch/bin/aarch64-linux-gnu-"
 DEST=$(readlink -f "$DEST")
 LINUX=$(readlink -f "$LINUX")
 
-if [ ! -d $DEST/lib/modules ]; then
-	mkdir "$DEST/lib/modules"
-else
-	rm -rf $DEST/lib/modules
-	mkdir "$DEST/lib/modules"
-fi
-
-# Install Kernel modules
-make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLCHAIN modules_install INSTALL_MOD_PATH="$DEST"
-# Install Kernel firmware
-make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLCHAIN firmware_install INSTALL_MOD_PATH="$DEST"
+# Install Kernel headers
+make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLCHAIN headers_install INSTALL_HDR_PATH="$DEST/usr"

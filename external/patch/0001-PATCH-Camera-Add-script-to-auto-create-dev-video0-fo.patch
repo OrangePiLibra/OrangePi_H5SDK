@@ -1,0 +1,32 @@
+From e83cf8c1fcda5b4be8e2d750980e8fd9b41a9b27 Mon Sep 17 00:00:00 2001
+From: BuddyZhang1 <buddy.d.zhang@gmail.com>
+Date: Wed, 16 Nov 2016 10:40:49 +0800
+Subject: [PATCH] [PATCH] Camera: Add script to auto create /dev/video0 for
+ gc2035
+
+---
+ scripts/platform-scripts/OrangePi_Camera.sh | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100755 scripts/platform-scripts/OrangePi_Camera.sh
+
+diff --git a/scripts/platform-scripts/OrangePi_Camera.sh b/scripts/platform-scripts/OrangePi_Camera.sh
+new file mode 100755
+index 0000000..5267095
+--- /dev/null
++++ b/scripts/platform-scripts/OrangePi_Camera.sh
+@@ -0,0 +1,12 @@
++#!/bin/sh
++
++set -e
++
++cat > "/etc/modules-load.d/OrangePi_Camera.conf" << EOF
++videobuf2-core
++videobuf2-memops
++videobuf2-dma-contig
++vfe_io
++gc2035
++vfe_v4l2
++EOF
+-- 
+1.9.1
+

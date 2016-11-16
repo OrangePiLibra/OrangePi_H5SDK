@@ -128,6 +128,7 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 	sudo echo ""
 	clear
 	TMP=$OPTION
+	TMP_DISTRO=""
 	echo -e "\e[1;31m =========================================== \e[0m"
 	echo -e "\e[1;31m Pls Select Release Version \e[0m"
 	echo -e "\e[1;32m 0. ArchLinux \e[0m"
@@ -150,21 +151,43 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		cd -
 	fi
 	if [ $OPTION = "0" ]; then
-		export DISTRO="arch"
+		TMP_DISTRO="arch"
 	elif [ $OPTION = "1" ]; then
-		export DISTRO="xenial"	
+		TMP_DISTRO="xenial"	
 	elif [ $OPTION = "2" ]; then
-		export DISTRO="sid"
+		TMP_DISTRO="sid"
 	elif [ $OPTION = "3" ]; then
-		export DISTRO="jessie"
+		TMP_DISTRO="jessie"
 	elif [ $OPTION = "4" ]; then
-		export DISTRO="centeros"
+		TMP_DISTRO="centeros"
 	fi
 	cd $SCRIPTS
-	sudo ./00_rootfs_build.sh
-	./01_rootfs_build.sh
+	DISTRO=$TMP_DISTRO
+	if [ -d $ROOT/output/${DISTRO}_rootfs ]; then
+		echo -e "\e[1;31m ${DISTRO}'s rootfs has exist! Do you want use it?(yes/no) \e[0m"
+		read OP_ROOTFS
+		if [ $OP_ROOTFS = "y" -o $OP_ROOTFS = "yes" ]; then
+			sudo cp -rf $ROOT/output/${DISTRO}_rootfs $ROOT/output/tmp
+			if [ -d $ROOT/output/rootfs ]; then
+				sudo rm -rf $ROOT/output/rootfs
+			fi
+			sudo mv $ROOT/output/tmp $ROOT/output/rootfs
+			echo -e "\e[1;31m Creating Rootfs \e[0m"
+		else
+			sudo ./00_rootfs_build.sh $DISTRO
+			sudo ./01_rootfs_build.sh $DISTRO
+			sudo ./02_rootfs_build.sh $DISTRO
+			sudo ./03_rootfs_build.sh $DISTRO
+
+		fi
+	else
+		sudo ./00_rootfs_build.sh $DISTRO
+		sudo ./01_rootfs_build.sh $DISTRO
+		sudo ./02_rootfs_build.sh $DISTRO
+		sudo ./03_rootfs_build.sh $DISTRO
+	fi
 	if [ $TMP = "0" ]; then 
-		sudo ./build_image.sh
+		sudo ./build_image.sh $PLATFORM
 		echo -e "\e[1;31m ================================== \e[0m"
 		echo -e "\e[1;31m Succeed to build Image \e[0m"
 		echo -e "\e[1;31m ================================== \e[0m"
