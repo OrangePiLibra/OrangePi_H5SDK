@@ -1,0 +1,197 @@
+From 56b3c0bc08153aaa09c82c228f3a6b976186edda Mon Sep 17 00:00:00 2001
+From: BuddyZhang1 <buddy.d.zhang@gmail.com>
+Date: Thu, 17 Nov 2016 17:25:19 +0800
+Subject: [PATCH 2/2] [PATCH] random: introduce getrandom(2) system call
+
+---
+ kernel/arch/x86/syscalls/syscall_32.tbl  |  1 +
+ kernel/arch/x86/syscalls/syscall_64.tbl  |  1 +
+ kernel/drivers/char/random.c             | 45 +++++++++++++++++++++++++++++---
+ kernel/include/linux/syscalls.h          |  3 +++
+ kernel/include/uapi/asm-generic/unistd.h |  4 ++-
+ kernel/include/uapi/linux/random.h       |  8 ++++++
+ 6 files changed, 57 insertions(+), 5 deletions(-)
+
+diff --git a/kernel/arch/x86/syscalls/syscall_32.tbl b/kernel/arch/x86/syscalls/syscall_32.tbl
+index 01ed502..03c8589 100644
+--- a/kernel/arch/x86/syscalls/syscall_32.tbl
++++ b/kernel/arch/x86/syscalls/syscall_32.tbl
+@@ -361,3 +361,4 @@
+ # 352	i386	sched_getattr		sys_sched_getattr
+ # 353	i386	renameat2		sys_renameat2
+ 354	i386	seccomp			sys_seccomp
++355	i386	getrandom		sys_getrandom
+diff --git a/kernel/arch/x86/syscalls/syscall_64.tbl b/kernel/arch/x86/syscalls/syscall_64.tbl
+index c7b4ac7..bbf7f7c 100644
+--- a/kernel/arch/x86/syscalls/syscall_64.tbl
++++ b/kernel/arch/x86/syscalls/syscall_64.tbl
+@@ -324,6 +324,7 @@
+ # 315	common	sched_getattr		sys_sched_getattr
+ # 316	common	renameat2		sys_renameat2
+ 317	common	seccomp			sys_seccomp
++318	common	getrandom		sys_getrandom
+ 
+ #
+ # x32-specific system call numbers start at 512 to avoid cache impact
+diff --git a/kernel/drivers/char/random.c b/kernel/drivers/char/random.c
+index ad17489..ef52b77 100644
+--- a/kernel/drivers/char/random.c
++++ b/kernel/drivers/char/random.c
+@@ -260,6 +260,9 @@
+ # include <linux/irq.h>
+ #endif
+ 
++#include <linux/syscalls.h>
++#include <linux/completion.h>
++
+ #include <asm/processor.h>
+ #include <asm/uaccess.h>
+ #include <asm/irq.h>
+@@ -407,6 +410,7 @@ static struct poolinfo {
+  */
+ static DECLARE_WAIT_QUEUE_HEAD(random_read_wait);
+ static DECLARE_WAIT_QUEUE_HEAD(random_write_wait);
++static DECLARE_WAIT_QUEUE_HEAD(urandom_init_wait);
+ static struct fasync_struct *fasync;
+ 
+ static bool debug;
+@@ -616,8 +620,10 @@ retry:
+ 
+ 	if (!r->initialized && nbits > 0) {
+ 		r->entropy_total += nbits;
+-		if (r->entropy_total > 128)
++		if (r->entropy_total > 128) {
+ 			r->initialized = 1;
++			wake_up_interruptible(&urandom_init_wait);
++		}
+ 	}
+ 
+ 	trace_credit_entropy_bits(r->name, nbits, entropy_count,
+@@ -1025,13 +1031,14 @@ static ssize_t extract_entropy_user(struct entropy_store *r, void __user *buf,
+ {
+ 	ssize_t ret = 0, i;
+ 	__u8 tmp[EXTRACT_SIZE];
++	int large_request = (nbytes > 256);
+ 
+ 	trace_extract_entropy_user(r->name, nbytes, r->entropy_count, _RET_IP_);
+ 	xfer_secondary_pool(r, nbytes);
+ 	nbytes = account(r, nbytes, 0, 0);
+ 
+ 	while (nbytes) {
+-		if (need_resched()) {
++		if (large_request && need_resched()) {
+ 			if (signal_pending(current)) {
+ 				if (ret == 0)
+ 					ret = -ERESTARTSYS;
+@@ -1165,7 +1172,7 @@ void rand_initialize_disk(struct gendisk *disk)
+ #endif
+ 
+ static ssize_t
+-random_read(struct file *file, char __user *buf, size_t nbytes, loff_t *ppos)
++_random_read(int nonblock, char __user *buf, size_t nbytes)
+ {
+ 	ssize_t n;
+ 
+@@ -1181,7 +1188,7 @@ random_read(struct file *file, char __user *buf, size_t nbytes, loff_t *ppos)
+ 			return n;
+ 		/* Pool is (near) empty.  Maybe wait and retry. */
+ 
+-		if (file->f_flags & O_NONBLOCK)
++		if (nonblock)
+ 			return -EAGAIN;
+ 
+ 		wait_event_interruptible(random_read_wait,
+@@ -1194,6 +1201,12 @@ random_read(struct file *file, char __user *buf, size_t nbytes, loff_t *ppos)
+ }
+ 
+ static ssize_t
++random_read(struct file *file, char __user *buf, size_t nbytes, loff_t *ppos)
++{
++	return _random_read(file->f_flags & O_NONBLOCK, buf, nbytes);
++}
++
++static ssize_t
+ urandom_read(struct file *file, char __user *buf, size_t nbytes, loff_t *ppos)
+ {
+ 	return extract_entropy_user(&nonblocking_pool, buf, nbytes);
+@@ -1319,6 +1332,30 @@ const struct file_operations urandom_fops = {
+ 	.llseek = noop_llseek,
+ };
+ 
++SYSCALL_DEFINE3(getrandom, char __user *, buf, size_t, count,
++	unsigned int, flags)
++{
++	if (flags & ~(GRND_NONBLOCK|GRND_RANDOM))
++		return -EINVAL;
++
++	if (count > INT_MAX)
++		count = INT_MAX;
++
++	if (flags & GRND_RANDOM)
++		return _random_read(flags & GRND_NONBLOCK, buf, count);
++
++	if (unlikely(nonblocking_pool.initialized == 0)) {
++		if (flags & GRND_NONBLOCK)
++			return -EAGAIN;
++		wait_event_interruptible(urandom_init_wait,
++					 nonblocking_pool.initialized);
++		if (signal_pending(current))
++			return -ERESTARTSYS;
++	}
++	return urandom_read(NULL, buf, count, NULL);
++}
++
++
+ /***************************************************************
+  * Random UUID interface
+  *
+diff --git a/kernel/include/linux/syscalls.h b/kernel/include/linux/syscalls.h
+index 4e98d71..1192fbe 100644
+--- a/kernel/include/linux/syscalls.h
++++ b/kernel/include/linux/syscalls.h
+@@ -848,4 +848,7 @@ asmlinkage long sys_kcmp(pid_t pid1, pid_t pid2, int type,
+ asmlinkage long sys_finit_module(int fd, const char __user *uargs, int flags);
+ asmlinkage long sys_seccomp(unsigned int op, unsigned int flags,
+ 			    const char __user *uargs);
++asmlinkage long sys_getrandom(char __user *buf, size_t count,
++			      unsigned int flags);
++
+ #endif
+diff --git a/kernel/include/uapi/asm-generic/unistd.h b/kernel/include/uapi/asm-generic/unistd.h
+index b422ad5..348d28c 100644
+--- a/kernel/include/uapi/asm-generic/unistd.h
++++ b/kernel/include/uapi/asm-generic/unistd.h
+@@ -702,9 +702,11 @@ __SYSCALL(__NR_renameat2, sys_renameat2)
+  */
+ #define __NR_seccomp 277
+ __SYSCALL(__NR_seccomp, sys_seccomp)
++#define __NR_getrandom 278
++__SYSCALL(__NR_getrandom, sys_getrandom)
+ 
+ #undef __NR_syscalls
+-#define __NR_syscalls 278
++#define __NR_syscalls 279
+ 
+ /*
+  * All syscalls below here should go away really,
+diff --git a/kernel/include/uapi/linux/random.h b/kernel/include/uapi/linux/random.h
+index 7471b5b..3017239 100644
+--- a/kernel/include/uapi/linux/random.h
++++ b/kernel/include/uapi/linux/random.h
+@@ -46,5 +46,13 @@ struct rnd_state {
+ 
+ /* Exported functions */
+ 
++/*
++ * Flags for getrandom(2)
++ *
++ * GRND_NONBLOCK	Don't block and return EAGAIN instead
++ * GRND_RANDOM		Use the /dev/random pool instead of /dev/urandom
++ */
++#define GRND_NONBLOCK	0x0001
++#define GRND_RANDOM	0x0002
+ 
+ #endif /* _UAPI_LINUX_RANDOM_H */
+-- 
+1.9.1
+
