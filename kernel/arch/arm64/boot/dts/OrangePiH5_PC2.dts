@@ -2993,6 +2993,11 @@
 			gmac_power3;
 		};
 
+		OrangePi_DTS {
+			compatible = "allwinner,OrangePi_DTS";
+			device_type = "OrangePi_DTS";
+		};
+
 		product {
 			device_type = "product";
 			version = "100";
@@ -3319,8 +3324,8 @@
 		};
 
 		gpio_power_key {
+			compatible = "allwinner,gpio_power_key";
 			device_type = "gpio_power_key";
-			key_io = <0x9e 0xb 0x3 0x6 0xffffffff 0xffffffff 0x0>;
 		};
 	};
 
