@@ -376,3 +376,10 @@ EOF
 # Clean up
 rm -f "$DEST/usr/bin/qemu-aarch64-static"
 rm -f "$DEST/usr/sbin/policy-rc.d"
+
+if [ ! -d $DEST/lib/modules ]; then
+	mkdir "$DEST/lib/modules"
+else
+	rm -rf $DEST/lib/modules
+	mkdir "$DEST/lib/modules"
+fi

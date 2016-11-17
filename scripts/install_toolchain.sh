@@ -17,5 +17,6 @@ echo "Uncompress toolchain.. "
 cat ${TOOLTARXZ}* > ${TOOLTAR}
 
 tar xzvf $TOOLTAR -C $ROOT
+rm -rf $TOOLTAR
 
 
