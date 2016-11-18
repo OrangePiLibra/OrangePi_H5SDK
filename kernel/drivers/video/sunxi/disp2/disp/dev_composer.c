@@ -912,8 +912,8 @@ static void hwc_commit_work(struct work_struct *work)
 			acquire_fence = (struct sync_fence **)(&frame->acquire_fence[0]);
 			for (i = 0; i < frame->hwc_data.layer_num; i++, acquire_fence++) {
 				if (acquire_fence != NULL && *acquire_fence != NULL) {
-					err = sync_fence_wait(*acquire_fence, 1000);
-					sync_fence_put(*acquire_fence);
+					//err = sync_fence_wait(*acquire_fence, 1000);
+					//sync_fence_put(*acquire_fence);
 					if (err < 0) {
 						printk("synce_fence_wait timeout AcquireFence:%p\n", *acquire_fence);
 						sw_sync_timeline_inc(composer_priv.relseastimeline, 1);
@@ -1022,7 +1022,8 @@ static int hwc_commit(setup_dispc_data_t *disp_data)
 		/* get fence object by acquire fencefd */
 		for (i = 0; i < setup->layer_num; i++) {
 			if (acquire_fencefd[i] != -1)
-				fence[i] = sync_fence_fdget(acquire_fencefd[i]);
+				//fence[i] = sync_fence_fdget(acquire_fencefd[i]);
+				;
 		}
 	}
 
@@ -1046,8 +1047,8 @@ static int hwc_commit(setup_dispc_data_t *disp_data)
 
 		composer_priv.timeline_max++;
 		pt = sw_sync_pt_create(composer_priv.relseastimeline, composer_priv.timeline_max);
-		release_fence = sync_fence_create("sunxi_display", pt);
-		sync_fence_install(release_fence, release_fencefd);
+		//release_fence = sync_fence_create("sunxi_display", pt);
+		//sync_fence_install(release_fence, release_fencefd);
 
 		disp_data_list->framenumber = composer_priv.timeline_max;
 		mutex_lock(&(composer_priv.update_regs_list_lock));
