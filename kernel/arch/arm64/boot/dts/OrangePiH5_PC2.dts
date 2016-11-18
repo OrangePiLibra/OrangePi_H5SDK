@@ -2983,8 +2983,8 @@
 			clocks = <0x94 0x95>;
 			clock-names = "gmac", "ephy";
 			phy-mode = "rgmii";
-			tx-delay = <0x7>;
-			rx-delay = <0x1f>;
+			tx-delay = <0x0>;
+			rx-delay = <0x0>;
 			phy_power_on = <0x3a 0x3 0x6 0x1 0x0 0x0 0x0>;
 			status = "okay";
 			device_type = "gmac0";
