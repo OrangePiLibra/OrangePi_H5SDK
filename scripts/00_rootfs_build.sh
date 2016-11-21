@@ -195,6 +195,21 @@ EOF
 	do_chroot systemctl enable cpu-corekeeper
 }
 
+add_audio_record_player_service() {
+	cat > "$DEST/etc/systemd/system/audio_record_player.service" <<EOF
+[Unit]
+Description=Add audio configure
+
+[Service]
+ExecStart=/usr/local/sbin/OrangePi_Audio.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+	do_chroot systemctl enable add_audio_record_player_service
+}
+
 add_ssh_keygen_service() {
 	cat > "$DEST/etc/systemd/system/ssh-keygen.service" <<EOF
 [Unit]
@@ -281,6 +296,7 @@ case $DISTRO in
 		do_chroot pacman -Sy --noconfirm --needed dosfstools curl xz iw rfkill netctl dialog wpa_supplicant alsa-utils || true
 		add_platform_scripts
 		add_mackeeper_service
+		add_audio_record_player_service
 		add_corekeeper_service
 		add_disp_udev_rules
 		add_asound_state
@@ -348,6 +364,7 @@ ff02::2 ip6-allrouters
 EOF
 		add_platform_scripts
 		add_mackeeper_service
+		add_audio_record_player_service
 		add_corekeeper_service
 		add_ssh_keygen_service
 		add_disp_udev_rules
