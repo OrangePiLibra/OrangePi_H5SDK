@@ -1,0 +1,27 @@
+[Describe]
+	When you use build.sh to create a Ubuntu Image, you will get bug of zram swaping on 
+	boot system. 
+[Log]
+	[  OK  ] Started Permit User Sessions.
+	[FAILED] Failed to start Initializes zram swaping.
+	See 'systemctl status zram-config.service' for details.
+	[  OK  ] Started Save/Restore Sound Card State.
+[Fix]
+	$sudo apt-get install zram-config
+	$sudo apt-get remove zram-config
+	$sudo apt-get autoremove zram-config
+	$sudo apt-get install zram-config
+	$sudo reboot
+
+	$sudo dpkg --purge zram-config
+
+[Bug Info]
+ProblemType: Bug
+DistroRelease: Ubuntu 16.04
+Package: zram-config 0.1
+Uname: Linux Orangepi 3.10.65 #55 SMP PREEMPT  aarch64 aarch64 aarch64 GNU/Linux
+Architecture: arm64
+Date: Fri Nov 18 16:17:28 CST 2016
+Dependencies:
+[LINK]
+https://bugs.launchpad.net/ubuntu/+source/zram-config/+bug/1036339
