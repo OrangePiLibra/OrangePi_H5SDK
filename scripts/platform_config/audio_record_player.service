@@ -1,0 +1,9 @@
+[Unit]
+Description=OrangePi Audio Configure
+
+[Service]
+ExecStart=/usr/local/sbin/OrangePi_Audio.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

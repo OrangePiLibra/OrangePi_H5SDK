@@ -29,8 +29,5 @@ LINUX=$(readlink -f "$LINUX")
 cp -rfa $DEST $OUTPUT/${DISTRO}_rootfs
 
 clear
-echo -e "\e[1;31m ================================== \e[0m"
-echo -e "\e[1;31m Done - Install Rootfs: $DEST \e[0m"
-echo -e "\e[1;31m ================================== \e[0m"
-
-
+whiptail --title "OrangePi Build System" \
+	--msgbox "Build Rootfs Ok. The path of output: $DEST" 10 50 0

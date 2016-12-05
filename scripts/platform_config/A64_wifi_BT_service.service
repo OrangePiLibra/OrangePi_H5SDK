@@ -1,0 +1,9 @@
+[Unit]
+Description=OrangePi Wifi and BT Service
+
+[Service]
+ExecStart=/usr/local/sbin/OrangePi_Wifi.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
