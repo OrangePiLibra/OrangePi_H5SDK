@@ -36,13 +36,13 @@ if [ ! -d $BUILD ]; then
 fi 
 
 # Perpare souce code
-if [ -d $LINUX ]; then
-	echo "Kernel exist and compile kernel"
-else
-	echo "Kernel doesn't exist, pls perpare linux source code."
+if [ ! -d $LINUX ]; then
+	whiptail --title "OrangePi Build System" --msgbox \
+		"Kernel doesn't exist, pls perpare linux source code." 10 40 0 --cancel-button Exit
 	exit 0
 fi
 
+clear
 echo -e "\e[1;31m Start Compile.....\e[0m"
 
 if [ $CLEANUP = "1" ]; then
@@ -96,15 +96,8 @@ EOF
 fi 
 
 clear
-echo -e "\e[1;31m ============================== \e[0m"
-echo -e "\e[1;31m Build Kernel OK \e[0m"
-echo -e "\e[1;31m ============================== \e[0m"
-echo -e "\e[1;31m Kernel: ${BUILD}/uImage \e[0m"
-echo -e "\e[1;31m Module: ${BUILD}/lib/ \e[0m"
-echo -e "\e[1;31m DTB:    ${BUILD}/OrangePiH5.dtb \e[0m"
-echo -e "\e[1;31m uEnv:   ${BUILD}/uEnv.txt \e[0m"
-echo -e "\e[1;31m initrd: ${BUILD}/initrd.img \e[0m"
-echo ""
+whiptail --title "OrangePi Build System" --msgbox \
+	"Build Kernel OK. The path of output file: ${BUILD}" 10 80 0
 
 
 

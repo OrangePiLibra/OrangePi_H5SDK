@@ -10,26 +10,22 @@ fi
 OUTPUT="$1"
 BUILD=$ROOT/output
 
-if [ -z "$OUTPUT" ]; then
-	echo "Usage: $0 /medio/XXX/ROOTFS"
-	exit 1
-fi
-
-if [ "$(id -u)" -ne "0" ]; then
-	echo "This option requires root."
-	echo "Pls use command: sudo ./scritps.sh"
-	exit 0
-fi
-
+FILE_NUM=$(ls $BUILD/lib/modules -lR | grep "^-" | wc -l)
 #####
 # Remove old modules
-echo -e "\e[1;31m Copying modules. \e[0m"
 rm -rf $OUTPUT/lib/modules/*
-cp -rfva $BUILD/lib/modules/* $OUTPUT/lib/modules/
+cp -rfa $BUILD/lib/modules/* $OUTPUT/lib/modules/ &
 
-echo -e "\e[1;31m Sync modules. \e[0m"
-sync
+{
+	for ((i = 0; i < 100; )); do
+		CUR_FILE=$(ls $OUTPUT/lib/modules -lR | grep "^-" | wc -l)
+		i=$[ CUR_FILE * 100 / FILE_NUM ]
+		echo i
+	done
+} | whiptail --gauge "Update modules into SDcard" 6 60 0
+
+sync &
 clear
-echo -e "\e[1;31m =================================== \e[0m"
-echo -e "\e[1;31m Succeed to update Module \e[0m"
-echo -e "\e[1;31m =================================== \e[0m"
+whiptail --title "OrangePi Build System" \
+	     --msgbox "Succeed to update Module" \
+		 10 40 0 

@@ -108,6 +108,7 @@ rootfs.cpio.gz
 /external/xenial-base-arm64.tar.gz
 !/external/uboot.bin
 !/external/boot0.bin
+/external/CentOS-7-aarch64-rootfs-1606.tar.xz
 
 # Build file
 output/

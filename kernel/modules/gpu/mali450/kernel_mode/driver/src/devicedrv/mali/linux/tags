@@ -1,0 +1,776 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CREATE_TRACE_POINTS	mali_kernel_linux.c	60;"	d	file:
+MALI_BLOCK_MAX_REF_COUNT	mali_memory_block_alloc.h	22;"	d
+MALI_BLOCK_REF_MASK	mali_memory_block_alloc.h	21;"	d
+MALI_BLOCK_SIZE	mali_memory_block_alloc.h	20;"	d
+MALI_EVENT_ID_IS_HW	mali_kernel_sysfs.c	737;"	d	file:
+MALI_KERNEL_LINUX_LICENSE	license/gpl/mali_kernel_license.h	23;"	d
+MALI_KERNEL_LINUX_LICENSE	mali_kernel_linux.c	/^MODULE_LICENSE(MALI_KERNEL_LINUX_LICENSE);$/;"	v
+MALI_LICENSE_IS_GPL	license/gpl/mali_kernel_license.h	24;"	d
+MALI_LINUX_TRACE_H	mali_linux_trace.h	12;"	d
+MALI_MEM_ALLOCATION_FREED_MAGIC	mali_memory_types.h	97;"	d
+MALI_MEM_ALLOCATION_VALID_MAGIC	mali_memory_types.h	96;"	d
+MALI_MEM_BLOCK	mali_memory_types.h	/^	MALI_MEM_BLOCK,$/;"	e	enum:mali_mem_type
+MALI_MEM_DESCRIPTORS_INIT	mali_memory.c	213;"	d	file:
+MALI_MEM_DESCRIPTORS_MAX	mali_memory.c	214;"	d	file:
+MALI_MEM_DMA_BUF	mali_memory_types.h	/^	MALI_MEM_DMA_BUF,$/;"	e	enum:mali_mem_type
+MALI_MEM_EXTERNAL	mali_memory_types.h	/^	MALI_MEM_EXTERNAL,$/;"	e	enum:mali_mem_type
+MALI_MEM_FLAG_DONT_CPU_MAP	mali_memory_types.h	168;"	d
+MALI_MEM_FLAG_MALI_GUARD_PAGE	mali_memory_types.h	167;"	d
+MALI_MEM_OS	mali_memory_types.h	/^	MALI_MEM_OS,$/;"	e	enum:mali_mem_type
+MALI_MEM_OS_CHUNK_TO_FREE	mali_memory_os_alloc.c	419;"	d	file:
+MALI_MEM_OS_PAGE_TABLE_PAGE_POOL_SIZE	mali_memory_os_alloc.c	325;"	d	file:
+MALI_MEM_SAFE_COPY_BLOCK_SIZE	mali_osk_low_level_mem.c	87;"	d	file:
+MALI_MEM_TYPE_MAX	mali_memory_types.h	/^	MALI_MEM_TYPE_MAX,$/;"	e	enum:mali_mem_type
+MALI_MEM_UMP	mali_memory_types.h	/^	MALI_MEM_UMP,$/;"	e	enum:mali_mem_type
+MALI_NON_STATIC_INLINE	mali_osk_specific.h	30;"	d
+MALI_OSK_INVALID_RESOURCE_ADDRESS	mali_osk_mali.c	30;"	d	file:
+MALI_OSK_MAX_RESOURCE_NUMBER	mali_osk_mali.c	35;"	d	file:
+MALI_OSK_RESOURCE_L2_LOCATION_START	mali_osk_mali.c	52;"	d	file:
+MALI_OSK_RESOURCE_PP_LOCATION_END	mali_osk_mali.c	47;"	d	file:
+MALI_OSK_RESOURCE_PP_LOCATION_START	mali_osk_mali.c	46;"	d	file:
+MALI_OSK_RESOURCE_WITH_IRQ_NUMBER	mali_osk_mali.c	41;"	d	file:
+MALI_OSK_RESOURCE_l2_LOCATION_END	mali_osk_mali.c	53;"	d	file:
+MALI_OS_MEMORY_KERNEL_BUFFER_SIZE_IN_PAGES	mali_memory_os_alloc.c	26;"	d	file:
+MALI_OS_MEMORY_POOL_TRIM_JIFFIES	mali_memory_os_alloc.c	27;"	d	file:
+MALI_PAGE_NODE_BLOCK	mali_memory_types.h	/^	MALI_PAGE_NODE_BLOCK,$/;"	e	enum:mali_page_node_type
+MALI_PAGE_NODE_OS	mali_memory_types.h	/^	MALI_PAGE_NODE_OS,$/;"	e	enum:mali_page_node_type
+MALI_PROC_DIR	mali_kernel_sysfs.h	20;"	d
+MALI_PROFILING_STATE_IDLE	mali_profiling_internal.c	/^	MALI_PROFILING_STATE_IDLE,$/;"	e	enum:mali_profiling_state	file:
+MALI_PROFILING_STATE_RETURN	mali_profiling_internal.c	/^	MALI_PROFILING_STATE_RETURN,$/;"	e	enum:mali_profiling_state	file:
+MALI_PROFILING_STATE_RUNNING	mali_profiling_internal.c	/^	MALI_PROFILING_STATE_RUNNING,$/;"	e	enum:mali_profiling_state	file:
+MALI_PROFILING_STATE_UNINITIALIZED	mali_profiling_internal.c	/^	MALI_PROFILING_STATE_UNINITIALIZED,$/;"	e	enum:mali_profiling_state	file:
+MALI_S32_MAX	mali_memory_manager.c	42;"	d	file:
+MALI_STATIC_INLINE	mali_osk_specific.h	29;"	d
+POWER_BUFFER_SIZE	mali_kernel_sysfs.c	62;"	d	file:
+PRIVATE_DATA_COUNTER_GET_SRC	mali_kernel_sysfs.c	58;"	d	file:
+PRIVATE_DATA_COUNTER_GET_SUB_JOB	mali_kernel_sysfs.c	60;"	d	file:
+PRIVATE_DATA_COUNTER_IS_PP	mali_kernel_sysfs.c	57;"	d	file:
+PRIVATE_DATA_COUNTER_IS_SUB_JOB	mali_kernel_sysfs.c	59;"	d	file:
+PRIVATE_DATA_COUNTER_MAKE_GP	mali_kernel_sysfs.c	54;"	d	file:
+PRIVATE_DATA_COUNTER_MAKE_PP	mali_kernel_sysfs.c	55;"	d	file:
+PRIVATE_DATA_COUNTER_MAKE_PP_SUB_JOB	mali_kernel_sysfs.c	56;"	d	file:
+SVN_REV_STRING	mali_kernel_linux.c	/^MODULE_VERSION(SVN_REV_STRING);$/;"	v
+TRACE_INCLUDE_FILE	mali_linux_trace.h	24;"	d
+TRACE_INCLUDE_PATH	mali_linux_trace.h	23;"	d
+TRACE_SYSTEM	mali_linux_trace.h	19;"	d
+TRACE_SYSTEM	mali_linux_trace.h	20;"	d
+TRACE_SYSTEM_STRING	mali_linux_trace.h	21;"	d
+_MALI_DEVICE_DVFS_PAUSE	mali_kernel_sysfs.c	/^	_MALI_DEVICE_DVFS_PAUSE,$/;"	e	enum:__anon1	file:
+_MALI_DEVICE_DVFS_RESUME	mali_kernel_sysfs.c	/^	_MALI_DEVICE_DVFS_RESUME,$/;"	e	enum:__anon1	file:
+_MALI_DEVICE_RESUME	mali_kernel_sysfs.c	/^	_MALI_DEVICE_RESUME,$/;"	e	enum:__anon1	file:
+_MALI_DEVICE_SUSPEND	mali_kernel_sysfs.c	/^	_MALI_DEVICE_SUSPEND,$/;"	e	enum:__anon1	file:
+_MALI_MAX_EVENTS	mali_kernel_sysfs.c	/^	_MALI_MAX_EVENTS$/;"	e	enum:__anon1	file:
+_MALI_OSK_LOCKS_H	mali_osk_locks.h	16;"	d
+_MALI_SYNC_H_	mali_sync.h	18;"	d
+__MALI_BLOCK_ALLOCATOR_H__	mali_memory_block_alloc.h	12;"	d
+__MALI_GPU_VMEM_H__	mali_memory_virtual.h	11;"	d
+__MALI_KERNEL_LICENSE_H__	license/gpl/mali_kernel_license.h	17;"	d
+__MALI_KERNEL_LINUX_H__	mali_kernel_linux.h	12;"	d
+__MALI_KERNEL_SYSFS_H__	mali_kernel_sysfs.h	12;"	d
+__MALI_MEMORY_DMA_BUF_H__	mali_memory_dma_buf.h	12;"	d
+__MALI_MEMORY_EXTERNAL_H__	mali_memory_external.h	13;"	d
+__MALI_MEMORY_H__	mali_memory.h	12;"	d
+__MALI_MEMORY_MANAGER_H__	mali_memory_manager.h	12;"	d
+__MALI_MEMORY_OS_ALLOC_H__	mali_memory_os_alloc.h	12;"	d
+__MALI_MEMORY_TYPES_H__	mali_memory_types.h	12;"	d
+__MALI_MEMORY_UMP_BUF_H__	mali_memory_ump.h	12;"	d
+__MALI_OSK_SPECIFIC_H__	mali_osk_specific.h	18;"	d
+__MALI_PROFILING_EVENTS_H__	mali_profiling_events.h	12;"	d
+__MALI_PROFILING_GATOR_API_H__	mali_profiling_gator_api.h	12;"	d
+__MALI_PROFILING_INTERNAL_H__	mali_profiling_internal.h	12;"	d
+__MALI_UKK_WRAPPERS_H__	mali_ukk_wrappers.h	17;"	d
+__MALI_UK_TYPES_H__	mali_uk_types.h	12;"	d
+_mali_blk_item_get_pfn	mali_memory_block_alloc.c	/^unsigned long _mali_blk_item_get_pfn(mali_block_item *item)$/;"	f
+_mali_blk_item_get_phy_addr	mali_memory_block_alloc.c	/^unsigned long _mali_blk_item_get_phy_addr(mali_block_item *item)$/;"	f
+_mali_block_node_add_block_item	mali_memory_block_alloc.c	/^void _mali_block_node_add_block_item(struct mali_block_node *node, mali_block_item *item)$/;"	f
+_mali_block_node_allocate	mali_memory_block_alloc.c	/^struct mali_block_node *_mali_block_node_allocate(mali_page_node_type type)$/;"	f
+_mali_block_node_get_pfn	mali_memory_block_alloc.c	/^unsigned long _mali_block_node_get_pfn(struct mali_block_node *node)$/;"	f
+_mali_block_node_get_phy_addr	mali_memory_block_alloc.c	/^dma_addr_t _mali_block_node_get_phy_addr(struct mali_block_node *node)$/;"	f
+_mali_block_node_get_ref_count	mali_memory_block_alloc.c	/^int _mali_block_node_get_ref_count(struct mali_block_node *node)$/;"	f
+_mali_block_node_ref	mali_memory_block_alloc.c	/^void _mali_block_node_ref(struct mali_block_node *node)$/;"	f
+_mali_block_node_unref	mali_memory_block_alloc.c	/^void _mali_block_node_unref(struct mali_block_node *node)$/;"	f
+_mali_device_debug_power_events	mali_kernel_sysfs.c	/^} _mali_device_debug_power_events;$/;"	t	typeref:enum:__anon1	file:
+_mali_free_allocation_mem	mali_memory_util.c	/^static void _mali_free_allocation_mem(struct kref *kref)$/;"	f	file:
+_mali_internal_profiling_clear	mali_profiling_internal.c	/^_mali_osk_errcode_t _mali_internal_profiling_clear(void)$/;"	f
+_mali_internal_profiling_get_count	mali_profiling_internal.c	/^u32 _mali_internal_profiling_get_count(void)$/;"	f
+_mali_internal_profiling_get_event	mali_profiling_internal.c	/^_mali_osk_errcode_t _mali_internal_profiling_get_event(u32 index, u64 *timestamp, u32 *event_id, u32 data[5])$/;"	f
+_mali_internal_profiling_have_recording	mali_profiling_internal.c	/^mali_bool _mali_internal_profiling_have_recording(void)$/;"	f
+_mali_internal_profiling_init	mali_profiling_internal.c	/^_mali_osk_errcode_t _mali_internal_profiling_init(mali_bool auto_start)$/;"	f
+_mali_internal_profiling_is_recording	mali_profiling_internal.c	/^mali_bool _mali_internal_profiling_is_recording(void)$/;"	f
+_mali_internal_profiling_start	mali_profiling_internal.c	/^_mali_osk_errcode_t _mali_internal_profiling_start(u32 *limit)$/;"	f
+_mali_internal_profiling_stop	mali_profiling_internal.c	/^_mali_osk_errcode_t _mali_internal_profiling_stop(u32 *count)$/;"	f
+_mali_internal_profiling_term	mali_profiling_internal.c	/^void _mali_internal_profiling_term(void)$/;"	f
+_mali_memory_gpu_map_property_set	mali_memory_manager.c	/^static void _mali_memory_gpu_map_property_set(u32 *properties, u32 flags)$/;"	f	file:
+_mali_osk_abort	mali_osk_misc.c	/^void _mali_osk_abort(void)$/;"	f
+_mali_osk_atomic_dec	mali_osk_atomics.c	/^void _mali_osk_atomic_dec(_mali_osk_atomic_t *atom)$/;"	f
+_mali_osk_atomic_dec_return	mali_osk_atomics.c	/^u32 _mali_osk_atomic_dec_return(_mali_osk_atomic_t *atom)$/;"	f
+_mali_osk_atomic_inc	mali_osk_atomics.c	/^void _mali_osk_atomic_inc(_mali_osk_atomic_t *atom)$/;"	f
+_mali_osk_atomic_inc_return	mali_osk_atomics.c	/^u32 _mali_osk_atomic_inc_return(_mali_osk_atomic_t *atom)$/;"	f
+_mali_osk_atomic_init	mali_osk_atomics.c	/^void _mali_osk_atomic_init(_mali_osk_atomic_t *atom, u32 val)$/;"	f
+_mali_osk_atomic_read	mali_osk_atomics.c	/^u32 _mali_osk_atomic_read(_mali_osk_atomic_t *atom)$/;"	f
+_mali_osk_atomic_term	mali_osk_atomics.c	/^void _mali_osk_atomic_term(_mali_osk_atomic_t *atom)$/;"	f
+_mali_osk_atomic_xchg	mali_osk_atomics.c	/^u32 _mali_osk_atomic_xchg(_mali_osk_atomic_t *atom, u32 val)$/;"	f
+_mali_osk_boot_time_get_ns	mali_osk_time.c	/^u64 _mali_osk_boot_time_get_ns(void)$/;"	f
+_mali_osk_break	mali_osk_misc.c	/^void _mali_osk_break(void)$/;"	f
+_mali_osk_cache_ensure_uncached_range_flushed	mali_osk_low_level_mem.c	/^void _mali_osk_cache_ensure_uncached_range_flushed(void *uncached_mapping, u32 offset, u32 size)$/;"	f
+_mali_osk_cache_flushall	mali_osk_low_level_mem.c	/^void _mali_osk_cache_flushall(void)$/;"	f
+_mali_osk_calloc	mali_osk_memory.c	/^void inline *_mali_osk_calloc(u32 n, u32 size)$/;"	f
+_mali_osk_clz	mali_osk_math.c	/^u32 _mali_osk_clz(u32 input)$/;"	f
+_mali_osk_copy_from_user	mali_osk_specific.h	/^MALI_STATIC_INLINE u32 _mali_osk_copy_from_user(void *to, void *from, u32 n)$/;"	f
+_mali_osk_ctxprintf	mali_osk_misc.c	/^void _mali_osk_ctxprintf(_mali_osk_print_ctx *print_ctx, const char *fmt, ...)$/;"	f
+_mali_osk_dbgmsg	mali_osk_misc.c	/^void _mali_osk_dbgmsg(const char *fmt, ...)$/;"	f
+_mali_osk_device_data_get	mali_osk_mali.c	/^_mali_osk_errcode_t _mali_osk_device_data_get(_mali_osk_device_data *data)$/;"	f
+_mali_osk_device_data_pmu_config_get	mali_osk_mali.c	/^void _mali_osk_device_data_pmu_config_get(u16 *domain_config_array, int array_size)$/;"	f
+_mali_osk_fls	mali_osk_math.c	/^u32 _mali_osk_fls(u32 input)$/;"	f
+_mali_osk_free	mali_osk_memory.c	/^void inline _mali_osk_free(void *ptr)$/;"	f
+_mali_osk_get_comm	mali_osk_misc.c	/^char *_mali_osk_get_comm(void)$/;"	f
+_mali_osk_get_pid	mali_osk_misc.c	/^u32 _mali_osk_get_pid(void)$/;"	f
+_mali_osk_get_pmu_switch_delay	mali_osk_mali.c	/^u32 _mali_osk_get_pmu_switch_delay(void)$/;"	f
+_mali_osk_get_tid	mali_osk_misc.c	/^u32 _mali_osk_get_tid(void)$/;"	f
+_mali_osk_in_atomic	mali_osk_specific.h	/^MALI_STATIC_INLINE mali_bool _mali_osk_in_atomic(void)$/;"	f
+_mali_osk_irq_init	mali_osk_irq.c	/^_mali_osk_irq_t *_mali_osk_irq_init(u32 irqnum, _mali_osk_irq_uhandler_t uhandler, void *int_data, _mali_osk_irq_trigger_t trigger_func, _mali_osk_irq_ack_t ack_func, void *probe_data, const char *description)$/;"	f
+_mali_osk_irq_t_struct	mali_osk_irq.c	/^typedef struct _mali_osk_irq_t_struct {$/;"	s	file:
+_mali_osk_irq_term	mali_osk_irq.c	/^void _mali_osk_irq_term(_mali_osk_irq_t *irq)$/;"	f
+_mali_osk_l2_resource_count	mali_osk_mali.c	/^u32 _mali_osk_l2_resource_count(void)$/;"	f
+_mali_osk_lock_debug_s	mali_osk_locks.h	/^	struct _mali_osk_lock_debug_s {$/;"	s
+_mali_osk_lock_get_owner	mali_osk_locks.h	/^	static inline u32 _mali_osk_lock_get_owner(struct _mali_osk_lock_debug_s *lock)$/;"	f
+_mali_osk_locks_debug_add	mali_osk_locks.c	/^void _mali_osk_locks_debug_add(struct _mali_osk_lock_debug_s *checker)$/;"	f
+_mali_osk_locks_debug_add	mali_osk_locks.h	91;"	d
+_mali_osk_locks_debug_init	mali_osk_locks.c	/^void _mali_osk_locks_debug_init(struct _mali_osk_lock_debug_s *checker, _mali_osk_lock_flags_t flags, _mali_osk_lock_order_t order)$/;"	f
+_mali_osk_locks_debug_init	mali_osk_locks.h	90;"	d
+_mali_osk_locks_debug_remove	mali_osk_locks.c	/^void _mali_osk_locks_debug_remove(struct _mali_osk_lock_debug_s *checker)$/;"	f
+_mali_osk_locks_debug_remove	mali_osk_locks.h	92;"	d
+_mali_osk_malloc	mali_osk_memory.c	/^void inline *_mali_osk_malloc(u32 size)$/;"	f
+_mali_osk_mem_barrier	mali_osk_low_level_mem.c	/^void _mali_osk_mem_barrier(void)$/;"	f
+_mali_osk_mem_check_allocated	mali_osk_memory.c	/^mali_bool _mali_osk_mem_check_allocated(u32 max_allocated)$/;"	f
+_mali_osk_mem_ioread32	mali_osk_low_level_mem.c	/^u32 inline _mali_osk_mem_ioread32(volatile mali_io_address addr, u32 offset)$/;"	f
+_mali_osk_mem_iowrite32	mali_osk_low_level_mem.c	/^void inline _mali_osk_mem_iowrite32(volatile mali_io_address addr, u32 offset, u32 val)$/;"	f
+_mali_osk_mem_iowrite32_relaxed	mali_osk_low_level_mem.c	/^void inline _mali_osk_mem_iowrite32_relaxed(volatile mali_io_address addr, u32 offset, u32 val)$/;"	f
+_mali_osk_mem_mapioregion	mali_osk_low_level_mem.c	/^mali_io_address _mali_osk_mem_mapioregion(uintptr_t phys, u32 size, const char *description)$/;"	f
+_mali_osk_mem_reqregion	mali_osk_low_level_mem.c	/^_mali_osk_errcode_t inline _mali_osk_mem_reqregion(uintptr_t phys, u32 size, const char *description)$/;"	f
+_mali_osk_mem_unmapioregion	mali_osk_low_level_mem.c	/^void _mali_osk_mem_unmapioregion(uintptr_t phys, u32 size, mali_io_address virt)$/;"	f
+_mali_osk_mem_unreqregion	mali_osk_low_level_mem.c	/^void inline _mali_osk_mem_unreqregion(uintptr_t phys, u32 size)$/;"	f
+_mali_osk_mem_write_safe	mali_osk_low_level_mem.c	/^u32 _mali_osk_mem_write_safe(void __user *dest, const void __user *src, u32 size)$/;"	f
+_mali_osk_memcpy	mali_osk_memory.c	/^void inline *_mali_osk_memcpy(void *dst, const void *src, u32  len)$/;"	f
+_mali_osk_memset	mali_osk_memory.c	/^void inline *_mali_osk_memset(void *s, u32 c, u32 n)$/;"	f
+_mali_osk_mutex_init	mali_osk_locks.h	/^	static inline _mali_osk_mutex_t *_mali_osk_mutex_init(_mali_osk_lock_flags_t flags, _mali_osk_lock_order_t order)$/;"	f
+_mali_osk_mutex_rw_init	mali_osk_locks.h	/^	static inline _mali_osk_mutex_rw_t *_mali_osk_mutex_rw_init(_mali_osk_lock_flags_t flags, _mali_osk_lock_order_t order)$/;"	f
+_mali_osk_mutex_rw_s	mali_osk_locks.h	/^	struct _mali_osk_mutex_rw_s {$/;"	s
+_mali_osk_mutex_rw_signal	mali_osk_locks.h	/^	static inline void  _mali_osk_mutex_rw_signal(_mali_osk_mutex_rw_t *lock, _mali_osk_lock_mode_t mode)$/;"	f
+_mali_osk_mutex_rw_term	mali_osk_locks.h	/^	static inline void _mali_osk_mutex_rw_term(_mali_osk_mutex_rw_t *lock)$/;"	f
+_mali_osk_mutex_rw_wait	mali_osk_locks.h	/^	static inline void _mali_osk_mutex_rw_wait(_mali_osk_mutex_rw_t *lock, _mali_osk_lock_mode_t mode)$/;"	f
+_mali_osk_mutex_s	mali_osk_locks.h	/^	struct _mali_osk_mutex_s {$/;"	s
+_mali_osk_mutex_signal	mali_osk_locks.h	/^	static inline void _mali_osk_mutex_signal(_mali_osk_mutex_t *lock)$/;"	f
+_mali_osk_mutex_signal_interruptible	mali_osk_locks.h	/^	static inline void _mali_osk_mutex_signal_interruptible(_mali_osk_mutex_t *lock)$/;"	f
+_mali_osk_mutex_term	mali_osk_locks.h	/^	static inline void _mali_osk_mutex_term(_mali_osk_mutex_t *lock)$/;"	f
+_mali_osk_mutex_wait	mali_osk_locks.h	/^	static inline void _mali_osk_mutex_wait(_mali_osk_mutex_t *lock)$/;"	f
+_mali_osk_mutex_wait_interruptible	mali_osk_locks.h	/^	static inline _mali_osk_errcode_t _mali_osk_mutex_wait_interruptible(_mali_osk_mutex_t *lock)$/;"	f
+_mali_osk_notification_create	mali_osk_notification.c	/^_mali_osk_notification_t *_mali_osk_notification_create(u32 type, u32 size)$/;"	f
+_mali_osk_notification_delete	mali_osk_notification.c	/^void _mali_osk_notification_delete(_mali_osk_notification_t *object)$/;"	f
+_mali_osk_notification_queue_dequeue	mali_osk_notification.c	/^_mali_osk_errcode_t _mali_osk_notification_queue_dequeue(_mali_osk_notification_queue_t *queue, _mali_osk_notification_t **result)$/;"	f
+_mali_osk_notification_queue_init	mali_osk_notification.c	/^_mali_osk_notification_queue_t *_mali_osk_notification_queue_init(void)$/;"	f
+_mali_osk_notification_queue_receive	mali_osk_notification.c	/^_mali_osk_errcode_t _mali_osk_notification_queue_receive(_mali_osk_notification_queue_t *queue, _mali_osk_notification_t **result)$/;"	f
+_mali_osk_notification_queue_send	mali_osk_notification.c	/^void _mali_osk_notification_queue_send(_mali_osk_notification_queue_t *queue, _mali_osk_notification_t *object)$/;"	f
+_mali_osk_notification_queue_t_struct	mali_osk_notification.c	/^struct _mali_osk_notification_queue_t_struct {$/;"	s	file:
+_mali_osk_notification_queue_term	mali_osk_notification.c	/^void _mali_osk_notification_queue_term(_mali_osk_notification_queue_t *queue)$/;"	f
+_mali_osk_notification_wrapper_t	mali_osk_notification.c	/^} _mali_osk_notification_wrapper_t;$/;"	t	typeref:struct:_mali_osk_notification_wrapper_t_struct	file:
+_mali_osk_notification_wrapper_t_struct	mali_osk_notification.c	/^typedef struct _mali_osk_notification_wrapper_t_struct {$/;"	s	file:
+_mali_osk_pm_dev_barrier	mali_osk_pm.c	/^void _mali_osk_pm_dev_barrier(void)$/;"	f
+_mali_osk_pm_dev_ref_get_async	mali_osk_pm.c	/^_mali_osk_errcode_t _mali_osk_pm_dev_ref_get_async(void)$/;"	f
+_mali_osk_pm_dev_ref_get_sync	mali_osk_pm.c	/^_mali_osk_errcode_t _mali_osk_pm_dev_ref_get_sync(void)$/;"	f
+_mali_osk_pm_dev_ref_put	mali_osk_pm.c	/^void _mali_osk_pm_dev_ref_put(void)$/;"	f
+_mali_osk_profiling_init	mali_osk_profiling.c	/^_mali_osk_errcode_t _mali_osk_profiling_init(mali_bool auto_start)$/;"	f
+_mali_osk_profiling_memory_usage_get	mali_osk_profiling.c	/^void _mali_osk_profiling_memory_usage_get(u32 *memory_usage)$/;"	f
+_mali_osk_profiling_report_sw_counters	mali_osk_profiling.c	/^void _mali_osk_profiling_report_sw_counters(u32 *counters)$/;"	f
+_mali_osk_profiling_term	mali_osk_profiling.c	/^void _mali_osk_profiling_term(void)$/;"	f
+_mali_osk_put_user	mali_osk_specific.h	70;"	d
+_mali_osk_resource_base_address	mali_osk_mali.c	/^uintptr_t _mali_osk_resource_base_address(void)$/;"	f
+_mali_osk_resource_find	mali_osk_mali.c	/^_mali_osk_errcode_t _mali_osk_resource_find(u32 addr, _mali_osk_resource_t *res)$/;"	f
+_mali_osk_resource_initialize	mali_osk_mali.c	/^_mali_osk_errcode_t _mali_osk_resource_initialize(void)$/;"	f
+_mali_osk_shared_interrupts	mali_osk_mali.c	/^mali_bool _mali_osk_shared_interrupts(void)$/;"	f
+_mali_osk_snprintf	mali_osk_misc.c	/^u32 _mali_osk_snprintf(char *buf, u32 size, const char *fmt, ...)$/;"	f
+_mali_osk_spinlock_init	mali_osk_locks.h	/^	static inline _mali_osk_spinlock_t *_mali_osk_spinlock_init(_mali_osk_lock_flags_t flags, _mali_osk_lock_order_t order)$/;"	f
+_mali_osk_spinlock_irq_init	mali_osk_locks.h	/^	static inline _mali_osk_spinlock_irq_t *_mali_osk_spinlock_irq_init(_mali_osk_lock_flags_t flags, _mali_osk_lock_order_t order)$/;"	f
+_mali_osk_spinlock_irq_lock	mali_osk_locks.h	/^	static inline void _mali_osk_spinlock_irq_lock(_mali_osk_spinlock_irq_t *lock)$/;"	f
+_mali_osk_spinlock_irq_s	mali_osk_locks.h	/^	struct _mali_osk_spinlock_irq_s {$/;"	s
+_mali_osk_spinlock_irq_term	mali_osk_locks.h	/^	static inline void _mali_osk_spinlock_irq_term(_mali_osk_spinlock_irq_t *lock)$/;"	f
+_mali_osk_spinlock_irq_unlock	mali_osk_locks.h	/^	static inline void _mali_osk_spinlock_irq_unlock(_mali_osk_spinlock_irq_t *lock)$/;"	f
+_mali_osk_spinlock_lock	mali_osk_locks.h	/^	static inline void  _mali_osk_spinlock_lock(_mali_osk_spinlock_t *lock)$/;"	f
+_mali_osk_spinlock_s	mali_osk_locks.h	/^	struct _mali_osk_spinlock_s {$/;"	s
+_mali_osk_spinlock_term	mali_osk_locks.h	/^	static inline void _mali_osk_spinlock_term(_mali_osk_spinlock_t *lock)$/;"	f
+_mali_osk_spinlock_unlock	mali_osk_locks.h	/^	static inline void _mali_osk_spinlock_unlock(_mali_osk_spinlock_t *lock)$/;"	f
+_mali_osk_time_after_eq	mali_osk_time.c	/^mali_bool _mali_osk_time_after_eq(unsigned long ticka, unsigned long tickb)$/;"	f
+_mali_osk_time_get_ns	mali_osk_time.c	/^u64 _mali_osk_time_get_ns(void)$/;"	f
+_mali_osk_time_mstoticks	mali_osk_time.c	/^unsigned long _mali_osk_time_mstoticks(u32 ms)$/;"	f
+_mali_osk_time_tickcount	mali_osk_time.c	/^unsigned long _mali_osk_time_tickcount(void)$/;"	f
+_mali_osk_time_tickstoms	mali_osk_time.c	/^u32 _mali_osk_time_tickstoms(unsigned long ticks)$/;"	f
+_mali_osk_time_ubusydelay	mali_osk_time.c	/^void _mali_osk_time_ubusydelay(u32 usecs)$/;"	f
+_mali_osk_timer_add	mali_osk_timers.c	/^void _mali_osk_timer_add(_mali_osk_timer_t *tim, unsigned long ticks_to_expire)$/;"	f
+_mali_osk_timer_del	mali_osk_timers.c	/^void _mali_osk_timer_del(_mali_osk_timer_t *tim)$/;"	f
+_mali_osk_timer_del_async	mali_osk_timers.c	/^void _mali_osk_timer_del_async(_mali_osk_timer_t *tim)$/;"	f
+_mali_osk_timer_init	mali_osk_timers.c	/^_mali_osk_timer_t *_mali_osk_timer_init(void)$/;"	f
+_mali_osk_timer_mod	mali_osk_timers.c	/^void _mali_osk_timer_mod(_mali_osk_timer_t *tim, unsigned long ticks_to_expire)$/;"	f
+_mali_osk_timer_pending	mali_osk_timers.c	/^mali_bool _mali_osk_timer_pending(_mali_osk_timer_t *tim)$/;"	f
+_mali_osk_timer_setcallback	mali_osk_timers.c	/^void _mali_osk_timer_setcallback(_mali_osk_timer_t *tim, _mali_osk_timer_callback_t callback, void *data)$/;"	f
+_mali_osk_timer_t_struct	mali_osk_timers.c	/^struct _mali_osk_timer_t_struct {$/;"	s	file:
+_mali_osk_timer_term	mali_osk_timers.c	/^void _mali_osk_timer_term(_mali_osk_timer_t *tim)$/;"	f
+_mali_osk_valloc	mali_osk_memory.c	/^void inline *_mali_osk_valloc(u32 size)$/;"	f
+_mali_osk_vfree	mali_osk_memory.c	/^void inline _mali_osk_vfree(void *ptr)$/;"	f
+_mali_osk_wait_queue_init	mali_osk_wait_queue.c	/^_mali_osk_wait_queue_t *_mali_osk_wait_queue_init(void)$/;"	f
+_mali_osk_wait_queue_t_struct	mali_osk_wait_queue.c	/^struct _mali_osk_wait_queue_t_struct {$/;"	s	file:
+_mali_osk_wait_queue_term	mali_osk_wait_queue.c	/^void _mali_osk_wait_queue_term(_mali_osk_wait_queue_t *queue)$/;"	f
+_mali_osk_wait_queue_wait_event	mali_osk_wait_queue.c	/^void _mali_osk_wait_queue_wait_event(_mali_osk_wait_queue_t *queue, mali_bool(*condition)(void *), void *data)$/;"	f
+_mali_osk_wait_queue_wait_event_timeout	mali_osk_wait_queue.c	/^void _mali_osk_wait_queue_wait_event_timeout(_mali_osk_wait_queue_t *queue, mali_bool(*condition)(void *), void *data, u32 timeout)$/;"	f
+_mali_osk_wait_queue_wake_up	mali_osk_wait_queue.c	/^void _mali_osk_wait_queue_wake_up(_mali_osk_wait_queue_t *queue)$/;"	f
+_mali_osk_wq_create_work	mali_osk_wq.c	/^_mali_osk_wq_work_t *_mali_osk_wq_create_work(_mali_osk_wq_work_handler_t handler, void *data)$/;"	f
+_mali_osk_wq_create_work_high_pri	mali_osk_wq.c	/^_mali_osk_wq_work_t *_mali_osk_wq_create_work_high_pri(_mali_osk_wq_work_handler_t handler, void *data)$/;"	f
+_mali_osk_wq_delayed_cancel_work_async	mali_osk_wq.c	/^void _mali_osk_wq_delayed_cancel_work_async(_mali_osk_wq_delayed_work_t *work)$/;"	f
+_mali_osk_wq_delayed_cancel_work_sync	mali_osk_wq.c	/^void _mali_osk_wq_delayed_cancel_work_sync(_mali_osk_wq_delayed_work_t *work)$/;"	f
+_mali_osk_wq_delayed_create_work	mali_osk_wq.c	/^mali_osk_wq_delayed_work_object_t *_mali_osk_wq_delayed_create_work(_mali_osk_wq_work_handler_t handler, void *data)$/;"	f
+_mali_osk_wq_delayed_delete_work_nonflush	mali_osk_wq.c	/^void _mali_osk_wq_delayed_delete_work_nonflush(_mali_osk_wq_delayed_work_t *work)$/;"	f
+_mali_osk_wq_delayed_schedule_work	mali_osk_wq.c	/^void _mali_osk_wq_delayed_schedule_work(_mali_osk_wq_delayed_work_t *work, u32 delay)$/;"	f
+_mali_osk_wq_delayed_work_func	mali_osk_wq.c	/^static void _mali_osk_wq_delayed_work_func(struct work_struct *work)$/;"	f	file:
+_mali_osk_wq_delayed_work_s	mali_osk_wq.c	/^typedef struct _mali_osk_wq_delayed_work_s {$/;"	s	file:
+_mali_osk_wq_delete_work	mali_osk_wq.c	/^void _mali_osk_wq_delete_work(_mali_osk_wq_work_t *work)$/;"	f
+_mali_osk_wq_delete_work_nonflush	mali_osk_wq.c	/^void _mali_osk_wq_delete_work_nonflush(_mali_osk_wq_work_t *work)$/;"	f
+_mali_osk_wq_flush	mali_osk_wq.c	/^void _mali_osk_wq_flush(void)$/;"	f
+_mali_osk_wq_init	mali_osk_wq.c	/^_mali_osk_errcode_t _mali_osk_wq_init(void)$/;"	f
+_mali_osk_wq_schedule_work	mali_osk_wq.c	/^void _mali_osk_wq_schedule_work(_mali_osk_wq_work_t *work)$/;"	f
+_mali_osk_wq_schedule_work_high_pri	mali_osk_wq.c	/^void _mali_osk_wq_schedule_work_high_pri(_mali_osk_wq_work_t *work)$/;"	f
+_mali_osk_wq_term	mali_osk_wq.c	/^void _mali_osk_wq_term(void)$/;"	f
+_mali_osk_wq_work_func	mali_osk_wq.c	/^static void _mali_osk_wq_work_func(struct work_struct *work)$/;"	f	file:
+_mali_osk_wq_work_s	mali_osk_wq.c	/^typedef struct _mali_osk_wq_work_s {$/;"	s	file:
+_mali_osk_write_mem_barrier	mali_osk_low_level_mem.c	/^void _mali_osk_write_mem_barrier(void)$/;"	f
+_mali_profiling_control	mali_osk_profiling.c	/^EXPORT_SYMBOL(_mali_profiling_control);$/;"	v
+_mali_profiling_control	mali_osk_profiling.c	/^void _mali_profiling_control(u32 action, u32 value)$/;"	f
+_mali_profiling_get_api_version	mali_osk_profiling.c	/^EXPORT_SYMBOL(_mali_profiling_get_api_version);$/;"	v
+_mali_profiling_get_api_version	mali_osk_profiling.c	/^u32 _mali_profiling_get_api_version(void)$/;"	f
+_mali_profiling_get_l2_counters	mali_osk_profiling.c	/^EXPORT_SYMBOL(_mali_profiling_get_l2_counters);$/;"	v
+_mali_profiling_get_l2_counters	mali_osk_profiling.c	/^u32 _mali_profiling_get_l2_counters(_mali_profiling_l2_counter_values *values)$/;"	f
+_mali_profiling_get_mali_version	mali_osk_profiling.c	/^EXPORT_SYMBOL(_mali_profiling_get_mali_version);$/;"	v
+_mali_profiling_get_mali_version	mali_osk_profiling.c	/^void _mali_profiling_get_mali_version(struct _mali_profiling_mali_version *values)$/;"	f
+_mali_profiling_set_event	mali_osk_profiling.c	/^EXPORT_SYMBOL(_mali_profiling_set_event);$/;"	v
+_mali_profiling_set_event	mali_osk_profiling.c	/^int _mali_profiling_set_event(u32 counter_id, s32 event_id)$/;"	f
+_mali_ukk_mem_allocate	mali_memory_manager.c	/^_mali_osk_errcode_t _mali_ukk_mem_allocate(_mali_uk_alloc_mem_s *args)$/;"	f
+_mali_ukk_mem_bind	mali_memory_manager.c	/^_mali_osk_errcode_t _mali_ukk_mem_bind(_mali_uk_bind_mem_s *args)$/;"	f
+_mali_ukk_mem_cow	mali_memory_manager.c	/^_mali_osk_errcode_t _mali_ukk_mem_cow(_mali_uk_cow_mem_s *args)$/;"	f
+_mali_ukk_mem_free	mali_memory_manager.c	/^_mali_osk_errcode_t _mali_ukk_mem_free(_mali_uk_free_mem_s *args)$/;"	f
+_mali_ukk_mem_unbind	mali_memory_manager.c	/^_mali_osk_errcode_t _mali_ukk_mem_unbind(_mali_uk_unbind_mem_s *args)$/;"	f
+_mali_ukk_mem_write_safe	mali_osk_low_level_mem.c	/^_mali_osk_errcode_t _mali_ukk_mem_write_safe(_mali_uk_mem_write_safe_s *args)$/;"	f
+_mali_ukk_profiling_add_event	mali_osk_profiling.c	/^_mali_osk_errcode_t _mali_ukk_profiling_add_event(_mali_uk_profiling_add_event_s *args)$/;"	f
+_mali_ukk_profiling_memory_usage_get	mali_osk_profiling.c	/^_mali_osk_errcode_t _mali_ukk_profiling_memory_usage_get(_mali_uk_profiling_memory_usage_get_s *args)$/;"	f
+_mali_ukk_report_memory_usage	mali_memory.c	/^u32 _mali_ukk_report_memory_usage(void)$/;"	f
+_mali_ukk_report_total_memory_size	mali_memory.c	/^u32 _mali_ukk_report_total_memory_size(void)$/;"	f
+_mali_ukk_sw_counters_report	mali_osk_profiling.c	/^_mali_osk_errcode_t _mali_ukk_sw_counters_report(_mali_uk_sw_counters_report_s *args)$/;"	f
+_mali_vma_offset_add_rb	mali_memory_virtual.c	/^static inline void _mali_vma_offset_add_rb(struct mali_allocation_manager *mgr,$/;"	f	file:
+ack_func	mali_osk_irq.c	/^	_mali_osk_irq_ack_t ack_func;$/;"	m	struct:test_interrupt_data	file:
+add_event	mali_profiling_internal.c	/^static inline void add_event(u32 event_id, u32 data0, u32 data1, u32 data2, u32 data3, u32 data4)$/;"	f	file:
+add_lock_to_log_and_check	mali_osk_locks.c	/^static mali_bool add_lock_to_log_and_check(struct _mali_osk_lock_debug_s *lock, uint32_t tid)$/;"	f	file:
+addr	mali_memory_types.h	/^	mali_address_t addr; \/* Virtual Mali address *\/$/;"	m	struct:mali_mem_virt_mali_mapping
+addr	mali_memory_types.h	/^	void __user *addr;$/;"	m	struct:mali_mem_virt_cpu_mapping
+allocated	mali_memory_types.h	/^	unsigned allocated : 1;$/;"	m	struct:mali_mm_node
+allocated_pages	mali_memory_os_alloc.c	/^	atomic_t allocated_pages;$/;"	m	struct:mali_mem_os_allocator	file:
+allocation_limit	mali_memory_os_alloc.c	/^	size_t allocation_limit;$/;"	m	struct:mali_mem_os_allocator	file:
+allocation_mgr_rb	mali_memory_manager.h	/^	struct rb_root allocation_mgr_rb;$/;"	m	struct:mali_allocation_manager	typeref:struct:mali_allocation_manager::rb_root
+attachment	mali_memory_dma_buf.h	/^	struct dma_buf_attachment *attachment;$/;"	m	struct:mali_dma_buf_attachment	typeref:struct:mali_dma_buf_attachment::dma_buf_attachment
+attachment	mali_memory_types.h	/^	struct mali_dma_buf_attachment *attachment;$/;"	m	struct:mali_mem_dma_buf	typeref:struct:mali_mem_dma_buf::mali_dma_buf_attachment
+aw_deinit	mali_platform.c	/^static void aw_deinit(struct platform_device *device)$/;"	f	file:
+aw_dvfs_queue_work	mali_platform.c	/^static void aw_dvfs_queue_work(struct work_struct *work)$/;"	f	file:
+aw_init	mali_platform.c	/^static void aw_init(struct platform_device *device)$/;"	f	file:
+aw_resume	mali_platform.c	/^void aw_resume(void)$/;"	f
+aw_suspend	mali_platform.c	/^void aw_suspend(void)$/;"	f
+backend_handle	mali_memory_types.h	/^	s32 backend_handle; \/* idr for mem_backend *\/$/;"	m	struct:mali_mem_allocation
+base_dt_ids	mali_kernel_linux.c	/^static struct of_device_id base_dt_ids[] = {$/;"	v	typeref:struct:of_device_id	file:
+blk_it	mali_memory_types.h	/^	mali_block_item *blk_it; \/*pointer to block item*\/$/;"	m	struct:mali_block_node
+block_allocator_allocation	mali_memory_types.h	/^typedef struct block_allocator_allocation {$/;"	s
+block_allocator_allocation	mali_memory_types.h	/^} block_allocator_allocation;$/;"	t	typeref:struct:block_allocator_allocation
+block_mem	mali_memory_types.h	/^		mali_mem_block_mem block_mem; \/**< MALI_MEM_BLOCK *\/$/;"	m	union:mali_mem_allocation::__anon2
+block_mem	mali_memory_types.h	/^		mali_mem_block_mem block_mem; \/**< MALI_MEM_BLOCK *\/$/;"	m	union:mali_mem_backend::__anon3
+buf	mali_memory_dma_buf.h	/^	struct dma_buf *buf;$/;"	m	struct:mali_dma_buf_attachment	typeref:struct:mali_dma_buf_attachment::dma_buf
+checker	mali_osk_locks.h	/^		struct _mali_osk_lock_debug_s checker;$/;"	m	struct:_mali_osk_mutex_rw_s	typeref:struct:_mali_osk_mutex_rw_s::_mali_osk_lock_debug_s
+checker	mali_osk_locks.h	/^		struct _mali_osk_lock_debug_s checker;$/;"	m	struct:_mali_osk_mutex_s	typeref:struct:_mali_osk_mutex_s::_mali_osk_lock_debug_s
+checker	mali_osk_locks.h	/^		struct _mali_osk_lock_debug_s checker;$/;"	m	struct:_mali_osk_spinlock_irq_s	typeref:struct:_mali_osk_spinlock_irq_s::_mali_osk_lock_debug_s
+checker	mali_osk_locks.h	/^		struct _mali_osk_lock_debug_s checker;$/;"	m	struct:_mali_osk_spinlock_s	typeref:struct:_mali_osk_spinlock_s::_mali_osk_lock_debug_s
+count	mali_memory_os_alloc.c	/^	size_t count;$/;"	m	struct:__anon4	file:
+count	mali_memory_types.h	/^	u32 count;               \/**< number of pages *\/$/;"	m	struct:mali_mem_cow
+count	mali_memory_types.h	/^	u32 count;$/;"	m	struct:mali_mem_block_mem
+count	mali_memory_types.h	/^	u32 count;$/;"	m	struct:mali_mem_os_mem
+cow_mem	mali_memory_types.h	/^		mali_mem_cow cow_mem;$/;"	m	union:mali_mem_backend::__anon3
+cpu_mapping	mali_memory_types.h	/^	mali_mem_virt_cpu_mapping cpu_mapping; \/**< CPU mapping *\/$/;"	m	struct:mali_mem_allocation
+data	mali_osk_irq.c	/^	void *data;$/;"	m	struct:_mali_osk_irq_t_struct	file:
+data	mali_osk_notification.c	/^	_mali_osk_notification_t data;   \/**< Notification data *\/$/;"	m	struct:_mali_osk_notification_wrapper_t_struct	file:
+data	mali_osk_wq.c	/^	void *data;$/;"	m	struct:_mali_osk_wq_delayed_work_s	file:
+data	mali_osk_wq.c	/^	void *data;$/;"	m	struct:_mali_osk_wq_work_s	file:
+data	mali_profiling_internal.c	/^	u32 data[5];$/;"	m	struct:mali_profiling_entry	file:
+disable_gpu_clk	mali_platform.c	/^void disable_gpu_clk(void)$/;"	f
+disable_gpu_power	mali_platform.c	/^static void disable_gpu_power(void)$/;"	f	file:
+dma_buf	mali_memory_types.h	/^		mali_mem_dma_buf dma_buf;     \/**< MALI_MEM_DMA_BUF *\/$/;"	m	union:mali_mem_allocation::__anon2
+dma_buf	mali_memory_types.h	/^		mali_mem_dma_buf dma_buf;     \/**< MALI_MEM_DMA_BUF *\/$/;"	m	union:mali_mem_backend::__anon3
+dump_debugfs_open	mali_kernel_sysfs.c	/^static int dump_debugfs_open(struct inode *inode, struct file *file)$/;"	f	file:
+dump_debugfs_show	mali_kernel_sysfs.c	/^static int dump_debugfs_show(struct seq_file *s, void *private_data)$/;"	f	file:
+dump_fops	mali_kernel_sysfs.c	/^static const struct file_operations dump_fops = {$/;"	v	typeref:struct:file_operations	file:
+dump_lock_tracking_list	mali_osk_locks.c	/^static void dump_lock_tracking_list(void)$/;"	f	file:
+dvfs_change	mali_platform.c	/^void dvfs_change(u8 level)$/;"	f
+enable_gpu_clk	mali_platform.c	/^void enable_gpu_clk(void)$/;"	f
+enable_gpu_power	mali_platform.c	/^static void enable_gpu_power(void)$/;"	f	file:
+event_id	mali_profiling_internal.c	/^	u32 event_id;$/;"	m	struct:mali_profiling_entry	file:
+ext_mem	mali_memory_types.h	/^		mali_mem_external ext_mem;    \/**< MALI_MEM_EXTERNAL *\/$/;"	m	union:mali_mem_allocation::__anon2
+ext_mem	mali_memory_types.h	/^		mali_mem_external ext_mem;    \/**< MALI_MEM_EXTERNAL *\/$/;"	m	union:mali_mem_backend::__anon3
+flag	mali_sync.c	/^	struct mali_sync_flag *flag;$/;"	m	struct:mali_sync_pt	typeref:struct:mali_sync_pt::mali_sync_flag	file:
+flags	mali_memory_types.h	/^	u32 flags;                         \/**< Flags for this allocation *\/$/;"	m	struct:mali_mem_allocation
+flags	mali_memory_types.h	/^	u32 flags;                         \/**< Flags for this allocation *\/$/;"	m	struct:mali_mem_backend
+flags	mali_osk_locks.h	/^		unsigned long flags;$/;"	m	struct:_mali_osk_spinlock_irq_s
+free	mali_memory_block_alloc.h	/^	struct list_head free; \/*free list of mali_memory_node*\/$/;"	m	struct:mali_block_allocator	typeref:struct:mali_block_allocator::list_head
+free_num	mali_memory_block_alloc.h	/^	atomic_t free_num; \/*number of free pages*\/$/;"	m	struct:mali_block_allocator
+get_api_version_v2_wrapper	mali_ukk_core.c	/^int get_api_version_v2_wrapper(struct mali_session_data *session_data, _mali_uk_get_api_version_v2_s __user *uargs)$/;"	f
+get_api_version_wrapper	mali_ukk_core.c	/^int get_api_version_wrapper(struct mali_session_data *session_data, _mali_uk_get_api_version_s __user *uargs)$/;"	f
+get_gpu_clk	mali_platform.c	/^static void get_gpu_clk(void)$/;"	f	file:
+get_str_from_fex	mali_platform.c	/^static char *get_str_from_fex(char *main_key, char *second_key)$/;"	f	file:
+get_u32_from_fex	mali_platform.c	/^static int get_u32_from_fex(char *main_key, char *second_key)$/;"	f	file:
+get_user_settings_wrapper	mali_ukk_core.c	/^int get_user_settings_wrapper(struct mali_session_data *session_data, _mali_uk_get_user_settings_s __user *uargs)$/;"	f
+get_value	mali_kernel_sysfs.c	/^static int get_value(char *cmd, char *buf, int cmd_size, int total_size)$/;"	f	file:
+gp_get_core_version_wrapper	mali_ukk_gp.c	/^int gp_get_core_version_wrapper(struct mali_session_data *session_data, _mali_uk_get_gp_core_version_s __user *uargs)$/;"	f
+gp_get_number_of_cores_wrapper	mali_ukk_gp.c	/^int gp_get_number_of_cores_wrapper(struct mali_session_data *session_data, _mali_uk_get_gp_number_of_cores_s __user *uargs)$/;"	f
+gp_start_job_wrapper	mali_ukk_gp.c	/^int gp_start_job_wrapper(struct mali_session_data *session_data, _mali_uk_gp_start_job_s __user *uargs)$/;"	f
+gp_suspend_response_wrapper	mali_ukk_gp.c	/^int gp_suspend_response_wrapper(struct mali_session_data *session_data, _mali_uk_gp_suspend_response_s __user *uargs)$/;"	f
+gpu_thermal_cool	mali_platform.c	/^EXPORT_SYMBOL(gpu_thermal_cool);$/;"	v
+gpu_thermal_cool	mali_platform.c	/^int gpu_thermal_cool(int freq \/* MHz *\/)$/;"	f
+group_enabled_fops	mali_kernel_sysfs.c	/^static const struct file_operations group_enabled_fops = {$/;"	v	typeref:struct:file_operations	file:
+group_enabled_read	mali_kernel_sysfs.c	/^static ssize_t group_enabled_read(struct file *filp, char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+group_enabled_write	mali_kernel_sysfs.c	/^static ssize_t group_enabled_write(struct file *filp, const char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+handle	mali_memory_types.h	/^	ump_dd_handle handle;$/;"	m	struct:mali_mem_ump
+handler	mali_osk_wq.c	/^	_mali_osk_wq_work_handler_t handler;$/;"	m	struct:_mali_osk_wq_delayed_work_s	file:
+handler	mali_osk_wq.c	/^	_mali_osk_wq_work_handler_t handler;$/;"	m	struct:_mali_osk_wq_work_s	file:
+head	mali_memory_manager.h	/^	struct list_head head;$/;"	m	struct:mali_allocation_manager	typeref:struct:mali_allocation_manager::list_head
+head	mali_osk_notification.c	/^	struct list_head head; \/**< List of notifications waiting to be picked up *\/$/;"	m	struct:_mali_osk_notification_queue_t_struct	typeref:struct:_mali_osk_notification_queue_t_struct::list_head	file:
+high_pri	mali_osk_wq.c	/^	mali_bool high_pri;$/;"	m	struct:_mali_osk_wq_work_s	file:
+hw_core_base_addr_fops	mali_kernel_sysfs.c	/^static const struct file_operations hw_core_base_addr_fops = {$/;"	v	typeref:struct:file_operations	file:
+hw_core_base_addr_read	mali_kernel_sysfs.c	/^static ssize_t hw_core_base_addr_read(struct file *filp, char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+id	mali_memory_types.h	/^	int id;                            \/**< ID in the descriptor map for this allocation *\/$/;"	m	struct:mali_mem_allocation
+info	mali_memory_types.h	/^	struct block_allocator *info;$/;"	m	struct:block_allocator_allocation	typeref:struct:block_allocator_allocation::block_allocator
+interrupt_received	mali_osk_irq.c	/^	mali_bool interrupt_received;$/;"	m	struct:test_interrupt_data	file:
+irq_handler_func_t	mali_osk_irq.c	/^typedef irqreturn_t (*irq_handler_func_t)(int, void *, struct pt_regs *);$/;"	t	file:
+irq_handler_upper_half	mali_osk_irq.c	/^static irqreturn_t irq_handler_upper_half(int port_name, void *dev_id)   \/* , struct pt_regs *regs*\/$/;"	f	file:
+irqnum	mali_osk_irq.c	/^	u32 irqnum;$/;"	m	struct:_mali_osk_irq_t_struct	file:
+is_first_resume	mali_kernel_linux.c	/^static int is_first_resume = 1;$/;"	v	file:
+is_mapped	mali_memory_dma_buf.h	/^	mali_bool is_mapped;$/;"	m	struct:mali_dma_buf_attachment
+items	mali_memory_block_alloc.h	/^	mali_block_item *items; \/* information for each block item*\/$/;"	m	struct:mali_block_allocator
+l2_all_counter_src0_fops	mali_kernel_sysfs.c	/^static const struct file_operations l2_all_counter_src0_fops = {$/;"	v	typeref:struct:file_operations	file:
+l2_all_counter_src0_write	mali_kernel_sysfs.c	/^static ssize_t l2_all_counter_src0_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_all_counter_src1_fops	mali_kernel_sysfs.c	/^static const struct file_operations l2_all_counter_src1_fops = {$/;"	v	typeref:struct:file_operations	file:
+l2_all_counter_src1_write	mali_kernel_sysfs.c	/^static ssize_t l2_all_counter_src1_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_all_counter_srcx_write	mali_kernel_sysfs.c	/^static ssize_t l2_all_counter_srcx_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos, u32 src_id)$/;"	f	file:
+l2_l2x_counter_src0_fops	mali_kernel_sysfs.c	/^static const struct file_operations l2_l2x_counter_src0_fops = {$/;"	v	typeref:struct:file_operations	file:
+l2_l2x_counter_src0_read	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_src0_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_l2x_counter_src0_write	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_src0_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_l2x_counter_src1_fops	mali_kernel_sysfs.c	/^static const struct file_operations l2_l2x_counter_src1_fops = {$/;"	v	typeref:struct:file_operations	file:
+l2_l2x_counter_src1_read	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_src1_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_l2x_counter_src1_write	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_src1_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_l2x_counter_srcx_read	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_srcx_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos, u32 src_id)$/;"	f	file:
+l2_l2x_counter_srcx_write	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_srcx_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos, u32 src_id)$/;"	f	file:
+l2_l2x_counter_val0_fops	mali_kernel_sysfs.c	/^static const struct file_operations l2_l2x_counter_val0_fops = {$/;"	v	typeref:struct:file_operations	file:
+l2_l2x_counter_val0_read	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_val0_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_l2x_counter_val1_fops	mali_kernel_sysfs.c	/^static const struct file_operations l2_l2x_counter_val1_fops = {$/;"	v	typeref:struct:file_operations	file:
+l2_l2x_counter_val1_read	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_val1_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+l2_l2x_counter_valx_read	mali_kernel_sysfs.c	/^static ssize_t l2_l2x_counter_valx_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos, u32 src_id)$/;"	f	file:
+last_allocated	mali_memory_types.h	/^	struct block_info *last_allocated;$/;"	m	struct:block_allocator_allocation	typeref:struct:block_allocator_allocation::block_info
+list	mali_memory_types.h	/^	struct list_head list;$/;"	m	struct:mali_block_node	typeref:struct:mali_block_node::list_head
+list	mali_memory_types.h	/^	struct list_head list;$/;"	m	struct:mali_mem_allocation	typeref:struct:mali_mem_allocation::list_head
+list	mali_memory_types.h	/^	struct list_head list;$/;"	m	struct:mali_page_node	typeref:struct:mali_page_node::list_head
+list	mali_osk_notification.c	/^	struct list_head list;           \/**< Internal linked list variable *\/$/;"	m	struct:_mali_osk_notification_wrapper_t_struct	typeref:struct:_mali_osk_notification_wrapper_t_struct::list_head	file:
+list_mutex	mali_memory_manager.h	/^	struct mutex list_mutex;$/;"	m	struct:mali_allocation_manager	typeref:struct:mali_allocation_manager::mutex
+lock	mali_memory_os_alloc.c	/^	spinlock_t lock;$/;"	m	struct:__anon4	file:
+lock	mali_profiling_internal.c	/^static _mali_osk_mutex_t *lock = NULL;$/;"	v	file:
+lock_lookup_list	mali_osk_locks.c	/^static struct _mali_osk_lock_debug_s *lock_lookup_list;$/;"	v	typeref:struct:_mali_osk_lock_debug_s	file:
+lock_order_to_string	mali_osk_locks.c	/^static const char *const lock_order_to_string(_mali_osk_lock_order_t order)$/;"	f	file:
+mali_address_t	mali_memory_types.h	/^typedef u32 mali_address_t;$/;"	t
+mali_allocation	mali_memory_types.h	/^	mali_mem_allocation *mali_allocation;$/;"	m	struct:mali_mem_backend
+mali_allocation_manager	mali_memory_manager.h	/^struct mali_allocation_manager {$/;"	s
+mali_allocation_nr	mali_memory_manager.h	/^	u32 mali_allocation_nr;$/;"	m	struct:mali_allocation_manager
+mali_allocation_ref	mali_memory_util.c	/^void mali_allocation_ref(struct mali_mem_allocation *alloc)$/;"	f
+mali_allocation_unref	mali_memory_util.c	/^void mali_allocation_unref(struct mali_mem_allocation **alloc)$/;"	f
+mali_backend_idr	mali_memory_manager.c	/^struct idr mali_backend_idr;$/;"	v	typeref:struct:idr
+mali_block_allocator	mali_memory_block_alloc.h	/^typedef struct mali_block_allocator {$/;"	s
+mali_block_allocator	mali_memory_block_alloc.h	/^} mali_block_allocator;$/;"	t	typeref:struct:mali_block_allocator
+mali_block_item	mali_memory_types.h	/^typedef struct mali_block_item {$/;"	s
+mali_block_item	mali_memory_types.h	/^} mali_block_item;$/;"	t	typeref:struct:mali_block_item
+mali_block_node	mali_memory_types.h	/^typedef struct mali_block_node {$/;"	s
+mali_block_node	mali_memory_types.h	/^} mali_block_node;$/;"	t	typeref:struct:mali_block_node
+mali_cpu_clock_last_value	mali_kernel_linux.c	/^static u32 mali_cpu_clock_last_value[8] = {0,};$/;"	v	file:
+mali_debug_level	mali_kernel_linux.c	/^int mali_debug_level = 2;$/;"	v
+mali_debugfs_dir	mali_kernel_sysfs.c	/^static struct dentry *mali_debugfs_dir = NULL;$/;"	v	typeref:struct:dentry	file:
+mali_dev_ext_pm_ops	mali_kernel_linux.c	/^struct pm_ext_ops mali_dev_ext_pm_ops = {$/;"	v	typeref:struct:pm_ext_ops
+mali_dev_name	mali_kernel_linux.c	/^static char mali_dev_name[] = "mali"; \/* should be const, but the functions we call requires non-cost *\/$/;"	v	file:
+mali_dev_pause	mali_device_pause_resume.c	/^EXPORT_SYMBOL(mali_dev_pause);$/;"	v
+mali_dev_pause	mali_device_pause_resume.c	/^void mali_dev_pause(void)$/;"	f
+mali_dev_pm_ops	mali_kernel_linux.c	/^static const struct dev_pm_ops mali_dev_pm_ops = {$/;"	v	typeref:struct:dev_pm_ops	file:
+mali_dev_resume	mali_device_pause_resume.c	/^EXPORT_SYMBOL(mali_dev_resume);$/;"	v
+mali_dev_resume	mali_device_pause_resume.c	/^void mali_dev_resume(void)$/;"	f
+mali_dma_addr	mali_osk_specific.h	/^typedef u32 mali_dma_addr;$/;"	t
+mali_dma_buf_attachment	mali_memory_dma_buf.h	/^struct mali_dma_buf_attachment {$/;"	s
+mali_dma_buf_get_size	mali_memory_dma_buf.c	/^int mali_dma_buf_get_size(struct mali_session_data *session, _mali_uk_dma_buf_get_size_s __user *user_arg)$/;"	f
+mali_dma_buf_map	mali_memory_dma_buf.c	/^static int mali_dma_buf_map(mali_mem_backend *mem_backend)$/;"	f	file:
+mali_dma_buf_map_job	mali_memory_dma_buf.c	/^int mali_dma_buf_map_job(struct mali_pp_job *job)$/;"	f
+mali_dma_buf_unmap	mali_memory_dma_buf.c	/^static void mali_dma_buf_unmap(mali_mem_allocation *alloc, struct mali_dma_buf_attachment *mem)$/;"	f	file:
+mali_dma_buf_unmap_job	mali_memory_dma_buf.c	/^void mali_dma_buf_unmap_job(struct mali_pp_job *job)$/;"	f
+mali_dma_pool	mali_osk_specific.h	/^typedef struct dma_pool *mali_dma_pool;$/;"	t	typeref:struct:dma_pool
+mali_driver_resume_scheduler	mali_kernel_linux.c	/^static int mali_driver_resume_scheduler(struct device *dev)$/;"	f	file:
+mali_driver_runtime_idle	mali_kernel_linux.c	/^static int mali_driver_runtime_idle(struct device *dev)$/;"	f	file:
+mali_driver_runtime_resume	mali_kernel_linux.c	/^static int mali_driver_runtime_resume(struct device *dev)$/;"	f	file:
+mali_driver_runtime_suspend	mali_kernel_linux.c	/^static int mali_driver_runtime_suspend(struct device *dev)$/;"	f	file:
+mali_driver_suspend_scheduler	mali_kernel_linux.c	/^static int mali_driver_suspend_scheduler(struct device *dev)$/;"	f	file:
+mali_fops	mali_kernel_linux.c	/^struct file_operations mali_fops = {$/;"	v	typeref:struct:file_operations
+mali_free_session_allocations	mali_memory_util.c	/^void mali_free_session_allocations(struct mali_session_data *session)$/;"	f
+mali_get_cpu_cyclecount	mali_osk_specific.h	/^static inline unsigned int mali_get_cpu_cyclecount(void)$/;"	f
+mali_get_user_setting	mali_kernel_linux.c	/^EXPORT_SYMBOL(mali_get_user_setting);$/;"	v
+mali_gpu_clk	mali_kernel_linux.c	/^static struct mali_gpu_clk_item mali_gpu_clk[2];$/;"	v	typeref:struct:mali_gpu_clk_item	file:
+mali_gpu_data	mali_platform.c	/^static struct mali_gpu_device_data mali_gpu_data = {$/;"	v	typeref:struct:mali_gpu_device_data	file:
+mali_gpu_device	mali_platform.c	/^static struct platform_device mali_gpu_device = {$/;"	v	typeref:struct:platform_device	file:
+mali_gpu_resources	mali_platform.c	/^static struct resource mali_gpu_resources[] = {$/;"	v	typeref:struct:resource	file:
+mali_gpu_utilization_callback	mali_platform.c	/^static void mali_gpu_utilization_callback(struct mali_gpu_utilization_data *data)$/;"	f	file:
+mali_hw_counter	mali_kernel_linux.c	/^EXPORT_TRACEPOINT_SYMBOL_GPL(mali_hw_counter);$/;"	v
+mali_idr_mutex	mali_memory_manager.c	/^struct mutex mali_idr_mutex;$/;"	v	typeref:struct:mutex
+mali_init_cpu_clock_timer_func	mali_kernel_linux.c	/^static void mali_init_cpu_clock_timer_func(unsigned long data)$/;"	f	file:
+mali_init_cpu_clock_timers	mali_kernel_linux.c	/^static struct timer_list mali_init_cpu_clock_timers[8];$/;"	v	typeref:struct:timer_list	file:
+mali_init_cpu_time_counters	mali_kernel_linux.c	/^void mali_init_cpu_time_counters(int reset, int enable_divide_by_64)$/;"	f
+mali_init_cpu_time_counters_on_all_cpus	mali_kernel_linux.c	/^void mali_init_cpu_time_counters_on_all_cpus(int print_only)$/;"	f
+mali_ioctl	mali_kernel_linux.c	/^static long mali_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)$/;"	f	file:
+mali_kernel_vm_ops	mali_memory.c	/^static struct vm_operations_struct mali_kernel_vm_ops = {$/;"	v	typeref:struct:vm_operations_struct	file:
+mali_mapping	mali_memory_types.h	/^	mali_mem_virt_mali_mapping mali_mapping; \/**< Mali mapping *\/$/;"	m	struct:mali_mem_allocation
+mali_mem_allocation	mali_memory_types.h	/^typedef struct mali_mem_allocation {$/;"	s
+mali_mem_allocation	mali_memory_types.h	/^} mali_mem_allocation;$/;"	t	typeref:struct:mali_mem_allocation
+mali_mem_allocation_struct_create	mali_memory_manager.c	/^static mali_mem_allocation *mali_mem_allocation_struct_create(struct mali_session_data *session)$/;"	f	file:
+mali_mem_allocation_struct_destory	mali_memory_manager.c	/^void  mali_mem_allocation_struct_destory(mali_mem_allocation *alloc)$/;"	f
+mali_mem_backend	mali_memory_types.h	/^typedef struct mali_mem_backend {$/;"	s
+mali_mem_backend	mali_memory_types.h	/^} mali_mem_backend;$/;"	t	typeref:struct:mali_mem_backend
+mali_mem_backend_struct_create	mali_memory_manager.c	/^int mali_mem_backend_struct_create(mali_mem_backend **backend, u32 psize)$/;"	f
+mali_mem_backend_struct_destory	mali_memory_manager.c	/^static void mali_mem_backend_struct_destory(mali_mem_backend **backend, s32 backend_handle)$/;"	f	file:
+mali_mem_block_add_ref	mali_memory_block_alloc.c	/^u32 mali_mem_block_add_ref(mali_block_node *node)$/;"	f
+mali_mem_block_alloc	mali_memory_block_alloc.c	/^int mali_mem_block_alloc(mali_mem_block_mem *block_mem, u32 size)$/;"	f
+mali_mem_block_allocator_create	mali_memory_block_alloc.c	/^static mali_block_allocator *mali_mem_block_allocator_create(u32 base_address, u32 size)$/;"	f	file:
+mali_mem_block_allocator_destroy	mali_memory_block_alloc.c	/^void mali_mem_block_allocator_destroy(void)$/;"	f
+mali_mem_block_allocator_stat	mali_memory_block_alloc.c	/^u32 mali_mem_block_allocator_stat(void)$/;"	f
+mali_mem_block_cpu_map	mali_memory_block_alloc.c	/^int mali_mem_block_cpu_map(mali_mem_backend *mem_bkend, struct vm_area_struct *vma)$/;"	f
+mali_mem_block_dec_ref	mali_memory_block_alloc.c	/^u32 mali_mem_block_dec_ref(mali_block_node *node)$/;"	f
+mali_mem_block_free	mali_memory_block_alloc.c	/^void mali_mem_block_free(mali_mem_block_mem *block_mem)$/;"	f
+mali_mem_block_free_list	mali_memory_block_alloc.c	/^void mali_mem_block_free_list(struct list_head *list)$/;"	f
+mali_mem_block_free_node	mali_memory_block_alloc.c	/^void mali_mem_block_free_node(struct mali_block_node *node)$/;"	f
+mali_mem_block_get_ref_count	mali_memory_block_alloc.c	/^u32 mali_mem_block_get_ref_count(mali_block_node *node)$/;"	f
+mali_mem_block_gobal_allocator	mali_memory_block_alloc.c	/^static mali_block_allocator *mali_mem_block_gobal_allocator = NULL;$/;"	v	file:
+mali_mem_block_mali_map	mali_memory_block_alloc.c	/^int mali_mem_block_mali_map(mali_mem_block_mem *block_mem, struct mali_session_data *session, u32 vaddr, u32 props)$/;"	f
+mali_mem_block_mali_unmap	mali_memory_block_alloc.c	/^void mali_mem_block_mali_unmap(mali_mem_allocation *alloc)$/;"	f
+mali_mem_block_mem	mali_memory_types.h	/^typedef struct mali_mem_block_mem {$/;"	s
+mali_mem_block_mem	mali_memory_types.h	/^} mali_mem_block_mem;$/;"	t	typeref:struct:mali_mem_block_mem
+mali_mem_block_release	mali_memory_block_alloc.c	/^void mali_mem_block_release(mali_mem_backend *mem_bkend)$/;"	f
+mali_mem_cow	mali_memory_types.h	/^typedef struct mali_mem_cow {$/;"	s
+mali_mem_cow	mali_memory_types.h	/^} mali_mem_cow;$/;"	t	typeref:struct:mali_mem_cow
+mali_mem_dma_buf	mali_memory_types.h	/^typedef struct mali_mem_dma_buf {$/;"	s
+mali_mem_dma_buf	mali_memory_types.h	/^} mali_mem_dma_buf;$/;"	t	typeref:struct:mali_mem_dma_buf
+mali_mem_dma_buf_release	mali_memory_dma_buf.c	/^void mali_mem_dma_buf_release(mali_mem_backend *mem_backend)$/;"	f
+mali_mem_external	mali_memory_types.h	/^typedef struct mali_mem_external {$/;"	s
+mali_mem_external	mali_memory_types.h	/^} mali_mem_external;$/;"	t	typeref:struct:mali_mem_external
+mali_mem_external_release	mali_memory_external.c	/^void mali_mem_external_release(mali_mem_backend *mem_backend)$/;"	f
+mali_mem_mali_map_free	mali_memory.c	/^void mali_mem_mali_map_free(struct mali_session_data *session, u32 size, mali_address_t vaddr, u32 flags)$/;"	f
+mali_mem_mali_map_prepare	mali_memory.c	/^_mali_osk_errcode_t mali_mem_mali_map_prepare(mali_mem_allocation *descriptor)$/;"	f
+mali_mem_os_alloc_pages	mali_memory_os_alloc.c	/^int mali_mem_os_alloc_pages(mali_mem_os_mem *os_mem, u32 size)$/;"	f
+mali_mem_os_allocator	mali_memory_os_alloc.c	/^static struct mali_mem_os_allocator {$/;"	s	file:
+mali_mem_os_allocator	mali_memory_os_alloc.c	/^} mali_mem_os_allocator = {$/;"	v	typeref:struct:mali_mem_os_allocator	file:
+mali_mem_os_cpu_map	mali_memory_os_alloc.c	/^int mali_mem_os_cpu_map(mali_mem_os_mem *os_mem, struct vm_area_struct *vma)$/;"	f
+mali_mem_os_free	mali_memory_os_alloc.c	/^void mali_mem_os_free(mali_mem_os_mem *os_mem)$/;"	f
+mali_mem_os_free_page	mali_memory_os_alloc.c	/^static void mali_mem_os_free_page(struct mali_page_node *m_page)$/;"	f	file:
+mali_mem_os_get_table_page	mali_memory_os_alloc.c	/^_mali_osk_errcode_t mali_mem_os_get_table_page(mali_dma_addr *phys, mali_io_address *mapping)$/;"	f
+mali_mem_os_init	mali_memory_os_alloc.c	/^_mali_osk_errcode_t mali_mem_os_init(void)$/;"	f
+mali_mem_os_mali_map	mali_memory_os_alloc.c	/^void mali_mem_os_mali_map(mali_mem_backend *mem_bkend, u32 vaddr, u32 props)$/;"	f
+mali_mem_os_mali_unmap	mali_memory_os_alloc.c	/^static void mali_mem_os_mali_unmap(mali_mem_allocation *alloc)$/;"	f	file:
+mali_mem_os_mem	mali_memory_types.h	/^typedef struct mali_mem_os_mem {$/;"	s
+mali_mem_os_mem	mali_memory_types.h	/^} mali_mem_os_mem;$/;"	t	typeref:struct:mali_mem_os_mem
+mali_mem_os_page_table_pool_free	mali_memory_os_alloc.c	/^static void mali_mem_os_page_table_pool_free(size_t nr_to_free)$/;"	f	file:
+mali_mem_os_release	mali_memory_os_alloc.c	/^void mali_mem_os_release(mali_mem_backend *mem_bkend)$/;"	f
+mali_mem_os_release_table_page	mali_memory_os_alloc.c	/^void mali_mem_os_release_table_page(mali_dma_addr phys, void *virt)$/;"	f
+mali_mem_os_shrink	mali_memory_os_alloc.c	/^static int mali_mem_os_shrink(int nr_to_scan, gfp_t gfp_mask)$/;"	f	file:
+mali_mem_os_shrink_count	mali_memory_os_alloc.c	/^static unsigned long mali_mem_os_shrink_count(struct shrinker *shrinker, struct shrink_control *sc)$/;"	f	file:
+mali_mem_os_stat	mali_memory_os_alloc.c	/^u32 mali_mem_os_stat(void)$/;"	f
+mali_mem_os_term	mali_memory_os_alloc.c	/^void mali_mem_os_term(void)$/;"	f
+mali_mem_os_trim_page_table_page_pool	mali_memory_os_alloc.c	/^static void mali_mem_os_trim_page_table_page_pool(void)$/;"	f	file:
+mali_mem_os_trim_pool	mali_memory_os_alloc.c	/^static void mali_mem_os_trim_pool(struct work_struct *data)$/;"	f	file:
+mali_mem_page_table_page_pool	mali_memory_os_alloc.c	/^} mali_mem_page_table_page_pool = {$/;"	v	typeref:struct:__anon4	file:
+mali_mem_type	mali_memory_types.h	/^typedef enum mali_mem_type {$/;"	g
+mali_mem_type	mali_memory_types.h	/^} mali_mem_type;$/;"	t	typeref:enum:mali_mem_type
+mali_mem_ump	mali_memory_types.h	/^typedef struct mali_mem_ump {$/;"	s
+mali_mem_ump	mali_memory_types.h	/^} mali_mem_ump;$/;"	t	typeref:struct:mali_mem_ump
+mali_mem_ump_map	mali_memory_ump.c	/^static int mali_mem_ump_map(mali_mem_backend *mem_backend)$/;"	f	file:
+mali_mem_ump_release	mali_memory_ump.c	/^void mali_mem_ump_release(mali_mem_backend *mem_backend)$/;"	f
+mali_mem_ump_unmap	mali_memory_ump.c	/^static void mali_mem_ump_unmap(mali_mem_allocation *alloc)$/;"	f	file:
+mali_mem_virt_cpu_mapping	mali_memory_types.h	/^typedef struct mali_mem_virt_cpu_mapping {$/;"	s
+mali_mem_virt_cpu_mapping	mali_memory_types.h	/^} mali_mem_virt_cpu_mapping;$/;"	t	typeref:struct:mali_mem_virt_cpu_mapping
+mali_mem_virt_mali_mapping	mali_memory_types.h	/^typedef struct mali_mem_virt_mali_mapping {$/;"	s
+mali_mem_virt_mali_mapping	mali_memory_types.h	/^} mali_mem_virt_mali_mapping;$/;"	t	typeref:struct:mali_mem_virt_mali_mapping
+mali_mem_vma_close	mali_memory.c	/^static void mali_mem_vma_close(struct vm_area_struct *vma)$/;"	f	file:
+mali_mem_vma_fault	mali_memory.c	/^static int mali_mem_vma_fault(struct vm_area_struct *vma, struct vm_fault *vmf)$/;"	f	file:
+mali_mem_vma_open	mali_memory.c	/^static void mali_mem_vma_open(struct vm_area_struct *vma)$/;"	f	file:
+mali_memory_bind_dma_buf	mali_memory_dma_buf.c	/^_mali_osk_errcode_t mali_memory_bind_dma_buf(mali_mem_allocation *alloc,$/;"	f
+mali_memory_bind_ext_mem	mali_memory_external.c	/^_mali_osk_errcode_t mali_memory_bind_ext_mem(mali_mem_allocation *alloc,$/;"	f
+mali_memory_bind_ump_buf	mali_memory_ump.c	/^int mali_memory_bind_ump_buf(mali_mem_allocation *alloc, mali_mem_backend *mem_backend, u32  secure_id, u32 flags)$/;"	f
+mali_memory_core_resource_dedicated_memory	mali_memory_block_alloc.c	/^_mali_osk_errcode_t mali_memory_core_resource_dedicated_memory(u32 start, u32 size)$/;"	f
+mali_memory_core_resource_os_memory	mali_memory_os_alloc.c	/^_mali_osk_errcode_t mali_memory_core_resource_os_memory(u32 size)$/;"	f
+mali_memory_have_dedicated_memory	mali_memory_block_alloc.c	/^mali_bool mali_memory_have_dedicated_memory(void)$/;"	f
+mali_memory_initialize	mali_memory.c	/^_mali_osk_errcode_t mali_memory_initialize(void)$/;"	f
+mali_memory_manager_init	mali_memory_manager.c	/^int mali_memory_manager_init(struct mali_allocation_manager *mgr)$/;"	f
+mali_memory_manager_uninit	mali_memory_manager.c	/^void mali_memory_manager_uninit(struct mali_allocation_manager *mgr)$/;"	f
+mali_memory_session_begin	mali_memory.c	/^_mali_osk_errcode_t mali_memory_session_begin(struct mali_session_data *session_data)$/;"	f
+mali_memory_session_end	mali_memory.c	/^void mali_memory_session_end(struct mali_session_data *session)$/;"	f
+mali_memory_terminate	mali_memory.c	/^void mali_memory_terminate(void)$/;"	f
+mali_memory_unbind_dma_buf	mali_memory_dma_buf.c	/^void mali_memory_unbind_dma_buf(mali_mem_backend *mem_backend)$/;"	f
+mali_memory_unbind_ext_mem	mali_memory_external.c	/^void mali_memory_unbind_ext_mem(mali_mem_backend *mem_backend)$/;"	f
+mali_memory_unbind_ump_buf	mali_memory_ump.c	/^int mali_memory_unbind_ump_buf(mali_mem_backend *mem_backend)$/;"	f
+mali_miscdevice	mali_kernel_linux.c	/^static struct miscdevice mali_miscdevice = { 0, };$/;"	v	typeref:struct:miscdevice	file:
+mali_miscdevice_register	mali_kernel_linux.c	/^static int mali_miscdevice_register(struct platform_device *pdev)$/;"	f	file:
+mali_miscdevice_unregister	mali_kernel_linux.c	/^static void mali_miscdevice_unregister(void)$/;"	f	file:
+mali_mm_node	mali_memory_types.h	/^typedef struct mali_mm_node {$/;"	s
+mali_mm_node	mali_memory_types.h	/^} mali_mm_node;$/;"	t	typeref:struct:mali_mm_node
+mali_mmap	mali_memory.c	/^int mali_mmap(struct file *filp, struct vm_area_struct *vma)$/;"	f
+mali_mmu_get_table_page	mali_memory.h	/^mali_mmu_get_table_page(mali_dma_addr *table_page, mali_io_address *mapping)$/;"	f
+mali_mmu_release_table_page	mali_memory.h	/^mali_mmu_release_table_page(mali_dma_addr phys, void *virt)$/;"	f
+mali_module_exit	mali_kernel_linux.c	/^module_exit(mali_module_exit);$/;"	v
+mali_module_exit	mali_kernel_linux.c	/^void mali_module_exit(void)$/;"	f
+mali_module_init	mali_kernel_linux.c	/^int mali_module_init(void)$/;"	f
+mali_module_init	mali_kernel_linux.c	/^module_init(mali_module_init);$/;"	v
+mali_open	mali_kernel_linux.c	/^static int mali_open(struct inode *inode, struct file *filp)$/;"	f	file:
+mali_osk_irq_object_t	mali_osk_irq.c	/^} mali_osk_irq_object_t;$/;"	t	typeref:struct:_mali_osk_irq_t_struct	file:
+mali_osk_resource_bank	mali_osk_mali.c	/^static _mali_osk_resource_t mali_osk_resource_bank[MALI_OSK_MAX_RESOURCE_NUMBER] = {$/;"	v	file:
+mali_osk_wq_delayed_work_object_t	mali_osk_wq.c	/^} mali_osk_wq_delayed_work_object_t;$/;"	t	typeref:struct:_mali_osk_wq_delayed_work_s	file:
+mali_osk_wq_work_object_t	mali_osk_wq.c	/^} mali_osk_wq_work_object_t;$/;"	t	typeref:struct:_mali_osk_wq_work_s	file:
+mali_page_node	mali_memory_types.h	/^typedef struct mali_page_node {$/;"	s
+mali_page_node	mali_memory_types.h	/^} mali_page_node;$/;"	t	typeref:struct:mali_page_node
+mali_page_node_type	mali_memory_types.h	/^typedef enum mali_page_node_type {$/;"	g
+mali_page_node_type	mali_memory_types.h	/^} mali_page_node_type;$/;"	t	typeref:enum:mali_page_node_type
+mali_perf_set_num_pp_cores	mali_pmu_power_up_down.c	/^EXPORT_SYMBOL(mali_perf_set_num_pp_cores);$/;"	v
+mali_perf_set_num_pp_cores	mali_pmu_power_up_down.c	/^int mali_perf_set_num_pp_cores(unsigned int num_cores)$/;"	f
+mali_platform_device	mali_kernel_linux.c	/^struct platform_device *mali_platform_device = NULL;$/;"	v	typeref:struct:platform_device
+mali_platform_device_deinit	mali_platform.c	/^int mali_platform_device_deinit(struct platform_device *device)$/;"	f
+mali_platform_device_init	mali_platform.c	/^int mali_platform_device_init(struct platform_device *device)$/;"	f
+mali_platform_driver	mali_kernel_linux.c	/^static struct platform_driver mali_platform_driver = {$/;"	v	typeref:struct:platform_driver	file:
+mali_power_events	mali_kernel_sysfs.c	/^static const char *const mali_power_events[_MALI_MAX_EVENTS] = {$/;"	v	file:
+mali_print_cpu_clock_timer_func	mali_kernel_linux.c	/^static void mali_print_cpu_clock_timer_func(unsigned long data)$/;"	f	file:
+mali_probe	mali_kernel_linux.c	/^static int mali_probe(struct platform_device *pdev)$/;"	f	file:
+mali_profiling_entry	mali_profiling_internal.c	/^typedef struct mali_profiling_entry {$/;"	s	file:
+mali_profiling_entry	mali_profiling_internal.c	/^} mali_profiling_entry;$/;"	t	typeref:struct:mali_profiling_entry	file:
+mali_profiling_state	mali_profiling_internal.c	/^typedef enum mali_profiling_state {$/;"	g	file:
+mali_profiling_state	mali_profiling_internal.c	/^} mali_profiling_state;$/;"	t	typeref:enum:mali_profiling_state	file:
+mali_release	mali_kernel_linux.c	/^static int mali_release(struct inode *inode, struct file *filp)$/;"	f	file:
+mali_remove	mali_kernel_linux.c	/^static int mali_remove(struct platform_device *pdev)$/;"	f	file:
+mali_seq_internal_state_fops	mali_kernel_sysfs.c	/^static const struct file_operations mali_seq_internal_state_fops = {$/;"	v	typeref:struct:file_operations	file:
+mali_seq_internal_state_open	mali_kernel_sysfs.c	/^static int mali_seq_internal_state_open(struct inode *inode, struct file *file)$/;"	f	file:
+mali_seq_internal_state_show	mali_kernel_sysfs.c	/^static int mali_seq_internal_state_show(struct seq_file *seq_file, void *v)$/;"	f	file:
+mali_set_user_setting	mali_kernel_linux.c	/^EXPORT_SYMBOL(mali_set_user_setting);$/;"	v
+mali_sw_counters	mali_kernel_linux.c	/^EXPORT_TRACEPOINT_SYMBOL_GPL(mali_sw_counters);$/;"	v
+mali_sync_fence_fd_alloc	mali_sync.c	/^s32 mali_sync_fence_fd_alloc(struct sync_fence *sync_fence)$/;"	f
+mali_sync_fence_merge	mali_sync.c	/^struct sync_fence *mali_sync_fence_merge(struct sync_fence *sync_fence1, struct sync_fence *sync_fence2)$/;"	f
+mali_sync_flag	mali_sync.c	/^struct mali_sync_flag {$/;"	s	file:
+mali_sync_flag_create	mali_sync.c	/^struct mali_sync_flag *mali_sync_flag_create(struct sync_timeline *sync_tl, mali_timeline_point point)$/;"	f
+mali_sync_flag_create_fence	mali_sync.c	/^struct sync_fence *mali_sync_flag_create_fence(struct mali_sync_flag *flag)$/;"	f
+mali_sync_flag_create_pt	mali_sync.c	/^static struct sync_pt *mali_sync_flag_create_pt(struct mali_sync_flag *flag)$/;"	f	file:
+mali_sync_flag_free	mali_sync.c	/^static void mali_sync_flag_free(struct kref *ref)$/;"	f	file:
+mali_sync_flag_get	mali_sync.c	/^void mali_sync_flag_get(struct mali_sync_flag *flag)$/;"	f
+mali_sync_flag_put	mali_sync.c	/^void mali_sync_flag_put(struct mali_sync_flag *flag)$/;"	f
+mali_sync_flag_signal	mali_sync.c	/^void mali_sync_flag_signal(struct mali_sync_flag *flag, int error)$/;"	f
+mali_sync_pt	mali_sync.c	/^struct mali_sync_pt {$/;"	s	file:
+mali_sync_timeline_container	mali_sync.c	/^struct mali_sync_timeline_container {$/;"	s	file:
+mali_sync_timeline_create	mali_sync.c	/^struct sync_timeline *mali_sync_timeline_create(struct mali_timeline *timeline, const char *name)$/;"	f
+mali_sync_timeline_create_signaled_fence	mali_sync.c	/^struct sync_fence *mali_sync_timeline_create_signaled_fence(struct sync_timeline *sync_tl)$/;"	f
+mali_sync_timeline_is_ours	mali_sync.c	/^mali_bool mali_sync_timeline_is_ours(struct sync_timeline *sync_tl)$/;"	f
+mali_sysfs_register	mali_kernel_sysfs.c	/^int mali_sysfs_register(const char *mali_dev_name)$/;"	f
+mali_sysfs_register	mali_kernel_sysfs.c	/^int mali_sysfs_register(struct mali_dev *device, dev_t dev, const char *mali_dev_name)$/;"	f
+mali_sysfs_unregister	mali_kernel_sysfs.c	/^int mali_sysfs_unregister(void)$/;"	f
+mali_sysfs_user_settings_register	mali_kernel_sysfs.c	/^static int mali_sysfs_user_settings_register(void)$/;"	f	file:
+mali_timeline_event	mali_kernel_linux.c	/^EXPORT_TRACEPOINT_SYMBOL_GPL(mali_timeline_event);$/;"	v
+mali_timeline_ops	mali_sync.c	/^static struct sync_timeline_ops mali_timeline_ops = {$/;"	v	typeref:struct:sync_timeline_ops	file:
+mali_vma_node	mali_memory_types.h	/^	struct mali_vma_node mali_vma_node;$/;"	m	struct:mali_mem_allocation	typeref:struct:mali_mem_allocation::mali_vma_node
+mali_vma_node	mali_memory_types.h	/^typedef struct mali_vma_node {$/;"	s
+mali_vma_node	mali_memory_types.h	/^} mali_vma_node;$/;"	t	typeref:struct:mali_vma_node
+mali_vma_offset_add	mali_memory_virtual.c	/^int mali_vma_offset_add(struct mali_allocation_manager *mgr,$/;"	f
+mali_vma_offset_remove	mali_memory_virtual.c	/^void mali_vma_offset_remove(struct mali_allocation_manager *mgr,$/;"	f
+mali_vma_offset_search	mali_memory_virtual.c	/^struct mali_vma_node *mali_vma_offset_search(struct mali_allocation_manager *mgr,$/;"	f
+mali_wq_high	mali_osk_wq.c	/^static struct workqueue_struct *mali_wq_high = NULL;$/;"	v	typeref:struct:workqueue_struct	file:
+mali_wq_normal	mali_osk_wq.c	/^static struct workqueue_struct *mali_wq_normal = NULL;$/;"	v	typeref:struct:workqueue_struct	file:
+map_errcode	mali_kernel_linux.c	/^int map_errcode(_mali_osk_errcode_t err)$/;"	f
+map_lock	mali_memory_dma_buf.h	/^	struct mutex map_lock;$/;"	m	struct:mali_dma_buf_attachment	typeref:struct:mali_dma_buf_attachment::mutex
+map_ref	mali_memory_dma_buf.h	/^	int map_ref;$/;"	m	struct:mali_dma_buf_attachment
+mapping	mali_memory_os_alloc.c	/^		mali_io_address mapping;$/;"	m	struct:__anon4::__anon5	file:
+mapping_length	mali_memory_types.h	/^	u32 mapping_length;$/;"	m	struct:block_allocator_allocation
+mem_alloc_wrapper	mali_ukk_mem.c	/^int mem_alloc_wrapper(struct mali_session_data *session_data, _mali_uk_alloc_mem_s __user *uargs)$/;"	f
+mem_bind_wrapper	mali_ukk_mem.c	/^int mem_bind_wrapper(struct mali_session_data *session_data, _mali_uk_bind_mem_s __user *uargs)$/;"	f
+mem_dump_mmu_page_table_wrapper	mali_ukk_mem.c	/^int mem_dump_mmu_page_table_wrapper(struct mali_session_data *session_data, _mali_uk_dump_mmu_page_table_s __user *uargs)$/;"	f
+mem_free_wrapper	mali_ukk_mem.c	/^int mem_free_wrapper(struct mali_session_data *session_data, _mali_uk_free_mem_s __user *uargs)$/;"	f
+mem_query_mmu_page_table_dump_size_wrapper	mali_ukk_mem.c	/^int mem_query_mmu_page_table_dump_size_wrapper(struct mali_session_data *session_data, _mali_uk_query_mmu_page_table_dump_size_s __user *uargs)$/;"	f
+mem_unbind_wrapper	mali_ukk_mem.c	/^int mem_unbind_wrapper(struct mali_session_data *session_data, _mali_uk_unbind_mem_s __user *uargs)$/;"	f
+mem_write_safe_wrapper	mali_ukk_mem.c	/^int mem_write_safe_wrapper(struct mali_session_data *session_data, _mali_uk_mem_write_safe_s __user *uargs)$/;"	f
+memory_debugfs_open	mali_kernel_sysfs.c	/^static int memory_debugfs_open(struct inode *inode, struct file *file)$/;"	f	file:
+memory_debugfs_show	mali_kernel_sysfs.c	/^static int memory_debugfs_show(struct seq_file *s, void *private_data)$/;"	f	file:
+memory_usage_fops	mali_kernel_sysfs.c	/^static const struct file_operations memory_usage_fops = {$/;"	v	typeref:struct:file_operations	file:
+mode	mali_osk_locks.h	/^		_mali_osk_lock_mode_t mode;$/;"	m	struct:_mali_osk_mutex_rw_s
+mutex	mali_osk_locks.h	/^		struct mutex mutex;$/;"	m	struct:_mali_osk_mutex_s	typeref:struct:_mali_osk_mutex_s::mutex
+mutex	mali_osk_notification.c	/^	spinlock_t mutex; \/**< Mutex protecting the list *\/$/;"	m	struct:_mali_osk_notification_queue_t_struct	file:
+next	mali_osk_locks.h	/^		struct _mali_osk_lock_debug_s *next;$/;"	m	struct:_mali_osk_lock_debug_s	typeref:struct:_mali_osk_lock_debug_s::_mali_osk_lock_debug_s
+open_copy_private_data	mali_kernel_sysfs.c	/^static int open_copy_private_data(struct inode *inode, struct file *filp)$/;"	f	file:
+order	mali_osk_locks.h	/^		_mali_osk_lock_order_t order;$/;"	m	struct:_mali_osk_lock_debug_s
+orig_flags	mali_osk_locks.h	/^		_mali_osk_lock_flags_t orig_flags;$/;"	m	struct:_mali_osk_lock_debug_s
+os_mem	mali_memory_types.h	/^		mali_mem_os_mem os_mem;       \/**< MALI_MEM_OS *\/$/;"	m	union:mali_mem_allocation::__anon2
+os_mem	mali_memory_types.h	/^		mali_mem_os_mem os_mem;       \/**< MALI_MEM_OS *\/$/;"	m	union:mali_mem_backend::__anon3
+owner	mali_osk_locks.h	/^		u32 owner;$/;"	m	struct:_mali_osk_lock_debug_s
+page	mali_memory_os_alloc.c	/^	} page[MALI_MEM_OS_PAGE_TABLE_PAGE_POOL_SIZE];$/;"	m	struct:__anon4	typeref:struct:__anon4::__anon5	file:
+page	mali_memory_types.h	/^	struct page *page;$/;"	m	struct:mali_page_node	typeref:struct:mali_page_node::page
+pages	mali_memory_types.h	/^	struct list_head pages;  \/**< all pages for this cow backend allocation,$/;"	m	struct:mali_mem_cow	typeref:struct:mali_mem_cow::list_head
+pages	mali_memory_types.h	/^	struct list_head pages;$/;"	m	struct:mali_mem_os_mem	typeref:struct:mali_mem_os_mem::list_head
+parse_sysconfig_fex	mali_platform.c	/^static void parse_sysconfig_fex(void)$/;"	f	file:
+pfns	mali_memory_types.h	/^	struct list_head pfns;$/;"	m	struct:mali_mem_block_mem	typeref:struct:mali_mem_block_mem::list_head
+phy_addr	mali_memory_types.h	/^	unsigned long phy_addr;$/;"	m	struct:mali_block_item
+phys	mali_memory_os_alloc.c	/^		mali_dma_addr phys;$/;"	m	struct:__anon4::__anon5	file:
+phys	mali_memory_types.h	/^	dma_addr_t phys;$/;"	m	struct:mali_mem_external
+point	mali_sync.c	/^	u32                   point;    \/**< Point on timeline. *\/$/;"	m	struct:mali_sync_flag	file:
+pool_count	mali_memory_os_alloc.c	/^	size_t pool_count;$/;"	m	struct:mali_mem_os_allocator	file:
+pool_lock	mali_memory_os_alloc.c	/^	spinlock_t pool_lock;$/;"	m	struct:mali_mem_os_allocator	file:
+pool_pages	mali_memory_os_alloc.c	/^	struct list_head pool_pages;$/;"	m	struct:mali_mem_os_allocator	typeref:struct:mali_mem_os_allocator::list_head	file:
+post_notification_wrapper	mali_ukk_core.c	/^int post_notification_wrapper(struct mali_session_data *session_data, _mali_uk_post_notification_s __user *uargs)$/;"	f
+power_always_on_enabled	mali_kernel_sysfs.c	/^static mali_bool power_always_on_enabled = MALI_FALSE;$/;"	v	file:
+power_always_on_fops	mali_kernel_sysfs.c	/^static const struct file_operations power_always_on_fops = {$/;"	v	typeref:struct:file_operations	file:
+power_always_on_read	mali_kernel_sysfs.c	/^static ssize_t power_always_on_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+power_always_on_write	mali_kernel_sysfs.c	/^static ssize_t power_always_on_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+power_power_events_fops	mali_kernel_sysfs.c	/^static const struct file_operations power_power_events_fops = {$/;"	v	typeref:struct:file_operations	file:
+power_power_events_seek	mali_kernel_sysfs.c	/^static loff_t power_power_events_seek(struct file *file, loff_t offset, int orig)$/;"	f	file:
+power_power_events_write	mali_kernel_sysfs.c	/^static ssize_t power_power_events_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+pp_and_gp_start_job_wrapper	mali_ukk_pp.c	/^int pp_and_gp_start_job_wrapper(struct mali_session_data *session_data, _mali_uk_pp_and_gp_start_job_s __user *uargs)$/;"	f
+pp_core_scaling_enabled_fops	mali_kernel_sysfs.c	/^static const struct file_operations pp_core_scaling_enabled_fops = {$/;"	v	typeref:struct:file_operations	file:
+pp_core_scaling_enabled_read	mali_kernel_sysfs.c	/^static ssize_t pp_core_scaling_enabled_read(struct file *filp, char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+pp_core_scaling_enabled_write	mali_kernel_sysfs.c	/^static ssize_t pp_core_scaling_enabled_write(struct file *filp, const char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+pp_disable_wb_wrapper	mali_ukk_pp.c	/^int pp_disable_wb_wrapper(struct mali_session_data *session_data, _mali_uk_pp_disable_wb_s __user *uargs)$/;"	f
+pp_get_core_version_wrapper	mali_ukk_pp.c	/^int pp_get_core_version_wrapper(struct mali_session_data *session_data, _mali_uk_get_pp_core_version_s __user *uargs)$/;"	f
+pp_get_number_of_cores_wrapper	mali_ukk_pp.c	/^int pp_get_number_of_cores_wrapper(struct mali_session_data *session_data, _mali_uk_get_pp_number_of_cores_s __user *uargs)$/;"	f
+pp_num_cores_enabled_fops	mali_kernel_sysfs.c	/^static const struct file_operations pp_num_cores_enabled_fops = {$/;"	v	typeref:struct:file_operations	file:
+pp_num_cores_enabled_read	mali_kernel_sysfs.c	/^static ssize_t pp_num_cores_enabled_read(struct file *filp, char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+pp_num_cores_enabled_write	mali_kernel_sysfs.c	/^static ssize_t pp_num_cores_enabled_write(struct file *filp, const char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+pp_num_cores_total_fops	mali_kernel_sysfs.c	/^static const struct file_operations pp_num_cores_total_fops = {$/;"	v	typeref:struct:file_operations	file:
+pp_num_cores_total_read	mali_kernel_sysfs.c	/^static ssize_t pp_num_cores_total_read(struct file *filp, char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+pp_start_job_wrapper	mali_ukk_pp.c	/^int pp_start_job_wrapper(struct mali_session_data *session_data, _mali_uk_pp_start_job_s __user *uargs)$/;"	f
+probe_data	mali_osk_irq.c	/^	void *probe_data;$/;"	m	struct:test_interrupt_data	file:
+probe_mali_timeline_event	mali_profiling_internal.c	/^void probe_mali_timeline_event(void *data, TP_PROTO(unsigned int event_id, unsigned int d0, unsigned int d1, unsigned$/;"	f
+prof_state	mali_profiling_internal.c	/^static mali_profiling_state prof_state = MALI_PROFILING_STATE_UNINITIALIZED;$/;"	v	file:
+profile_entries	mali_profiling_internal.c	/^static mali_profiling_entry *profile_entries = NULL;$/;"	v	file:
+profile_insert_index	mali_profiling_internal.c	/^static _mali_osk_atomic_t profile_insert_index;$/;"	v	file:
+profile_mask	mali_profiling_internal.c	/^static u32 profile_mask = 0;$/;"	v	file:
+profiling_add_event_wrapper	mali_ukk_profiling.c	/^int profiling_add_event_wrapper(struct mali_session_data *session_data, _mali_uk_profiling_add_event_s __user *uargs)$/;"	f
+profiling_counter_src_fops	mali_kernel_sysfs.c	/^static const struct file_operations profiling_counter_src_fops = {$/;"	v	typeref:struct:file_operations	file:
+profiling_counter_src_read	mali_kernel_sysfs.c	/^static ssize_t profiling_counter_src_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+profiling_counter_src_write	mali_kernel_sysfs.c	/^static ssize_t profiling_counter_src_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+profiling_events_fops	mali_kernel_sysfs.c	/^static const struct file_operations profiling_events_fops = {$/;"	v	typeref:struct:file_operations	file:
+profiling_events_human_readable_fops	mali_kernel_sysfs.c	/^static const struct file_operations profiling_events_human_readable_fops = {$/;"	v	typeref:struct:file_operations	file:
+profiling_events_human_readable_open	mali_kernel_sysfs.c	/^static int profiling_events_human_readable_open(struct inode *inode, struct file *file)$/;"	f	file:
+profiling_events_human_readable_seq_ops	mali_kernel_sysfs.c	/^static const struct seq_operations profiling_events_human_readable_seq_ops = {$/;"	v	typeref:struct:seq_operations	file:
+profiling_events_next	mali_kernel_sysfs.c	/^static void *profiling_events_next(struct seq_file *s, void *v, loff_t *pos)$/;"	f	file:
+profiling_events_open	mali_kernel_sysfs.c	/^static int profiling_events_open(struct inode *inode, struct file *file)$/;"	f	file:
+profiling_events_seq_ops	mali_kernel_sysfs.c	/^static const struct seq_operations profiling_events_seq_ops = {$/;"	v	typeref:struct:seq_operations	file:
+profiling_events_show	mali_kernel_sysfs.c	/^static int profiling_events_show(struct seq_file *seq_file, void *v)$/;"	f	file:
+profiling_events_show_human_readable	mali_kernel_sysfs.c	/^static int profiling_events_show_human_readable(struct seq_file *seq_file, void *v)$/;"	f	file:
+profiling_events_start	mali_kernel_sysfs.c	/^static void *profiling_events_start(struct seq_file *s, loff_t *pos)$/;"	f	file:
+profiling_events_stop	mali_kernel_sysfs.c	/^static void profiling_events_stop(struct seq_file *s, void *v)$/;"	f	file:
+profiling_memory_usage_get_wrapper	mali_ukk_profiling.c	/^int profiling_memory_usage_get_wrapper(struct mali_session_data *session_data, _mali_uk_profiling_memory_usage_get_s __user *uargs)$/;"	f
+profiling_record_fops	mali_kernel_sysfs.c	/^static const struct file_operations profiling_record_fops = {$/;"	v	typeref:struct:file_operations	file:
+profiling_record_read	mali_kernel_sysfs.c	/^static ssize_t profiling_record_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+profiling_record_write	mali_kernel_sysfs.c	/^static ssize_t profiling_record_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+profiling_report_sw_counters_wrapper	mali_ukk_profiling.c	/^int profiling_report_sw_counters_wrapper(struct mali_session_data *session_data, _mali_uk_sw_counters_report_s __user *uargs)$/;"	f
+properties	mali_memory_types.h	/^	u32 properties;      \/* MMU Permissions + cache, must match MMU HW *\/$/;"	m	struct:mali_mem_virt_mali_mapping
+psize	mali_memory_types.h	/^	u32 psize; \/* physical backend memory size*\/$/;"	m	struct:mali_mem_allocation
+put_gpu_clk	mali_platform.c	/^static void put_gpu_clk(void)$/;"	f	file:
+receive_queue	mali_osk_notification.c	/^	wait_queue_head_t receive_queue; \/**< Threads waiting for new entries to the queue *\/$/;"	m	struct:_mali_osk_notification_queue_t_struct	file:
+ref	mali_memory_types.h	/^	struct kref ref;$/;"	m	struct:mali_mem_allocation	typeref:struct:mali_mem_allocation::kref
+ref	mali_memory_types.h	/^	u32 ref;$/;"	m	struct:mali_mem_virt_cpu_mapping
+refcount	mali_sync.c	/^	struct kref           refcount; \/**< Reference count. *\/$/;"	m	struct:mali_sync_flag	typeref:struct:mali_sync_flag::kref	file:
+remove_lock_from_log	mali_osk_locks.c	/^static void remove_lock_from_log(struct _mali_osk_lock_debug_s *lock, uint32_t tid)$/;"	f	file:
+request_high_priority_wrapper	mali_ukk_core.c	/^int request_high_priority_wrapper(struct mali_session_data *session_data, _mali_uk_request_high_priority_s __user *uargs)$/;"	f
+revise_current_level	mali_platform.c	/^void revise_current_level(void)$/;"	f
+rw_sema	mali_osk_locks.h	/^		struct rw_semaphore rw_sema;$/;"	m	struct:_mali_osk_mutex_rw_s	typeref:struct:_mali_osk_mutex_rw_s::rw_semaphore
+session	mali_memory_dma_buf.h	/^	struct mali_session_data *session;$/;"	m	struct:mali_dma_buf_attachment	typeref:struct:mali_dma_buf_attachment::mali_session_data
+session	mali_memory_types.h	/^	struct mali_session_data *session; \/**< Pointer to session that owns the allocation *\/$/;"	m	struct:mali_mem_allocation	typeref:struct:mali_mem_allocation::mali_session_data
+set_freq	mali_platform.c	/^static void set_freq(int freq)$/;"	f	file:
+set_freq_wrap	mali_platform.c	/^void set_freq_wrap(int freq)$/;"	f
+set_voltage	mali_platform.c	/^void set_voltage(int vol)$/;"	f
+sgt	mali_memory_dma_buf.h	/^	struct sg_table *sgt;$/;"	m	struct:mali_dma_buf_attachment	typeref:struct:mali_dma_buf_attachment::sg_table
+shrinker	mali_memory_os_alloc.c	/^	struct shrinker shrinker;$/;"	m	struct:mali_mem_os_allocator	typeref:struct:mali_mem_os_allocator::shrinker	file:
+size	mali_memory_types.h	/^	u32 size;                          \/**< Size of the allocation *\/$/;"	m	struct:mali_mem_allocation
+size	mali_memory_types.h	/^	u32 size;$/;"	m	struct:mali_mem_backend
+size	mali_memory_types.h	/^	u32 size;$/;"	m	struct:mali_mem_external
+size	mali_memory_types.h	/^	uint32_t size;  \/* GPU allocation virtual size *\/$/;"	m	struct:mali_mm_node
+soft_job_signal_wrapper	mali_ukk_soft_job.c	/^int soft_job_signal_wrapper(struct mali_session_data *session, _mali_uk_soft_job_signal_s __user *uargs)$/;"	f
+soft_job_start_wrapper	mali_ukk_soft_job.c	/^int soft_job_start_wrapper(struct mali_session_data *session, _mali_uk_soft_job_start_s __user *uargs)$/;"	f
+sp_lock	mali_memory_block_alloc.h	/^	spinlock_t sp_lock; \/*lock for reference count & free list opertion*\/$/;"	m	struct:mali_block_allocator
+spinlock	mali_osk_locks.h	/^		spinlock_t spinlock;$/;"	m	struct:_mali_osk_spinlock_irq_s
+spinlock	mali_osk_locks.h	/^		spinlock_t spinlock;$/;"	m	struct:_mali_osk_spinlock_s
+start	mali_memory_types.h	/^	uint32_t start; \/* GPU vaddr *\/$/;"	m	struct:mali_mm_node
+status	mali_sync.c	/^	int                   status;   \/**< 0 if unsignaled, 1 if signaled without error or negative if signaled with error. *\/$/;"	m	struct:mali_sync_flag	file:
+sync_pt	mali_sync.c	/^	struct sync_pt         sync_pt;$/;"	m	struct:mali_sync_pt	typeref:struct:mali_sync_pt::sync_pt	file:
+sync_timeline	mali_sync.c	/^	struct sync_timeline sync_timeline;$/;"	m	struct:mali_sync_timeline_container	typeref:struct:mali_sync_timeline_container::sync_timeline	file:
+sync_tl	mali_sync.c	/^	struct sync_timeline *sync_tl;  \/**< Sync timeline this flag is connected to. *\/$/;"	m	struct:mali_sync_flag	typeref:struct:mali_sync_flag::sync_timeline	file:
+sync_tl	mali_sync.c	/^	struct sync_timeline *sync_tl;  \/**< Sync timeline this pt is connected to. *\/$/;"	m	struct:mali_sync_pt	typeref:struct:mali_sync_pt::sync_timeline	file:
+test_interrupt	mali_osk_irq.c	/^static _mali_osk_errcode_t test_interrupt(u32 irqnum,$/;"	f	file:
+test_interrupt_data	mali_osk_irq.c	/^struct test_interrupt_data {$/;"	s	file:
+test_interrupt_upper_half	mali_osk_irq.c	/^static irqreturn_t test_interrupt_upper_half(int port_name, void *dev_id)$/;"	f	file:
+timed_shrinker	mali_memory_os_alloc.c	/^	struct delayed_work timed_shrinker;$/;"	m	struct:mali_mem_os_allocator	typeref:struct:mali_mem_os_allocator::delayed_work	file:
+timeline	mali_sync.c	/^	struct mali_timeline *timeline;$/;"	m	struct:mali_sync_timeline_container	typeref:struct:mali_sync_timeline_container::mali_timeline	file:
+timeline_compare	mali_sync.c	/^static int timeline_compare(struct sync_pt *pta, struct sync_pt *ptb)$/;"	f	file:
+timeline_create_sync_fence_wrapper	mali_ukk_timeline.c	/^int timeline_create_sync_fence_wrapper(struct mali_session_data *session, _mali_uk_timeline_create_sync_fence_s __user *uargs)$/;"	f
+timeline_debugfs_open	mali_kernel_sysfs.c	/^static int timeline_debugfs_open(struct inode *inode, struct file *file)$/;"	f	file:
+timeline_debugfs_show	mali_kernel_sysfs.c	/^static int timeline_debugfs_show(struct seq_file *s, void *private_data)$/;"	f	file:
+timeline_dump_fops	mali_kernel_sysfs.c	/^static const struct file_operations timeline_dump_fops = {$/;"	v	typeref:struct:file_operations	file:
+timeline_dup	mali_sync.c	/^static struct sync_pt *timeline_dup(struct sync_pt *pt)$/;"	f	file:
+timeline_free_pt	mali_sync.c	/^static void timeline_free_pt(struct sync_pt *pt)$/;"	f	file:
+timeline_get_latest_point_wrapper	mali_ukk_timeline.c	/^int timeline_get_latest_point_wrapper(struct mali_session_data *session, _mali_uk_timeline_get_latest_point_s __user *uargs)$/;"	f
+timeline_has_signaled	mali_sync.c	/^static int timeline_has_signaled(struct sync_pt *pt)$/;"	f	file:
+timeline_print_pt	mali_sync.c	/^static void timeline_print_pt(struct seq_file *s, struct sync_pt *sync_pt)$/;"	f	file:
+timeline_pt_value_str	mali_sync.c	/^static void timeline_pt_value_str(struct sync_pt *pt, char *str, int size)$/;"	f	file:
+timeline_release	mali_sync.c	/^static void timeline_release(struct sync_timeline *sync_timeline)$/;"	f	file:
+timeline_value_str	mali_sync.c	/^static void timeline_value_str(struct sync_timeline *timeline, char *str, int size)$/;"	f	file:
+timeline_wait_wrapper	mali_ukk_timeline.c	/^int timeline_wait_wrapper(struct mali_session_data *session, _mali_uk_timeline_wait_s __user *uargs)$/;"	f
+timer	mali_osk_timers.c	/^	struct timer_list timer;$/;"	m	struct:_mali_osk_timer_t_struct	typeref:struct:_mali_osk_timer_t_struct::timer_list	file:
+timer_timeout_function_t	mali_osk_timers.c	/^typedef void (*timer_timeout_function_t)(unsigned long);$/;"	t	file:
+timestamp	mali_profiling_internal.c	/^	u64 timestamp;$/;"	m	struct:mali_profiling_entry	file:
+to_mali_sync_pt	mali_sync.c	/^MALI_STATIC_INLINE struct mali_sync_pt *to_mali_sync_pt(struct sync_pt *pt)$/;"	f
+to_mali_sync_tl_container	mali_sync.c	/^MALI_STATIC_INLINE struct mali_sync_timeline_container *to_mali_sync_tl_container(struct sync_timeline *sync_tl)$/;"	f
+total_num	mali_memory_block_alloc.h	/^	u32 total_num; \/* Number of total pages*\/$/;"	m	struct:mali_block_allocator
+tracking_list_length	mali_osk_locks.c	/^static int tracking_list_length(void)$/;"	f	file:
+type	mali_memory_types.h	/^	mali_mem_type type;                \/**< Type of backend memory *\/$/;"	m	struct:mali_mem_backend
+type	mali_memory_types.h	/^	mali_mem_type type;                \/**< Type of memory *\/$/;"	m	struct:mali_mem_allocation
+type	mali_memory_types.h	/^	u32 type;$/;"	m	struct:mali_block_node
+uhandler	mali_osk_irq.c	/^	_mali_osk_irq_uhandler_t uhandler;$/;"	m	struct:_mali_osk_irq_t_struct	file:
+ump_mem	mali_memory_types.h	/^		mali_mem_ump ump_mem;         \/**< MALI_MEM_UMP *\/$/;"	m	union:mali_mem_allocation::__anon2
+ump_mem	mali_memory_types.h	/^		mali_mem_ump ump_mem;         \/**< MALI_MEM_UMP *\/$/;"	m	union:mali_mem_backend::__anon3
+user_settings_fops	mali_kernel_sysfs.c	/^static const struct file_operations user_settings_fops = {$/;"	v	typeref:struct:file_operations	file:
+user_settings_read	mali_kernel_sysfs.c	/^static ssize_t user_settings_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+user_settings_write	mali_kernel_sysfs.c	/^static ssize_t user_settings_write(struct file *filp, const char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+utilization_gp_fops	mali_kernel_sysfs.c	/^static const struct file_operations utilization_gp_fops = {$/;"	v	typeref:struct:file_operations	file:
+utilization_gp_pp_fops	mali_kernel_sysfs.c	/^static const struct file_operations utilization_gp_pp_fops = {$/;"	v	typeref:struct:file_operations	file:
+utilization_gp_pp_read	mali_kernel_sysfs.c	/^static ssize_t utilization_gp_pp_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+utilization_gp_read	mali_kernel_sysfs.c	/^static ssize_t utilization_gp_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+utilization_pp_fops	mali_kernel_sysfs.c	/^static const struct file_operations utilization_pp_fops = {$/;"	v	typeref:struct:file_operations	file:
+utilization_pp_read	mali_kernel_sysfs.c	/^static ssize_t utilization_pp_read(struct file *filp, char __user *ubuf, size_t cnt, loff_t *ppos)$/;"	f	file:
+version_fops	mali_kernel_sysfs.c	/^static const struct file_operations version_fops = {$/;"	v	typeref:struct:file_operations	file:
+version_read	mali_kernel_sysfs.c	/^static ssize_t version_read(struct file *filp, char __user *buf, size_t count, loff_t *offp)$/;"	f	file:
+vm_lock	mali_memory_manager.h	/^	rwlock_t vm_lock;$/;"	m	struct:mali_allocation_manager
+vm_node	mali_memory_types.h	/^	struct mali_mm_node vm_node;$/;"	m	struct:mali_vma_node	typeref:struct:mali_vma_node::mali_mm_node
+vm_rb	mali_memory_types.h	/^	struct rb_node vm_rb;$/;"	m	struct:mali_vma_node	typeref:struct:mali_vma_node::rb_node
+vsize	mali_memory_types.h	/^	u32 vsize; \/* virtual size*\/$/;"	m	struct:mali_mem_allocation
+vsync_event_report_wrapper	mali_ukk_vsync.c	/^int vsync_event_report_wrapper(struct mali_session_data *session_data, _mali_uk_vsync_event_report_s __user *uargs)$/;"	f
+wait_for_notification_wrapper	mali_ukk_core.c	/^int wait_for_notification_wrapper(struct mali_session_data *session_data, _mali_uk_wait_for_notification_s __user *uargs)$/;"	f
+wait_queue	mali_memory_dma_buf.h	/^	wait_queue_head_t wait_queue;$/;"	m	struct:mali_dma_buf_attachment
+wait_queue	mali_osk_wait_queue.c	/^	wait_queue_head_t wait_queue;$/;"	m	struct:_mali_osk_wait_queue_t_struct	file:
+work	mali_osk_wq.c	/^	struct delayed_work work;$/;"	m	struct:_mali_osk_wq_delayed_work_s	typeref:struct:_mali_osk_wq_delayed_work_s::delayed_work	file:
+work_handle	mali_osk_wq.c	/^	struct work_struct work_handle;$/;"	m	struct:_mali_osk_wq_work_s	typeref:struct:_mali_osk_wq_work_s::work_struct	file:
+wq	mali_memory_os_alloc.c	/^	struct workqueue_struct *wq;$/;"	m	struct:mali_mem_os_allocator	typeref:struct:mali_mem_os_allocator::workqueue_struct	file:
+wq	mali_osk_irq.c	/^	wait_queue_head_t wq;$/;"	m	struct:test_interrupt_data	file:
+write_fops	mali_kernel_sysfs.c	/^static const struct file_operations write_fops = {$/;"	v	typeref:struct:file_operations	file:
+write_write	mali_kernel_sysfs.c	/^static ssize_t write_write(struct file *filp, const char __user *buf, size_t count, loff_t *offp)$/;"	f	file:

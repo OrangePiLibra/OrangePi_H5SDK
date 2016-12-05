@@ -12,16 +12,6 @@ fi
 # Output path, must /dev/sdx
 OUTPUT="$1"
 
-if [ -z "$OUTPUT" ]; then
-	echo "Usage: $0 /dev/sdx"
-	exit 1
-fi
-
-if [ "$(id -u)" -ne "0" ]; then
-	echo "This option requires root."
-	echo "Pls use command: sudo ./scripts.sh"
-	exit 0
-fi
 UBOOT=$ROOT/external/uboot.bin
 BOOT0=$ROOT/external/boot0.bin
 
@@ -33,6 +23,5 @@ dd bs=1K seek=8 if="$BOOT0" of="$OUTPUT"
 dd bs=1K seek=16400 if="$UBOOT" of="$OUTPUT"
 
 sync
-echo -e "\e[1;31m ================================= \e[0m"
-echo -e "\e[1;31m Succeed to Update Uboot and boot0 \e[0m"
-echo -e "\e[1;31m ================================= \e[0m"
+clear
+whiptail --title "OrangePi Build System" --msgbox "Succeed to update Uboot and boot0" 10 40 0

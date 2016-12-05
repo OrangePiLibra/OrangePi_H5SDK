@@ -22,122 +22,157 @@ root_check()
 
 UBOOT_check()
 {
-	## Get mount path of U-disk
-	echo "Pls input device node of SDcard.(like /dev/sdb)"
-	for ((i = 1; i < 5; i++)); do
-		read UBOOT_PATH
+	for ((i = 0; i < 5; i++)); do
+		UBOOT_PATH=$(whiptail --title "OrangePi Build System" \
+			--inputbox "Pls input device node of SDcard.(/dev/sdb)" \
+			10 60 3>&1 1>&2 2>&3)
+	
+		if [ $i = "4" ]; then
+			whiptail --title "OrangePi Build System" --msgbox "Error, Invalid Path" 10 40 0	
+			exit 0
+		fi
+
+
 		if [ ! -b "$UBOOT_PATH" ]; then
-			echo "Pls input correct path.(like /dev/sdb)"
+			whiptail --title "OrangePi Build System" --msgbox \
+				"The input path invalid! Pls input correct path!" \
+				--ok-button Continue 10 40 0	
 		else
 			i=200 
 		fi 
 	done
-	if [ ! $i = "201" ]; then
-		echo "Pls check your device node of SDcard"
-		exit 0
-	fi	
 }
 
 BOOT_check()
 {
-	## Get mount path of U-disk
-	echo "Pls input mount path of BOOT.(like /media/orange/BOOT)"
-	for ((i = 1; i < 5; i++)); do
-		read BOOT_PATH
-		echo "BOOT_PATH $BOOT_PATH"
+	## Get mount path of u-disk
+	for ((i = 0; i < 5; i++)); do
+		BOOT_PATH=$(whiptail --title "OrangePi Build System" \
+			--inputbox "Pls input mount path of BOOT.(/media/orangepi/BOOT)" \
+			10 60 3>&1 1>&2 2>&3)
+	
+		if [ $i = "4" ]; then
+			whiptail --title "OrangePi Build System" --msgbox "Error, Invalid Path" 10 40 0	
+			exit 0
+		fi
+
+
 		if [ ! -d "$BOOT_PATH" ]; then
-			echo "Pls input correct path.(like /media/orange/BOOT)"
+			whiptail --title "OrangePi Build System" --msgbox \
+				"The input path invalid! Pls input correct path!" \
+				--ok-button Continue 10 40 0	
 		else
 			i=200 
 		fi 
 	done
-	if [ ! $i = "201" ]; then
-		echo "Pls check your mount path of BOOT"
-		exit 0
-	fi	
 }
 
 ROOTFS_check()
 {
-	## Get mount path of U-disk
-	echo "Pls input mount path of ROOTFS.(like /media/orange/ROOTFS) "
-	for ((i = 1; i < 5; i++)); do
-		read ROOTFS_PATH
+	for ((i = 0; i < 5; i++)); do
+		ROOTFS_PATH=$(whiptail --title "OrangePi Build System" \
+			--inputbox "Pls input mount path of rootfs.(/media/orangepi/rootfs)" \
+			10 60 3>&1 1>&2 2>&3)
+	
+		if [ $i = "4" ]; then
+			whiptail --title "OrangePi Build System" --msgbox "Error, Invalid Path" 10 40 0	
+			exit 0
+		fi
+
+
 		if [ ! -d "$ROOTFS_PATH" ]; then
-			echo "Pls input correct path.(like /media/orange/ROOTFS)"
+			whiptail --title "OrangePi Build System" --msgbox \
+				"The input path invalid! Pls input correct path!" \
+				--ok-button Continue 10 40 0	
 		else
 			i=200 
 		fi 
 	done
-	if [ ! $i = "201" ]; then
-		echo "Pls check your mount path of ROOTFS"
-		exit 0
-	fi
 }
 
+MENUSTR="Welcome to OrangePi Build System. Pls choose Platform."
 ##########################################
-clear
-echo -e "\e[1;31m ======================================== \e[0m"
-echo -e "\e[1;31m Welcome to OrangePi Build System \e[0m"
-echo -e "\e[1;31m ======================================== \e[0m"
-echo -e "\e[1;31m Pls select board \e[0m"
-echo -e "\e[1;32m 0. OrangePi PC2 \e[0m"
-echo -e "\e[1;32m 1. OrangePi 3 \e[0m"
-read OPTION
+OPTION=$(whiptail --title "OrangePi Build System" \
+	--menu "$MENUSTR" 10 60 2 --cancel-button Exit --ok-button Select \
+	"0"  "OrangePi PC2" \
+	"1"  "OrangePi Prima(internal version)" \
+	3>&1 1>&2 2>&3)
+
 if [ $OPTION = "0" ]; then
 	export PLATFORM="OrangePiH5_PC2"
 elif [ $OPTION = "1" ]; then
-	export PLATFORM="OrangePiH5_3"
+	export PLATFORM="OrangePiH5_Prima"
 else
 	echo -e "\e[1;31m Pls select correct platform \e[0m"
 	exit 0
 fi
-clear
+
+##########################################
+## Root Password check
+for ((i = 0; i < 5; i++)); do
+	PASSWD=$(whiptail --title "OrangePi Build System" \
+		--passwordbox "Enter your root password. Note! Don't use root to run this scripts" \
+		10 60 3>&1 1>&2 2>&3)
+	
+	if [ $i = "4" ]; then
+		whiptail --title "Note Box" --msgbox "Error, Invalid password" 10 40 0	
+		exit 0
+	fi
+
+	sudo -k
+	if sudo -lS &> /dev/null << EOF
+$PASSWD
+EOF
+	then
+		i=10
+	else
+		whiptail --title "OrangePi Build System" --msgbox "Invalid password, Pls input corrent password" \
+			10 40 0	--cancel-button Exit --ok-button Retry
+	fi
+done
+
+echo $PASSWD | sudo ls &> /dev/null 2>&1
 
 ## Check cross tools
 if [ ! -d $ROOT/toolchain ]; then
 	cd $SCRIPTS
-	echo -e "\e[1;31m Install Cross toolchain... \e[0m"
 	./install_toolchain.sh
 	cd -
-	clear
 fi
 
-echo -e "\e[1;31m ================================== \e[0m"
-echo -e "\e[1;31m Pls select build option \e[0m"
-echo -e "\e[1;31m ================================== \e[0m"
-echo -e "\e[1;32m 0. Build Release Image \e[0m"
-echo -e "\e[1;32m 1. Build Rootfs \e[0m"
-echo -e "\e[1;32m 2. Build Linux \e[0m"
-echo -e "\e[1;32m 3. Build Kernel only\e[0m"
-echo -e "\e[1;32m 4. Build Module only \e[0m"
-echo -e "\e[1;31m ================================== \e[0m"
-echo -e "\e[1;31m If update Image, pls use root \e[0m"
-echo -e "\e[1;31m ================================== \e[0m"
-echo -e "\e[1;32m 5. Install Image into SDcard \e[0m"
-echo -e "\e[1;32m 6. Update kernel Image \e[0m"
-echo -e "\e[1;32m 7. Update Module \e[0m"
-echo -e "\e[1;32m 8. Update Uboot \e[0m"
-echo -e "\e[1;32m a. Update SDK to Github \e[0m"
-echo -e "\e[1;32m b. Update SDK from Github \e[0m"
-read OPTION
 
-clear
+MENUSTR="Pls select build option"
+
+OPTION=$(whiptail --title "OrangePi Build System" \
+	--menu "$MENUSTR" 20 60 12 --cancel-button Finish --ok-button Select \
+	"0"   "Build Release Image" \
+	"1"   "Build Rootfs" \
+	"2"   "Build Linux" \
+	"3"   "Build Kernel only" \
+	"4"   "Build Module only" \
+	"5"   "Install Image into SDcard" \
+	"6"   "Update kernel Image" \
+	"7"   "Update Module" \
+	"8"   "Update Uboot" \
+	"9"  "Update SDK to Github" \
+	"10"  "Update SDK from Github" \
+	3>&1 1>&2 2>&3)
 
 if [ $OPTION = "0" -o $OPTION = "1" ]; then
 	sudo echo ""
 	clear
 	TMP=$OPTION
 	TMP_DISTRO=""
-	echo -e "\e[1;31m =========================================== \e[0m"
-	echo -e "\e[1;31m Pls Select Release Version \e[0m"
-	echo -e "\e[1;32m 0. ArchLinux \e[0m"
-	echo -e "\e[1;32m 1. Ubuntu_Xenial \e[0m"
-	echo -e "\e[1;32m 2. Debian_Sid \e[0m"
-	echo -e "\e[1;32m 3. Debian_Jessie \e[0m"
-	echo -e "\e[1;32m 4. CenterOS \e[0m"
-	read OPTION
-	
+	MENUSTR="Distro Options"
+	OPTION=$(whiptail --title "OrangePi Build System" \
+		--menu "$MENUSTR" 20 60 5 --cancel-button Finish --ok-button Select \
+		"0"   "ArchLinux" \
+		"1"   "Ubuntu Xenial" \
+		"2"	  "Debian Sid" \
+		"3"   "Debian Jessie" \
+		"4"   "CentOS" \
+		3>&1 1>&2 2>&3)
+
 	if [ ! -f $ROOT/output/uImage ]; then
 		export BUILD_KERNEL=1
 		cd $SCRIPTS
@@ -159,20 +194,25 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 	elif [ $OPTION = "3" ]; then
 		TMP_DISTRO="jessie"
 	elif [ $OPTION = "4" ]; then
-		TMP_DISTRO="centeros"
+		TMP_DISTRO="centos"
 	fi
 	cd $SCRIPTS
 	DISTRO=$TMP_DISTRO
 	if [ -d $ROOT/output/${DISTRO}_rootfs ]; then
-		echo -e "\e[1;31m ${DISTRO}'s rootfs has exist! Do you want use it?(yes/no) \e[0m"
-		read OP_ROOTFS
-		if [ $OP_ROOTFS = "y" -o $OP_ROOTFS = "yes" ]; then
+		if (whiptail --title "OrangePi Build System" --yesno \
+			"${DISTRO} rootfs has exist! Do you want use it?" 10 60) then
+			OP_ROOTFS=0
+		else
+			OP_ROOTFS=1
+		fi
+		if [ $OP_ROOTFS = "0" ]; then
 			sudo cp -rf $ROOT/output/${DISTRO}_rootfs $ROOT/output/tmp
 			if [ -d $ROOT/output/rootfs ]; then
 				sudo rm -rf $ROOT/output/rootfs
 			fi
 			sudo mv $ROOT/output/tmp $ROOT/output/rootfs
-			echo -e "\e[1;31m Creating Rootfs \e[0m"
+			whiptail --title "OrangePi Build System" --msgbox "Rootfs has build" \
+				10 40 0	--ok-button Continue
 		else
 			sudo ./00_rootfs_build.sh $DISTRO
 			sudo ./01_rootfs_build.sh $DISTRO
@@ -188,9 +228,8 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 	fi
 	if [ $TMP = "0" ]; then 
 		sudo ./build_image.sh $PLATFORM
-		echo -e "\e[1;31m ================================== \e[0m"
-		echo -e "\e[1;31m Succeed to build Image \e[0m"
-		echo -e "\e[1;31m ================================== \e[0m"
+		whiptail --title "OrangePi Build System" --msgbox "Succeed to build Image" \
+				10 40 0	--ok-button Continue
 	fi
 	exit 0
 elif [ $OPTION = "2" ]; then
@@ -214,15 +253,15 @@ elif [ $OPTION = "5" ]; then
 	clear
 	UBOOT_check
 	clear
-	echo -e "\e[1;31m Downloading Image into SDcard...... \e[0m"
+	whiptail --title "OrangePi Build System" \
+			 --msgbox "Downloading Image into SDcard. Pls select Continue button" \
+				10 40 0	--ok-button Continue
 	sudo dd bs=1M if=$ROOT/output/${PLATFORM}.img of=$UBOOT_PATH && sync
 	clear
-	echo -e "\e[1;31m =================================== \e[0m"
-	echo -e "\e[1;31m Succeed Download Image into SDcard \e[0m"
-	echo -e "\e[1;31m =================================== \e[0m"
+	whiptail --title "OrangePi Build System" --msgbox "Succeed to Download Image into SDcard" \
+				10 40 0	--ok-button Continue
 	exit 0
 elif [ $OPTION = '6' ]; then
-	sudo echo ""
 	clear 
 	BOOT_check
 	clear
@@ -244,17 +283,18 @@ elif [ $OPTION = '8' ]; then
 	cd $SCRIPTS
 	sudo ./uboot_update.sh $UBOOT_PATH
 	exit 0
-elif [ $OPTION = 'a' ]; then
+elif [ $OPTION = '9' ]; then
 	clear
 	echo -e "\e[1;31m Updating SDK to Github \e[0m"
 	git push -u origin master
 	exit 0
-elif [ $OPTION = 'b' ]; then
+elif [ $OPTION = "10" ]; then
 	clear
 	echo -e "\e[1;31m Updating SDK from Github \e[0m"
 	git push origin
 	exit 0
 else
-	echo -e "\e[1;31m Pls select corrent option \e[0m"
+	whiptail --title "OrangePi Build System" \
+		--msgbox "Pls select correct option" 10 50 0
 	exit 0
 fi
