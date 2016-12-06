@@ -1,0 +1,25 @@
+diff --git a/u-boot-2014.07/arch/arm/lib/bootm.c b/u-boot-2014.07/arch/arm/lib/bootm.c
+old mode 100644
+new mode 100755
+index b4737bb..9672aad
+--- a/u-boot-2014.07/arch/arm/lib/bootm.c
++++ b/u-boot-2014.07/arch/arm/lib/bootm.c
+@@ -21,6 +21,8 @@
+ #include <fdt_support.h>
+ #include <asm/bootm.h>
+ #include <linux/compiler.h>
++#include <smc.h>
++
+ 
+ #if defined(CONFIG_ARMV7_NONSEC) || defined(CONFIG_ARMV7_VIRT)
+ #include <asm/armv7.h>
+@@ -292,7 +294,8 @@ static void boot_jump_linux(bootm_headers_t *images, int flag)
+ 		r2 = gd->bd->bi_boot_params;
+ 
+ 	if (!fake)
+-		kernel_entry(0, machid, r2);
++		arm_svc_run_os((ulong)images->ep, r2,  1);
++		//kernel_entry(0, machid, r2);
+ #endif
+ }
+ 

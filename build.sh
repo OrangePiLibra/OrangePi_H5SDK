@@ -147,15 +147,16 @@ OPTION=$(whiptail --title "OrangePi Build System" \
 	--menu "$MENUSTR" 20 60 12 --cancel-button Finish --ok-button Select \
 	"0"   "Build Release Image" \
 	"1"   "Build Rootfs" \
-	"2"   "Build Linux" \
-	"3"   "Build Kernel only" \
-	"4"   "Build Module only" \
-	"5"   "Install Image into SDcard" \
-	"6"   "Update kernel Image" \
-	"7"   "Update Module" \
-	"8"   "Update Uboot" \
-	"9"  "Update SDK to Github" \
-	"10"  "Update SDK from Github" \
+	"2"   "Build Uboot" \
+	"3"   "Build Linux" \
+	"4"   "Build Kernel only" \
+	"5"   "Build Module only" \
+	"6"   "Install Image into SDcard" \
+	"7"   "Update kernel Image" \
+	"8"   "Update Module" \
+	"9"   "Update Uboot" \
+	"10"  "Update SDK to Github" \
+	"11"  "Update SDK from Github" \
 	3>&1 1>&2 2>&3)
 
 if [ $OPTION = "0" -o $OPTION = "1" ]; then
@@ -233,22 +234,27 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 	fi
 	exit 0
 elif [ $OPTION = "2" ]; then
-	export BUILD_KERNEL=1
-	export BUILD_MODULE=1
 	cd $SCRIPTS
-	./kernel_compile.sh
+	./uboot_compile.sh
+	clear
 	exit 0
 elif [ $OPTION = "3" ]; then
 	export BUILD_KERNEL=1
+	export BUILD_MODULE=1
 	cd $SCRIPTS
 	./kernel_compile.sh
 	exit 0
 elif [ $OPTION = "4" ]; then
-	export BUILD_MODULE=1
+	export BUILD_KERNEL=1
 	cd $SCRIPTS
 	./kernel_compile.sh
 	exit 0
 elif [ $OPTION = "5" ]; then
+	export BUILD_MODULE=1
+	cd $SCRIPTS
+	./kernel_compile.sh
+	exit 0
+elif [ $OPTION = "6" ]; then
 	sudo echo ""
 	clear
 	UBOOT_check
@@ -256,19 +262,19 @@ elif [ $OPTION = "5" ]; then
 	whiptail --title "OrangePi Build System" \
 			 --msgbox "Downloading Image into SDcard. Pls select Continue button" \
 				10 40 0	--ok-button Continue
-	sudo dd bs=1M if=$ROOT/output/${PLATFORM}.img of=$UBOOT_PATH && sync
+	sudo pv "$ROOT/output/${PLATFORM}.img" | dd bs=1M of=$UBOOT_PATH && sync
 	clear
 	whiptail --title "OrangePi Build System" --msgbox "Succeed to Download Image into SDcard" \
 				10 40 0	--ok-button Continue
 	exit 0
-elif [ $OPTION = '6' ]; then
+elif [ $OPTION = '7' ]; then
 	clear 
 	BOOT_check
 	clear
 	cd $SCRIPTS
 	sudo ./kernel_update.sh $BOOT_PATH
 	exit 0
-elif [ $OPTION = '7' ]; then
+elif [ $OPTION = '8' ]; then
 	sudo echo ""
 	clear 
 	ROOTFS_check
@@ -276,19 +282,19 @@ elif [ $OPTION = '7' ]; then
 	cd $SCRIPTS
 	sudo ./modules_update.sh $ROOTFS_PATH
 	exit 0
-elif [ $OPTION = '8' ]; then
+elif [ $OPTION = '9' ]; then
 	clear
 	UBOOT_check
 	clear
 	cd $SCRIPTS
 	sudo ./uboot_update.sh $UBOOT_PATH
 	exit 0
-elif [ $OPTION = '9' ]; then
+elif [ $OPTION = '10' ]; then
 	clear
 	echo -e "\e[1;31m Updating SDK to Github \e[0m"
 	git push -u origin master
 	exit 0
-elif [ $OPTION = "10" ]; then
+elif [ $OPTION = "11" ]; then
 	clear
 	echo -e "\e[1;31m Updating SDK from Github \e[0m"
 	git push origin
