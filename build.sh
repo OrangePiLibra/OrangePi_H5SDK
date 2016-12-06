@@ -262,7 +262,7 @@ elif [ $OPTION = "6" ]; then
 	whiptail --title "OrangePi Build System" \
 			 --msgbox "Downloading Image into SDcard. Pls select Continue button" \
 				10 40 0	--ok-button Continue
-	sudo dd bs=1M if=$ROOT/output/${PLATFORM}.img of=$UBOOT_PATH && sync
+	sudo pv "$ROOT/output/${PLATFORM}.img" | dd bs=1M of=$UBOOT_PATH && sync
 	clear
 	whiptail --title "OrangePi Build System" --msgbox "Succeed to Download Image into SDcard" \
 				10 40 0	--ok-button Continue
