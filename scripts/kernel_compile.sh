@@ -65,9 +65,15 @@ if [ $BUILD_MODULE = "1" ]; then
 	echo -e "\e[1;31m Start Compile Module \e[0m"
 	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j4 modules
 
+	# Compile Mali450 driver
+	echo -e "\e[1;31m Compile Mali450 Module \e[0m"
+	make -C ${LINUX}/modules/gpu ARCH=arm64 CROSS_COMPILE=$TOOLS LICHEE_KDIR=${LINUX} LICHEE_MOD_DIR=$ROOT/output/lib LICHEE_PLATFORM=dragonboard
+	echo -e "\e[1;31m Build Mali450 succeed \e[0m"
+
 	# install module
 	echo -e "\e[1;31m Start Install Module \e[0m"
 	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j4 modules_install INSTALL_MOD_PATH=$BUILD
+
 fi
 
 if [ $BUILD_KERNEL = "1" ]; then
