@@ -67,7 +67,7 @@ if [ $BUILD_MODULE = "1" ]; then
 
 	# Compile Mali450 driver
 	echo -e "\e[1;31m Compile Mali450 Module \e[0m"
-	make -C ${LINUX}/modules/gpu ARCH=arm64 CROSS_COMPILE=$TOOLS LICHEE_KDIR=${LINUX} LICHEE_MOD_DIR=$ROOT/output/lib LICHEE_PLATFORM=dragonboard
+	make -C ${LINUX}/modules/gpu ARCH=arm64 CROSS_COMPILE=$TOOLS LICHEE_KDIR=${LINUX} LICHEE_MOD_DIR=$ROOT/output/lib LICHEE_PLATFORM=linux
 	echo -e "\e[1;31m Build Mali450 succeed \e[0m"
 
 	# install module
@@ -79,10 +79,15 @@ fi
 if [ $BUILD_KERNEL = "1" ]; then
 	# compile dts
 	echo -e "\e[1;31m Start Compile DTS \e[0m"
-	$ROOT/kernel/scripts/dtc/dtc -Odtb -o "$BUILD/OrangePiH5.dtb" "$LINUX/arch/arm64/boot/dts/${PLATFORM}.dts"
+	#$ROOT/kernel/scripts/dtc/dtc -Odtb -o "$BUILD/OrangePiH5.dtb" "$LINUX/arch/arm64/boot/dts/${PLATFORM}.dts"
 	## DTB conver to DTS
 	# Command:
 	# dtc -I dtb -O dts -o target_file.dts source_file.dtb
+	########
+	# Update DTB with uboot
+	cd $ROOT/scripts/pack/
+	./pack
+	cd -
 
 	# Perpare uImage
 	mkimage -A arm -n "OrangePiH5" -O linux -T kernel -C none -a 0x40080000 -e 0x40080000 \

@@ -1,0 +1,231 @@
+#!/bin/bash
+#
+# pack/pack
+# (c) Copyright 2013
+# Allwinner Technology Co., Ltd. <www.allwinnertech.com>
+# James Deng <csjamesdeng@allwinnertech.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+ROOT=`cd ../.. && pwd`
+KERNEL=${ROOT}/kernel
+OUTPUT=${ROOT}/output/pack/out
+
+function pack_error()
+{
+	echo -e "\033[47;31mERROR: $*\033[0m"
+}
+
+function pack_warn()
+{
+	echo -e "\033[47;34mWARN: $*\033[0m"
+}
+
+function pack_info()
+{
+	echo -e "\033[47;30mINFO: $*\033[0m"
+}
+
+PACK_CHIP=sun50iw2p1
+PACK_PLATFORM=drangboard
+PACK_BOARD=cheetah-p1
+PACK_KERN=linux-3.10
+PACK_DEBUG=uart0
+PACK_SIG=none
+PACK_MODE=normal
+PACK_FUNC=android
+PACK_TYPE=
+PACK_NO_IMG=
+PACK_PROGRAMMER=
+ARCH=arm64
+
+ROOT_DIR=`pwd`
+TOOLS_DIR="${ROOT_DIR}/pctools/linux"
+FILE=OrangePi
+UBOOT=${ROOT}/u-boot
+
+export PATH=${TOOLS_DIR}/mod_update:${TOOLS_DIR}/fsbuild200:$PATH
+
+configs_file_list=(
+${FILE}/boot_package.fex
+${FILE}/sunxi.fex
+${FILE}/sys_partition_dragonboard.fex
+${FILE}/default/*
+${FILE}/configs/*.fex
+${FILE}/split_xxxx.fex
+${ROOT}/external/sys_config.fex
+)
+
+boot_file_list=(
+${UBOOT}/boot0_nand_${PACK_CHIP}.bin:${OUTPUT}/boot0_nand.fex
+${UBOOT}/boot0_sdcard_${PACK_CHIP}.bin:${OUTPUT}/boot0_sdcard.fex
+${UBOOT}/fes1_${PACK_CHIP}.bin:${OUTPUT}/fes1.fex
+${UBOOT}/u-boot-${PACK_CHIP}.bin:${OUTPUT}/u-boot.fex
+${FILE}/scp.bin:${OUTPUT}/scp.fex
+${FILE}/bl31.bin:${OUTPUT}/monitor.fex
+${FILE}/boot-resource:${OUTPUT}
+${FILE}/boot-resource.ini:${OUTPUT}
+)
+
+function do_prepare()
+{
+
+	# Cleanup
+	if [ -d $OUTPUT ]; then
+		rm -rf ${OUTPUT}
+	fi
+	mkdir -p ${OUTPUT}
+	mkdir -p ${OUTPUT}/${PACK_BOARD}/
+
+	printf "copying configs file\n"
+	for file in ${configs_file_list[@]} ; do
+		cp -f $file ${OUTPUT}/ 2> /dev/null
+	done
+
+	printf "copying boot file\n"
+	for file in ${boot_file_list[@]} ; do
+		cp -f `echo $file | awk -F: '{print $1}'` \
+			`echo $file | awk -F: '{print $2}'` 2>/dev/null
+	done
+
+	if [ "x${PACK_PLATFORM}" = "xdragonboard" -a -f ${OUTPUT}/sys_partition_dragonboard.fex ] ; then
+		mv ${OUTPUT}/sys_partition_dragonboard.fex ${OUTPUT}/sys_partition.fex
+		if [ "${PACK_CHIP}" == "sun50iw2p1" -a -n "`grep "dragonboard_test" "out/sys_config.fex" | grep "1" | grep -v ";"`" ]; then
+            sed -i '/\[nand0_para\]/a\nand0_dragonboard = 1' ${OUTPUT}/sys_config.fex
+	    fi
+	fi
+
+	sed -i '/^burn_secure_mod/d' ${OUTPUT}/sys_config.fex
+
+	sed -i 's/\\boot-resource/\/boot-resource/g' ${OUTPUT}/boot-resource.ini
+	sed -i 's/\\\\/\//g' ${OUTPUT}/image.cfg
+	sed -i 's/^imagename/;imagename/g' ${OUTPUT}/image.cfg
+}
+
+function do_ini_to_dts()
+{
+	local DTC_COMPILER=${KERNEL}/scripts/dtc/dtc
+	local DTC_DEP_FILE=${KERNEL}/arch/$ARCH/boot/dts/.${PACK_CHIP}-${PACK_BOARD}.dtb.d.dtc.tmp
+	local DTC_SRC_PATH=${KERNEL}/arch/$ARCH/boot/dts/
+	local DTC_SRC_FILE=${KERNEL}/arch/$ARCH/boot/dts/.${PACK_CHIP}-${PACK_BOARD}.dtb.dts
+	local DTC_INI_FILE_BASE=${ROOT}/external/sys_config.fex
+	local DTC_INI_FILE=${ROOT}/output/sys_config_fix.fex
+	cp $DTC_INI_FILE_BASE $DTC_INI_FILE
+	sed -i "s/\(\[dram\)_para\(\]\)/\1\2/g" $DTC_INI_FILE
+	sed -i "s/\(\[nand[0-9]\)_para\(\]\)/\1\2/g" $DTC_INI_FILE
+
+	if [ ! -f $DTC_DEP_FILE ]; then
+		printf "Script_to_dts: Can not find [%s-%s.dts]. Will use common dts file instead.\n" ${PACK_CHIP} ${PACK_BOARD}
+		DTC_DEP_FILE=${KERNEL}/arch/$ARCH/boot/dts/.${PACK_CHIP}-soc.dtb.d.dtc.tmp
+		DTC_SRC_FILE=${KERNEL}/arch/$ARCH/boot/dts/.${PACK_CHIP}-soc.dtb.dts
+	fi
+
+	$DTC_COMPILER -O dtb -o ${ROOT}/output/sunxi.dtb	\
+		-b 0			\
+		-i $DTC_SRC_PATH	\
+		-F $DTC_INI_FILE	\
+		-d $DTC_DEP_FILE $DTC_SRC_FILE
+	if [ $? -ne 0 ]; then
+		pack_error "Conver script to dts failed"
+		exit 1
+	fi
+
+	if [ "x${PACK_PLATFORM}" = "xdragonboard" ]; then #restore the orignal dtsi
+		local DTS_PATH=${KERNEL}/arch/${ARCH}/boot/dts/
+		if [ -f ${DTS_PATH}/${PACK_CHIP}_bak.dtsi ];then
+			rm -f ${DTS_PATH}/${PACK_CHIP}.dtsi
+			mv  ${DTS_PATH}/${PACK_CHIP}_bak.dtsi  ${DTS_PATH}/${PACK_CHIP}.dtsi
+		fi
+	fi
+
+	printf "Conver script to dts ok.\n"
+	return
+}
+
+function do_common()
+{
+	cd ${OUTPUT}
+
+	busybox unix2dos sys_config.fex
+	busybox unix2dos sys_partition.fex
+	script sys_config.fex > /dev/null
+	script sys_partition.fex > /dev/null
+	cp sys_config.bin config.fex
+
+	if [ "x${PACK_PLATFORM}" = "xdragonboard" ] ; then
+		busybox dos2unix test_config.fex
+		cp test_config.fex boot-resource/
+		busybox unix2dos test_config.fex
+		script test_config.fex > /dev/null
+		cp test_config.bin boot-resource/
+
+		#use env_dragon.cfg
+		rm -f env.cfg
+		mv env_dragon.cfg env.cfg
+	fi
+
+	if [ -f "${ROOT}/output/sunxi.dtb" ]; then
+		cp ${ROOT}/output/sunxi.dtb sunxi.fex
+		update_uboot_fdt u-boot.fex sunxi.fex u-boot.fex >/dev/null
+	fi
+	if [ -f "scp.fex" ]; then
+		echo "update scp"
+		update_scp scp.fex sunxi.fex >/dev/null
+	fi
+
+
+	# Those files for Nand or Card
+	update_boot0 boot0_nand.fex		sys_config.bin NAND > /dev/null
+	update_boot0 boot0_sdcard.fex	sys_config.bin SDMMC_CARD > /dev/null
+	update_uboot u-boot.fex         sys_config.bin > /dev/null
+	update_fes1  fes1.fex           sys_config.bin > /dev/null
+	fsbuild	     boot-resource.ini  split_xxxx.fex > /dev/null
+	cp -f boot-resource.fex	bootloader.fex
+
+	# for Nor board
+	if [ -f sys_partition_nor.fex ];  then
+		echo "pack boot package"
+		busybox unix2dos boot_package_nor.cfg
+		dragonsecboot -pack boot_package_nor.cfg
+		if [ $? -ne 0 ]; then
+			pack_error "dragonsecboot  boot_package.cfg failed"
+			exit 1
+	        fi
+		cp boot_package.fex boot_package_nor.fex
+	fi
+	# for Nand/emmc board
+	if [ -f boot_package.cfg ]; then
+		echo "pack boot package"
+		busybox unix2dos boot_package.cfg
+		dragonsecboot -pack boot_package.cfg
+		if [ $? -ne 0 ]; then
+			pack_error "dragonsecboot  boot_package.cfg failed"
+			exit 1
+		fi
+	fi
+
+	#Here, will check if need to used multi config.fex or not
+	update_uboot_v2 u-boot.fex	sys_config.bin ${PACK_BOARD} > /dev/null
+	local ret=`echo $?`
+	if [ $ret != "0" -a $ret != "1" ] ; then
+		pack_error "update_uboot_v2 failed"
+		exit 1
+	elif [ $ret = "1" ] ; then
+		echo "no used multi config"
+	else
+		echo "used multi config"
+	fi
+	# Copy dtb
+	cp $ROOT/output/pack/out/sunxi.fex $ROOT/output/OrangePiH5.dtb
+
+	# Clear Space
+	rm $ROOT/output/sunxi.dtb
+	rm $ROOT/output/sys_config_fix.fex
+}
+
+do_prepare
+do_ini_to_dts
+do_common
