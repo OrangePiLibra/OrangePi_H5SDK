@@ -28,7 +28,7 @@
 		wlan_busnum = <1>;
 		wlan_regon = <&r_pio PC 14 1 1 1 0>;
 		wlan_hostwake = <&r_pio PL 7 0 0 0 0>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	bt:bt {

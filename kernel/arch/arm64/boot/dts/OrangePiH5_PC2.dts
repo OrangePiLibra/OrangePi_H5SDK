@@ -3323,10 +3323,6 @@
 			gpio1 = <0x3a 0x0 0x14 0x1 0xffffffff 0xffffffff 0x0>;
 		};
 
-		gpio_power_key {
-			compatible = "allwinner,gpio_power_key";
-			device_type = "gpio_power_key";
-		};
 	};
 
 	aliases {
@@ -3626,7 +3622,7 @@
 		clocks = <0x9b 0x9c>;
 		device_type = "gpu_mali450_0";
 		regulator_id = "vdd-gpu";
-		dvfs_status = <0x0>;
+		dvfs_status = <0x1>;
 		temp_ctrl_status = <0x1>;
 		scene_ctrl_status = <0x1>;
 		max_level = <0x3>;
@@ -3671,5 +3667,11 @@
 		device_type = "btlpm";
 		bt_wake = <0x3a 0x2 0xf 0x1 0xffffffff 0xffffffff 0x1>;
 		bt_hostwake = <0x9e 0xb 0x6 0x6 0xffffffff 0xffffffff 0x0>;
+	};
+
+	gpio_power_key {
+		compatible = "allwinner,gpio_power_key";
+		device_type = "gpio_power_key";
+		status = "okay";
 	};
 };
