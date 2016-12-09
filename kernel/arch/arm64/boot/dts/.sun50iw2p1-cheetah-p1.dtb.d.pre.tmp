@@ -1,0 +1,7 @@
+sun50iw2p1-cheetah-p1.o: arch/arm64/boot/dts/sun50iw2p1-cheetah-p1.dts \
+ arch/arm64/boot/dts/sun50iw2p1.dtsi \
+ /home/orange/extend_space/H5/Linux/lichee/linux-3.10/include/dt-bindings/interrupt-controller/arm-gic.h \
+ /home/orange/extend_space/H5/Linux/lichee/linux-3.10/include/dt-bindings/interrupt-controller/irq.h \
+ /home/orange/extend_space/H5/Linux/lichee/linux-3.10/include/dt-bindings/gpio/gpio.h \
+ arch/arm64/boot/dts/sun50iw2p1-clk.dtsi \
+ arch/arm64/boot/dts/sun50iw2p1-pinctrl.dtsi
