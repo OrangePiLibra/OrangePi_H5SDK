@@ -12,8 +12,8 @@ fi
 # Output path, must /dev/sdx
 OUTPUT="$1"
 
-UBOOT=$ROOT/external/uboot.bin
-BOOT0=$ROOT/external/boot0.bin
+UBOOT=$ROOT/output/uboot.bin
+BOOT0=$ROOT/output/boot0.bin
 
 # Clean SD partition
 dd bs=1K seek=8 count=1015 if=/dev/zero of="$OUTPUT"

@@ -16,7 +16,8 @@ endif
 export KDIR = $(KERNEL_DIR)
 export KERNELDIR = $(KERNEL_DIR)
 
-GPU_BUILD_TYPE = release
+#GPU_BUILD_TYPE = release
+GPU_BUILD_TYPE = debug
 
 include $(KERNEL_DIR)/.config
 

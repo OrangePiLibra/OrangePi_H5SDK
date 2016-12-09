@@ -20,19 +20,19 @@
 /*
  * Mali device tree 
  * */
-void Mali450_DT(void)
+void Gpio_PowerKey_DT(void)
 {
 	struct device_node *node;
 	const char *string;
 	int ret;
 
-	node = of_find_node_by_type(NULL, "gpu");
+	node = of_find_compatible_node(NULL, NULL, "allwinner,gpio_power_key");
 	if (!node) {
 		printk("Can't get Mali450 device node\n");
 		goto out;
 	}
 
-	ret = of_property_read_string(node, "compatible", &string);
+	ret = of_property_read_string(node, "device_type", &string);
 	if (ret) {
 		printk("Can't get string from DT\n");
 		return;
@@ -50,6 +50,7 @@ out:
  */
 static int buddy_open(struct inode *inode,struct file *filp)
 {
+	Gpio_PowerKey_DT();
 	printk(KERN_INFO "Open device\n");
 	return 0;
 }

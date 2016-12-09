@@ -364,7 +364,7 @@
 #define CONFIG_SUNXI_DMA
 #define CONFIG_OF_LIBFDT
 #define CONFIG_OF_CONTROL
-#define CONFIG_ANDROID_BOOT_IMAGE      /*image is android boot image*/
+//#define CONFIG_ANDROID_BOOT_IMAGE      /*image is android boot image*/
 #define CONFIG_USBD_HS
 #define BOARD_LATE_INIT		      /* init the fastboot partitions */
 #define CONFIG_SUNXI_KEY_BURN
@@ -415,11 +415,13 @@
 *
 ***************************************************************/
 
-
-#define CONFIG_CMD_BOOTA		/* boot android image */
+//#define CONFIG_CMD_BOOTA		/* boot android image */
+#define CONFIG_CMD_BOOTI        /* boot Linux image */
 #define CONFIG_CMD_RUN			/* run a command */
 #define CONFIG_CMD_BOOTD		/* boot the default command */
 #define CONFIG_CMD_FDT
+#define CONFIG_CMD_ECHO         /* Add echo command */
+#define CONFIG_SUPPORT_RAW_INITRD /* Support Ramdisk */
 
 #define CONFIG_CMD_FAT			/* with this we can access bootfs in nand */
 #define CONFIG_CMD_IRQ

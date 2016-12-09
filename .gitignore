@@ -36,6 +36,7 @@ modules.builtin
 #
 # Top-level generic files
 #
+tags
 /kernel/tags
 /kernel/TAGS
 /kernel/linux

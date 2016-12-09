@@ -235,9 +235,10 @@ static void enable_gpu_power(void)
 {
 	if (IS_ERR_OR_NULL(aw_private.pm.regulator))
 		return;
-
+	
 	if (regulator_enable(aw_private.pm.regulator)) {
 		MALI_PRINT_ERROR(("Failed to enable gpu power!\n"));
+
 	} else {
 		/*
 		 * If DVM is disabled, the voltage may be unstable after enable_gpu_power finished,
