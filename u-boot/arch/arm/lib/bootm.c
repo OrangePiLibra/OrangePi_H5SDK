@@ -61,7 +61,7 @@ void arch_lmb_reserve(struct lmb *lmb)
 		    gd->bd->bi_dram[0].start + gd->bd->bi_dram[0].size - sp);
 }
 
-#if 0
+#if 1
 /**
  * announce_and_cleanup() - Print message and prepare for kernel boot
  *
@@ -293,8 +293,8 @@ static void boot_jump_linux(bootm_headers_t *images, int flag)
 		r2 = gd->bd->bi_boot_params;
 
 	if (!fake)
-//		kernel_entry(0, machid, r2);
 		arm_svc_run_os((ulong)images->ep, r2, 1);
+	//	kernel_entry(0, machid, r2);
 #endif
 }
 

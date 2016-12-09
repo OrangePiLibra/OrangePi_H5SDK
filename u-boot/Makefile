@@ -845,6 +845,9 @@ u-boot.bin: u-boot FORCE
 
 u-boot-$(CONFIG_TARGET_NAME).bin:   u-boot.bin
 	@cp -v $<    $@
+	@if [ -d nand_sunxi/$(SOC)/lib-nand ];  then \
+		cp -v  nand_sunxi/$(SOC)/lib-nand/built-in.o nand_sunxi/$(SOC)/libnand-$(SOC); \
+	fi
 
 u-boot.ldr:	u-boot
 		$(CREATE_LDR_ENV)

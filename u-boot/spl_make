@@ -48,6 +48,7 @@ endif
 sboot:
 		$(MAKE) -C sunxi_spl/sbrom all
 		@$(TOPDIR)/tools/gen_check_sum sunxi_spl/sbrom/sboot.bin sboot_$(CONFIG_TARGET_NAME).bin > /dev/null
+
 ifeq ($(CONFIG_SUNXI_SECURE_SYSTEM),y)
 
 ifeq ($(SUNXI_MODE),$(OTA_TEST_NAME))
