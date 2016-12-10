@@ -140,6 +140,16 @@ if [ ! -d $ROOT/toolchain -o ! -d $ROOT/toolchain/gcc-linaro-aarch/gcc-linaro ];
 	cd -
 fi
 
+## prepare development tools
+STATE=`tail -1 $ROOT/scripts/Prepare_toolchain.sh`
+if [ $STATE = "#0" ]; then
+	cd $SCRIPTS
+	sudo ./Prepare_toolchain.sh
+	cat >> Prepare_toolchain.sh << _EOF_
+#1
+_EOF_
+	cd -
+fi
 
 MENUSTR="Pls select build option"
 
