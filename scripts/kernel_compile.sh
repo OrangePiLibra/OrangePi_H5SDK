@@ -30,6 +30,7 @@ LINUX=$ROOT/kernel
 TOOLS=$ROOT/toolchain/gcc-linaro-aarch/bin/aarch64-linux-gnu-
 # OUTPUT DIRECT
 BUILD=$ROOT/output
+CORES=$((`cat /proc/cpuinfo | grep processor | wc -l` - 1))
 
 if [ ! -d $BUILD ]; then
 	mkdir -p $BUILD
@@ -57,13 +58,13 @@ fi
 
 if [ $BUILD_KERNEL = "1" ]; then
 	# make kernel
-	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j4 Image
+	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j${CORES} Image
 fi
 
 if [ $BUILD_MODULE = "1" ]; then
 	# make module
 	echo -e "\e[1;31m Start Compile Module \e[0m"
-	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j4 modules
+	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j${CORES} modules
 
 	# Compile Mali450 driver
 	echo -e "\e[1;31m Compile Mali450 Module \e[0m"
@@ -72,14 +73,14 @@ if [ $BUILD_MODULE = "1" ]; then
 
 	# install module
 	echo -e "\e[1;31m Start Install Module \e[0m"
-	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j4 modules_install INSTALL_MOD_PATH=$BUILD
+	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j${CORES} modules_install INSTALL_MOD_PATH=$BUILD
 
 fi
 
 if [ $BUILD_KERNEL = "1" ]; then
 	# compile dts
 	echo -e "\e[1;31m Start Compile DTS \e[0m"
-	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j4 dtbs
+	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j${CORES} dtbs
 	#$ROOT/kernel/scripts/dtc/dtc -Odtb -o "$BUILD/OrangePiH5.dtb" "$LINUX/arch/arm64/boot/dts/${PLATFORM}.dts"
 	## DTB conver to DTS
 	# Command:

@@ -19,6 +19,7 @@ UBOOT=$ROOT/u-boot
 TOOLS=$ROOT/toolchain/gcc-linaro-aarch/gcc-linaro/bin/arm-linux-gnueabihf-
 
 BUILD=$ROOT/output
+CORES=$((`cat /proc/cpuinfo | grep processor | wc -l` - 1))
 
 # Perpar souce code
 if [ ! -d $UBOOT ]; then
@@ -34,7 +35,7 @@ echo "Compile U-boot......"
 if [ ! -f $UBOOT/u-boot-sun50iw2p1.bin ]; then
 	make  sun50iw2p1_config
 fi
-make -j4
+make -j${CORES}
 echo "Complete compile...."
 
 echo "Compile boot0......"
