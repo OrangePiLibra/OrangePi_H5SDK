@@ -28,7 +28,11 @@ if [ ! -d $TOOLS/gcc-linaro-aarch ]; then
 	rm -rf $TOOLS/gcc-linaro-aarch/gcc-linaro
 fi
 
-if [ ! -d $TOOLS/gcc-linaro-aarch/gcc-linaro ]; then
+if [ -d $ROOT/toolchain/gcc-linaro-aarch/gcc-linaro/arm-linux-gnueabihf ]; then
+	rm -rf $ROOT/toolchain/gcc-linaro-aarch/gcc-linaro
+fi
+
+if [ ! -d $TOOLS/gcc-linaro-aarch/gcc-linaro/arm-linux-gnueabi ]; then
 	cat ${UBOOTTARXZ}* > ${UBOOTTAR}
 
 	tar xzvf $UBOOTTAR -C $UBOOTS

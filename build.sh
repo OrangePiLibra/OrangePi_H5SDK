@@ -134,7 +134,7 @@ done
 echo $PASSWD | sudo ls &> /dev/null 2>&1
 
 ## Check cross tools
-if [ ! -d $ROOT/toolchain -o ! -d $ROOT/toolchain/gcc-linaro-aarch/gcc-linaro ]; then
+if [ ! -d $ROOT/toolchain -o ! -d $ROOT/toolchain/gcc-linaro-aarch/gcc-linaro/arm-linux-gnueabi ]; then
 	cd $SCRIPTS
 	./install_toolchain.sh
 	cd -
