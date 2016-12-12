@@ -68,13 +68,16 @@ if [ $BUILD_MODULE = "1" ]; then
 
 	# Compile Mali450 driver
 	echo -e "\e[1;31m Compile Mali450 Module \e[0m"
-	make -C ${LINUX}/modules/gpu ARCH=arm64 CROSS_COMPILE=$TOOLS LICHEE_KDIR=${LINUX} LICHEE_MOD_DIR=$ROOT/output/lib LICHEE_PLATFORM=linux
+	make -C ${LINUX}/modules/gpu ARCH=arm64 CROSS_COMPILE=$TOOLS LICHEE_KDIR=${LINUX} LICHEE_MOD_DIR=$BUILD/lib LICHEE_PLATFORM=linux
 	echo -e "\e[1;31m Build Mali450 succeed \e[0m"
 
 	# install module
 	echo -e "\e[1;31m Start Install Module \e[0m"
 	make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLS -j${CORES} modules_install INSTALL_MOD_PATH=$BUILD
-
+	# Install mali driver
+	MALI_MOD_DIR=$BUILD/lib/modules/`cat $LINUX/include/config/kernel.release 2> /dev/null`/kernel/drivers/gpu
+	install -d $MALI_MOD_DIR
+	mv ${BUILD}/lib/mali.ko $MALI_MOD_DIR
 fi
 
 if [ $BUILD_KERNEL = "1" ]; then

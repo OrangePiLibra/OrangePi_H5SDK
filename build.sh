@@ -191,11 +191,18 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		cd -
 	fi
 	if [ ! -d $ROOT/output/lib ]; then
+		if [ -f $ROOT/output/lib ]; then
+			rm $ROOT/output/lib
+		fi
+		mkdir $ROOT/output/lib
 		export BUILD_MODULE=1
 		cd $SCRIPTS
 		./kernel_compile.sh
 		cd -
 	fi
+	cd $SCRIPTS
+	./uboot_comiple.sh
+
 	if [ $OPTION = "0" ]; then
 		TMP_DISTRO="arch"
 	elif [ $OPTION = "1" ]; then
