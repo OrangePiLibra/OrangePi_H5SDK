@@ -33,8 +33,8 @@ fi
 
 echo "Creating image $IMAGE of size $disk_size MiB ..."
 
-boot0="$BUILD/boot0.bin"
-uboot="$BUILD/uboot.bin"
+boot0="$ROOT/output/boot0.bin"
+uboot="$ROOT/output/uboot.bin"
 
 # Partition Setup
 boot0_position=8      # KiB
