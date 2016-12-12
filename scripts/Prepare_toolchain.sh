@@ -9,8 +9,8 @@ fi
 
 apt-get -y --no-install-recommends --fix-missing install \
 	bsdtar mtools u-boot-tools pv bc \
-	gcc automake make qemu \
-	lib32z1 lib32z1-dev
+	gcc automake make \
+	lib32z1 lib32z1-dev qemu-user-static
 
 ######
 ## Note! Don't edit next line! The scripts will get tail line to exexute some scripts.
