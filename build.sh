@@ -201,7 +201,7 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		cd -
 	fi
 	cd $SCRIPTS
-	./uboot_comiple.sh
+	./uboot_compile.sh
 
 	if [ $OPTION = "0" ]; then
 		TMP_DISTRO="arch"
