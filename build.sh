@@ -206,8 +206,11 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		./kernel_compile.sh
 		cd -
 	fi
-	cd $SCRIPTS
-	./uboot_compile.sh
+	if [ ! -f $ROOT/output/uboot.bin -o ! -f $ROOT/output/boot0.bin ]; then
+	    cd $SCRIPTS
+		./uboot_compile.sh
+		cd -
+	fi
 
 	if [ $OPTION = "0" ]; then
 		TMP_DISTRO="arch"
