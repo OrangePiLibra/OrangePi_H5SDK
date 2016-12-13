@@ -52,11 +52,11 @@ cp $SYS_CONFIG/${PLATFORM}_sys_config.fex $BUILD/sys_config.fex > /dev/null  2>&
 
 # Backup DTS version
 if [ -d $DTS/${OLD_PLATFORM}_dts ]; then
-	rm -rfv $DTS/${OLD_PLATFORM}_dts > /dev/null  2>&1
+	rm -rfv $DTS/${OLD_PLATFORM}_dts 
 fi
-mv $DTS/dts $DTS/${OLD_PLATFORM}_dts > /dev/null  2>&1
+mv $DTS/dts $DTS/${OLD_PLATFORM}_dts 
 # Change current DTS version 
-mv $DTS/${PLATFORM}_dts $DTS/dts > /dev/null  2>&1
+mv $DTS/${PLATFORM}_dts $DTS/dts 
 
 # Backup .config
 if [ -f $ROOT/kernel/.config ]; then
