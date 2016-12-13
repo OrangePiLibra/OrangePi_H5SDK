@@ -93,19 +93,25 @@ ROOTFS_check()
 MENUSTR="Welcome to OrangePi Build System. Pls choose Platform."
 ##########################################
 OPTION=$(whiptail --title "OrangePi Build System" \
-	--menu "$MENUSTR" 10 60 2 --cancel-button Exit --ok-button Select \
+	--menu "$MENUSTR" 10 60 3 --cancel-button Exit --ok-button Select \
 	"0"  "OrangePi PC2" \
 	"1"  "OrangePi Prima(internal version)" \
+	"2"  "OrangePi Zero Plus2" \
 	3>&1 1>&2 2>&3)
 
 if [ $OPTION = "0" ]; then
 	export PLATFORM="OrangePiH5_PC2"
 elif [ $OPTION = "1" ]; then
 	export PLATFORM="OrangePiH5_Prima"
+elif [ $OPTION = "2" ]; then
+	export PLATFORM="OrangePiH5_Zero_Plus2"
 else
 	echo -e "\e[1;31m Pls select correct platform \e[0m"
 	exit 0
 fi
+cd $ROOT/scripts
+./Version_Change.sh $PLATFORM
+cd -
 
 ##########################################
 ## Root Password check
