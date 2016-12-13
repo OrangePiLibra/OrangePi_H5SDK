@@ -1,1 +1,1 @@
-/Thousand_Sunny/Platform_SDK/OrangePi/OrangePi_H5SDK/output/sunxi.dtb: /Thousand_Sunny/Platform_SDK/OrangePi/OrangePi_H5SDK/kernel/arch/arm64/boot/dts/.sun50iw2p1-cheetah-p1.dtb.dts
+/home/orange/extend_space/H5/Linux/lichee/out/sun50iw2p1/dragonboard/common/sunxi.dtb: /home/orange/extend_space/H5/Linux/lichee/out/sun50iw2p1/dragonboard/common/../../../../linux-3.10/arch/arm64/boot/dts/.sun50iw2p1-cheetah-p1.dtb.dts
