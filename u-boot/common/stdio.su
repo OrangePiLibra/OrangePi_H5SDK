@@ -1,0 +1,5 @@
+stdio.c:92:19:stdio_get_list	0	static
+stdio.c:97:19:stdio_get_by_name	24	static
+stdio.c:114:19:stdio_clone	16	static
+stdio.c:131:5:stdio_register	8	static
+stdio.c:182:5:stdio_init	72	static

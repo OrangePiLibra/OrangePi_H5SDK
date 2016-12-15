@@ -1,0 +1,4 @@
+sprite_char.c:95:12:uichar_change_newline	8	static
+sprite_char.c:47:5:sprite_uichar_init	48	static
+sprite_char.c:229:6:sprite_uichar_printf	552	static
+sprite_char.c:257:6:sprite_uichar_printf_ex	280	static

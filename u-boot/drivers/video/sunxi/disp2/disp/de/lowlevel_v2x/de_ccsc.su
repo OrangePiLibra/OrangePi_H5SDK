@@ -1,0 +1,6 @@
+de_ccsc.c:110:5:de_ccsc_update_regs	32	static
+de_ccsc.c:132:5:de_ccsc_init	64	static
+de_ccsc.c:231:12:in_tright_shift	0	static
+de_ccsc.c:244:14:IntRightShift64	16	static
+de_ccsc.c:346:5:de_csc_coeff_calc	496	static
+de_ccsc.c:52:5:de_ccsc_apply	88	static

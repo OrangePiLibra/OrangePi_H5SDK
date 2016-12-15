@@ -1,0 +1,2 @@
+x509_v3.c:65:5:X509v3_get_ext_count	0	static
+x509_v3.c:71:14:X509_EXTENSION_get_object	0	static

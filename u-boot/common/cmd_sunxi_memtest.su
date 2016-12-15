@@ -1,0 +1,3 @@
+cmd_sunxi_memtest.c:84:5:memtester_pagesize	8	static
+cmd_sunxi_memtest.c:256:6:usage	0	static
+cmd_sunxi_memtest.c:101:12:do_memtester	72	static

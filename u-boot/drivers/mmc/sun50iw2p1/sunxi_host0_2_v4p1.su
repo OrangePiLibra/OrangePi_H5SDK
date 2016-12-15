@@ -1,0 +1,12 @@
+sunxi_host0_2_v4p1.c:519:13:mmc_ddr_mode_onoff	0	static
+sunxi_host0_2_v4p1.c:538:13:mmc_hs400_mode_onoff	0	static
+sunxi_host0_2_v4p1.c:1264:12:sunxi_detail_errno	0	static
+sunxi_host0_2_v4p1.c:1179:12:sunxi_decide_rty	24	static
+sunxi_host0_2_v4p1.c:76:12:mmc_update_clk	16	static
+sunxi_host0_2_v4p1.c:99:12:mmc_update_phase	0	static
+sunxi_host0_2_v4p1.c:156:17:mmc_get_mclk	16	static
+sunxi_host0_2_v4p1.c:288:12:mmc_config_clock_modex	40	static
+sunxi_host0_2_v4p1.c:645:12:mmc_core_init	56	static
+sunxi_host0_2_v4p1.c:675:13:mmc_set_ios	24	static
+sunxi_host0_2_v4p1.c:58:6:mmc_dump_errinfo	72	static
+sunxi_host0_2_v4p1.c:902:12:mmc_send_cmd	72	static

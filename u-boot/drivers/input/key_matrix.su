@@ -1,0 +1,4 @@
+key_matrix.c:108:15:create_keymap	32	static
+key_matrix.c:55:5:key_matrix_decode	32	static
+key_matrix.c:141:5:key_matrix_decode_fdt	40	static
+key_matrix.c:180:5:key_matrix_init	24	static

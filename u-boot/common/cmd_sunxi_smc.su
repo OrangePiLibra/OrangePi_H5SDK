@@ -1,0 +1,2 @@
+cmd_sunxi_smc.c:88:5:do_sunxi_aes	800	static
+cmd_sunxi_smc.c:27:5:do_sunxi_smc	40	static

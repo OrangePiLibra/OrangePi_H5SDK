@@ -1,0 +1,3 @@
+disp_private.c:3:5:disp_delay_ms	8	static
+disp_private.c:21:5:disp_delay_us	8	static
+disp_private.c:37:5:dump_layer_config	552	static

@@ -1,0 +1,7 @@
+ss.c:44:12:__aw_endian4	0	static
+ss.c:207:13:__rsa_padding	24	static
+ss.c:178:13:__ss_encry_decry_end	0	static
+ss.c:233:6:sunxi_ss_open	0	static
+ss.c:272:6:sunxi_ss_close	0	static
+ss.c:292:6:sunxi_sha_calc	336	static
+ss.c:376:5:sunxi_rsa_calc	1368	static

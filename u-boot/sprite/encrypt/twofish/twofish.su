@@ -1,0 +1,3 @@
+twofish.c:42:5:TFInitial	16	static
+twofish.c:75:7:TFDecode	32	static
+twofish.c:102:7:TFUnInitial	8	static

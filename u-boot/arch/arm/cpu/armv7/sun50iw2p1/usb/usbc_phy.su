@@ -1,0 +1,6 @@
+usbc_phy.c:326:14:0	0	static
+usbc_phy.c:234:6:USBC_PHY_SetCommonConfig	0	static
+usbc_phy.c:257:6:USBC_PHY_SetPrivateConfig	0	static
+usbc_phy.c:293:7:USBC_PHY_GetCommonConfig	0	static
+usbc_phy.c:362:6:USBC_phy_Standby	8	static
+usbc_phy.c:394:6:USBC_Phy_Standby_Recover	0	static

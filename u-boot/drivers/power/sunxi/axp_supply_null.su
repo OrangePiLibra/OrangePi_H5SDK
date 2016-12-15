@@ -1,0 +1,4 @@
+axp_supply_null.c:44:5:axpnull_set_supply_status	0	static
+axp_supply_null.c:65:5:axpnull_set_supply_status_byname	0	static
+axp_supply_null.c:86:5:axpnull_probe_supply_status	0	static
+axp_supply_null.c:107:5:axpnull_probe_supply_status_byname	0	static

@@ -922,12 +922,12 @@ static void geth_check_addr(struct net_device *ndev, unsigned char *mac)
 			ndev->dev_addr[i] = simple_strtoul(p, &p, 16);
 
 		if (!is_valid_ether_addr(ndev->dev_addr)) {
-			random_ether_addr(ndev->dev_addr);
+			geth_chip_hwaddr(ndev->dev_addr);
 			printk(KERN_WARNING "%s: Use random mac address\n", ndev->name);
 		}
 
 		if (!is_valid_ether_addr(ndev->dev_addr)) {
-			geth_chip_hwaddr(ndev->dev_addr);
+			random_ether_addr(ndev->dev_addr);
 		}
 	}
 }

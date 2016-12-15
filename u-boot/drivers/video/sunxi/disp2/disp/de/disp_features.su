@@ -1,0 +1,9 @@
+disp_features.c:3:5:bsp_disp_feat_get_num_screens	0	static
+disp_features.c:8:5:bsp_disp_feat_get_num_devices	0	static
+disp_features.c:13:5:bsp_disp_feat_get_num_channels	0	static
+disp_features.c:18:5:bsp_disp_feat_get_num_layers	0	static
+disp_features.c:23:5:bsp_disp_feat_get_num_layers_by_chn	0	static
+disp_features.c:34:5:bsp_disp_feat_is_supported_output_types	0	static
+disp_features.c:39:5:disp_feat_is_support_smbl	0	static
+disp_features.c:44:5:bsp_disp_feat_is_support_capture	0	static
+disp_features.c:49:5:disp_init_feat	8	static

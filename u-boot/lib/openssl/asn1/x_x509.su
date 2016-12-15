@@ -1,0 +1,7 @@
+x_x509.c:19:1:X509_CINF_it	0	static
+x_x509.c:25:12:x509_cb	8	static
+x_x509.c:57:1:X509_it	0	static
+x_x509.c:59:1:d2i_X509	0	static
+x_x509.c:59:1:i2d_X509	0	static
+x_x509.c:59:1:X509_new	0	static
+x_x509.c:59:1:X509_free	0	static

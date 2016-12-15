@@ -1,0 +1,16 @@
+clk-sun50iw2.c:111:12:get_factors_pll_audio	0	static
+clk-sun50iw2.c:368:22:calc_rate_pll_periph	0	static
+clk-sun50iw2.c:358:22:calc_rate_pll_ddr	16	static
+clk-sun50iw2.c:341:22:calc_rate_media	16	static
+clk-sun50iw2.c:322:22:calc_rate_pll_audio	16	static
+clk-sun50iw2.c:312:22:calc_rate_pll_cpu	16	static
+clk-sun50iw2.c:279:12:get_factors_pll_de	24	static
+clk-sun50iw2.c:247:12:get_factors_pll_gpu	24	static
+clk-sun50iw2.c:229:12:get_factors_pll_periph1	16	static
+clk-sun50iw2.c:210:12:get_factors_pll_periph0	16	static
+clk-sun50iw2.c:192:12:get_factors_pll_ddr	16	static
+clk-sun50iw2.c:160:12:get_factors_pll_ve	24	static
+clk-sun50iw2.c:129:12:get_factors_pll_video	24	static
+clk-sun50iw2.c:94:12:get_factors_pll_cpu	16	static
+clk-sun50iw2_tbl.c:1017:6:sunxi_clk_factor_initlimits	0	static
+clk-sun50iw2.c:599:6:init_clocks	32	static

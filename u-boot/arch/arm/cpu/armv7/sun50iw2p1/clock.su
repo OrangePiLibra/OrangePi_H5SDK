@@ -1,0 +1,8 @@
+clock.c:382:5:sunxi_clock_get_corepll	8	static
+clock.c:412:5:sunxi_clock_get_axi	8	static
+clock.c:498:5:sunxi_clock_get_apb2	0	static
+clock.c:558:5:sunxi_clock_set_corepll	16	static
+clock.c:604:5:sunxi_clock_get_pll6	0	static
+clock.c:504:5:sunxi_clock_get_mbus	8	static
+clock.c:449:5:sunxi_clock_get_ahb	8	static
+clock.c:477:5:sunxi_clock_get_apb1	8	static

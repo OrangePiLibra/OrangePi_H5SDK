@@ -1,0 +1,10 @@
+tft720x1280.c:692:12:LCD_user_defined_func	0	static
+tft720x1280.c:633:12:LCD_close_flow	8	static
+tft720x1280.c:649:13:LCD_power_off	8	static
+tft720x1280.c:681:13:LCD_panel_exit	8	static
+tft720x1280.c:662:13:LCD_bl_close	0	static
+tft720x1280.c:623:12:LCD_open_flow	8	static
+tft720x1280.c:656:13:LCD_bl_open	8	static
+tft720x1280.c:667:13:LCD_panel_init	56	static
+tft720x1280.c:643:13:LCD_power_on	8	static
+tft720x1280.c:566:13:LCD_cfg_panel_info	168	static

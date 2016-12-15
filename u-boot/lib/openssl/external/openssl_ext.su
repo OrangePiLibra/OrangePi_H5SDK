@@ -1,0 +1,14 @@
+openssl_ext.c:44:12:__asn1_probe_data_head	8	static
+openssl_ext.c:738:12:__sample_atoi	8	static
+openssl_ext.c:273:5:sunxi_certif_create	16	static
+openssl_ext.c:303:5:sunxi_certif_free	8	static
+openssl_ext.c:328:5:sunxi_certif_probe_serial_num	8	static
+openssl_ext.c:362:5:sunxi_certif_probe_version	8	static
+openssl_ext.c:481:5:sunxi_certif_probe_pubkey	552	static
+openssl_ext.c:541:6:sunxi_certif_mem_reset	8	static
+openssl_ext.c:564:5:sunxi_certif_probe_signature	8	static
+openssl_ext.c:758:5:sunxi_bytes_merge	32	static
+openssl_ext.c:390:5:sunxi_certif_probe_extension	3248	static
+openssl_ext.c:697:5:sunxi_certif_probe_ext	24	static
+openssl_ext.c:587:5:sunxi_certif_verify_itself	832	static
+openssl_ext.c:814:5:sunxi_certif_dump	0	static

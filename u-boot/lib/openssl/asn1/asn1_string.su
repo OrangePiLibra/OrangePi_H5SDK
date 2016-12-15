@@ -1,0 +1,3 @@
+asn1_string.c:7:14:ASN1_STRING_type_new	24	static
+asn1_string.c:25:5:ASN1_STRING_set	32	static
+asn1_string.c:63:6:ASN1_STRING_free	8	static

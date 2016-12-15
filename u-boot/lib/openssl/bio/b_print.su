@@ -1,0 +1,7 @@
+b_print.c:700:1:doapr_outch	32	static
+b_print.c:447:1:fmtint	112	static
+b_print.c:144:1:_dopr	88	static
+b_print.c:742:5:BIO_vprintf	2104	static
+b_print.c:770:5:BIO_printf	12	static
+b_print.c:783:5:BIO_vsnprintf	40	static
+b_print.c:804:5:BIO_snprintf	16	static
