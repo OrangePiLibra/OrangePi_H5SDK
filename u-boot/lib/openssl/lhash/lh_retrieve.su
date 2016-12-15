@@ -1,0 +1,4 @@
+lh_retrieve.c:18:21:getrn	32	static
+lh_retrieve.c:65:7:lh_retrieve	16	static
+lh_retrieve.c:90:7:lh_insert	32	static
+lh_retrieve.c:129:8:lh_new	24	static

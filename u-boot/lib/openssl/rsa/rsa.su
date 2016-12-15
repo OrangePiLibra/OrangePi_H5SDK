@@ -1,0 +1,2 @@
+rsa.c:26:6:RSA_new_method	24	static
+rsa.c:16:6:RSA_new	0	static

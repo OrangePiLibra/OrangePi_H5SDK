@@ -1,0 +1,10 @@
+clk_periph.c:5:11:sunxi_clk_periph_get_parent	0	static
+clk_periph.c:173:12:sunxi_clk_periph_is_enabled	0	static
+clk_periph.c:417:12:sunxi_clk_periph_set_rate	16	static
+clk_periph.c:298:13:sunxi_clk_periph_round_rate	24	static
+clk_periph.c:275:22:sunxi_clk_periph_recalc_rate	16	static
+clk_periph.c:21:12:sunxi_clk_periph_set_parent	0	static
+clk_periph.c:123:12:sunxi_clk_periph_enable	0	static
+clk_periph.c:262:13:sunxi_clk_periph_disable	0	static
+clk_periph.c:439:6:sunxi_clk_get_periph_ops	0	static
+clk_periph.c:444:5:sunxi_clk_register_periph	32	static

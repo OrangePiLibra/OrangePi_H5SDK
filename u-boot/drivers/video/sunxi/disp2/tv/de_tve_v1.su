@@ -1,0 +1,15 @@
+de_tve_v1.c:8:5:tve_low_set_reg_base	0	static
+de_tve_v1.c:16:5:tve_low_set_top_reg_base	0	static
+de_tve_v1.c:21:5:tve_low_set_sid_base	0	static
+de_tve_v1.c:28:5:tve_low_init	0	static
+de_tve_v1.c:41:5:tve_low_exit	0	static
+de_tve_v1.c:46:5:tve_low_dac_enable	0	static
+de_tve_v1.c:53:5:tve_low_dac_disable	0	static
+de_tve_v1.c:60:5:tve_low_open	0	static
+de_tve_v1.c:68:5:tve_low_close	0	static
+de_tve_v1.c:76:5:tve_low_set_tv_mode	72	static
+de_tve_v1.c:136:5:tve_low_get_dac_status	0	static
+de_tve_v1.c:145:5:tve_low_dac_autocheck_enable	0	static
+de_tve_v1.c:158:5:tve_low_dac_autocheck_disable	0	static
+de_tve_v1.c:236:5:tve_low_enhance	0	static
+de_tve_v1.c:257:5:tve_low_get_sid	0	static

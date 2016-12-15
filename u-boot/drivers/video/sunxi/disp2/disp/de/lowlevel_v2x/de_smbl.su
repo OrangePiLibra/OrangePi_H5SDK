@@ -1,0 +1,12 @@
+de_smbl.c:508:5:de_smbl_set_reg_base	0	static
+de_smbl.c:513:5:de_smbl_update_regs	0	static
+de_smbl.c:518:5:de_smbl_tasklet	0	static
+de_smbl.c:523:5:de_smbl_apply	0	static
+de_smbl.c:528:5:de_smbl_sync	0	static
+de_smbl.c:533:5:de_smbl_init	0	static
+de_smbl.c:538:5:de_smbl_enable	0	static
+de_smbl.c:543:5:de_smbl_set_window	0	static
+de_smbl.c:549:5:de_smbl_set_para	0	static
+de_smbl.c:554:5:de_smbl_set_lut	0	static
+de_smbl.c:559:5:de_smbl_get_hist	0	static
+de_smbl.c:563:5:de_smbl_get_status	0	static

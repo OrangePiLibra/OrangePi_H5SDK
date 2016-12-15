@@ -1,0 +1,11 @@
+usb_fastboot.c:1101:13:sunxi_fastboot_reset	0	static
+usb_fastboot.c:1234:12:sunxi_fastboot_nonstandard_req_op	0	static
+usb_fastboot.c:1144:14:sunxi_fastboot_usb_tx_dma_isr	0	static
+usb_fastboot.c:1122:14:sunxi_fastboot_usb_rx_dma_isr	8	static
+usb_fastboot.c:1285:12:sunxi_fastboot_locked	8	static
+usb_fastboot.c:444:12:__fastboot_reboot	16	static
+usb_fastboot.c:1255:13:__limited_fastboot	72	static
+usb_fastboot.c:1310:12:sunxi_fastboot_state_loop	256	static
+usb_fastboot.c:1164:12:sunxi_fastboot_standard_req_op	40	static
+usb_fastboot.c:1075:12:sunxi_fastboot_exit	8	static
+usb_fastboot.c:1034:12:sunxi_fastboot_init	16	static

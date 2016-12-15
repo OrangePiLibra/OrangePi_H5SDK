@@ -1,0 +1,4 @@
+key.c:36:5:sunxi_key_init	8	static
+key.c:61:5:sunxi_key_exit	0	static
+key.c:74:5:sunxi_key_read	8	static
+key.c:119:5:do_key_test	8	static

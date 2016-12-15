@@ -1,0 +1,10 @@
+bio.c:50:22:ex_hash_cb	0	static
+bio.c:58:12:ex_cmp_cb	0	static
+bio.c:149:23:def_get_class	48	static
+bio.c:244:13:int_free_ex_data	40	static
+bio.c:185:12:int_new_ex_data	32	static
+bio.c:79:5:CRYPTO_new_ex_data	8	static
+bio.c:88:6:CRYPTO_free_ex_data	8	static
+bio.c:97:5:BIO_set	24	static
+bio.c:128:6:BIO_new	16	static
+bio.c:286:6:reset_BIO_reset	0	static

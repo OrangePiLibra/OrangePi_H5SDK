@@ -1,0 +1,2 @@
+i2a_ASN1_INTEGER.c:7:5:BIO_write	32	static
+i2a_ASN1_INTEGER.c:43:5:i2a_ASN1_INTEGER	32	static

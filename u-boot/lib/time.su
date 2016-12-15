@@ -1,0 +1,8 @@
+time.c:54:35:tick_to_time	24	static
+time.c:43:35:get_ticks	8	static
+time.c:63:12:timer_init	0	static
+time.c:68:14:get_timer	8	static
+time.c:73:30:timer_get_us	8	static
+time.c:101:7:__udelay	0	static
+time.c:109:6:udelay	16	static
+time.c:121:6:mdelay	8	static

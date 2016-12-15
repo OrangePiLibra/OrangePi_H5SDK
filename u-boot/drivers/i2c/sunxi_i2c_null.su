@@ -1,0 +1,6 @@
+sunxi_i2c_null.c:31:12:sunxi_i2c_io_null	0	static
+sunxi_i2c_null.c:51:12:sunxi_i2c_write_secos	0	static
+sunxi_i2c_null.c:39:12:sunxi_i2c_read_secos	8	static
+sunxi_i2c_null.c:56:5:i2c_read	16	static
+sunxi_i2c_null.c:61:5:i2c_write	16	static
+sunxi_i2c_null.c:66:6:i2c_init	8	static

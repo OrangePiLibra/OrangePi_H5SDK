@@ -1,0 +1,3 @@
+usbc_resource.c:47:5:usb_open_clock	8	static
+usbc_resource.c:107:5:usb_close_clock	8	static
+usbc_resource.c:150:5:usb_probe_vbus_type	24	static

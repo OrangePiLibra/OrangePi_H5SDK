@@ -1,0 +1,4 @@
+sprite_recovery.c:70:9:Img_Open_from_sysrecovery	16	static
+sprite_recovery.c:163:6:card_part_info	16416	static
+sprite_recovery.c:207:12:sprite_erase_partition_by_name	24	static
+sprite_recovery.c:342:5:sprite_form_sysrecovery	24	static

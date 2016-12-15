@@ -1,0 +1,4 @@
+efuse.c:80:13:0	0	static
+efuse.c:118:6:sid_set_security_mode	8	static
+efuse.c:145:5:sid_probe_security_mode	8	static
+efuse.c:166:5:sid_get_security_status	0	static

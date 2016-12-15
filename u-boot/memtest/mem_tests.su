@@ -1,0 +1,17 @@
+mem_tests.c:36:5:compare_regions	24	static
+mem_tests.c:61:5:test_stuck_address	16	static
+mem_tests.c:106:5:test_random_value	40	static
+mem_tests.c:127:5:test_xor_comparison	24	static
+mem_tests.c:140:5:test_sub_comparison	24	static
+mem_tests.c:153:5:test_mul_comparison	24	static
+mem_tests.c:166:5:test_div_comparison	32	static
+mem_tests.c:182:5:test_or_comparison	24	static
+mem_tests.c:195:5:test_and_comparison	24	static
+mem_tests.c:208:5:test_seqinc_comparison	24	static
+mem_tests.c:220:5:test_solidbits_comparison	32	static
+mem_tests.c:251:5:test_checkerboard_comparison	32	static
+mem_tests.c:282:5:test_blockseq_comparison	24	static
+mem_tests.c:311:5:test_walkbits0_comparison	32	static
+mem_tests.c:344:5:test_walkbits1_comparison	32	static
+mem_tests.c:377:5:test_bitspread_comparison	64	static
+mem_tests.c:416:5:test_bitflip_comparison	48	static

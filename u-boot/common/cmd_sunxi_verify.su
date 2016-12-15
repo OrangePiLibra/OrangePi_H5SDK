@@ -1,0 +1,3 @@
+cmd_sunxi_verify.c:52:5:sunxi_verify_signature	216	static
+cmd_sunxi_verify.c:131:5:sunxi_verify_rotpk_hash	1264	static
+cmd_sunxi_verify.c:285:5:do_rotpk_test	40	static

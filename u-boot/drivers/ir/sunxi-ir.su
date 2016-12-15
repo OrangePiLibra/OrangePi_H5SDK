@@ -1,0 +1,8 @@
+sunxi-ir.c:66:13:ir_mode_set	0	static
+sunxi-ir.c:88:13:ir_sample_config	0	static
+sunxi-ir.c:126:13:ir_irq_config	0	static
+sunxi-ir.c:215:15:ir_packet_handle	16	static
+sunxi-ir.c:226:6:ir_recv_irq_service	40	static
+sunxi-ir.c:303:6:rc_keydown	0	static
+sunxi-ir.c:308:5:ir_setup	16	static
+sunxi-ir.c:325:6:ir_disable	8	static

@@ -1,0 +1,7 @@
+hdmi_edid.c:101:12:edid_parse_dtd_block	32	static
+hdmi_edid.c:260:12:1	8	static
+hdmi_edid.c:25:13:2	16	static
+hdmi_edid.c:281:5:hdmi_edid_parse	40	static
+hdmi_edid.c:390:5:hdmi_edid_is_hdmi	0	static
+hdmi_edid.c:395:5:hdmi_edid_is_yuv	0	static
+hdmi_edid.c:400:11:hdmi_edid_get_data	0	static

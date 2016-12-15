@@ -1,0 +1,4 @@
+arisc.c:62:5:arisc_dvfs_cfg_vf_table	184	static
+arisc.c:257:5:sunxi_arisc_probe	32	static
+arisc.c:285:5:sunxi_arisc_wait_ready	8	static
+arisc.c:294:5:sunxi_arisc_fake_poweroff	8	static

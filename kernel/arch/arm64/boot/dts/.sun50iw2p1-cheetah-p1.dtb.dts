@@ -26,7 +26,7 @@
 /memreserve/ 0x48104000 0x00001000;
 /memreserve/ 0x48105000 0x00001000;
 
-# 1 "/home/orange/extend_space/H5/Linux/lichee/linux-3.10/include/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 1 "/home/orange/OPEN_SOURCE/OrangePi_H5SDK/kernel/include/dt-bindings/interrupt-controller/arm-gic.h" 1
 
 
 
@@ -34,10 +34,10 @@
 
 
 
-# 1 "/home/orange/extend_space/H5/Linux/lichee/linux-3.10/include/dt-bindings/interrupt-controller/irq.h" 1
-# 9 "/home/orange/extend_space/H5/Linux/lichee/linux-3.10/include/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 1 "/home/orange/OPEN_SOURCE/OrangePi_H5SDK/kernel/include/dt-bindings/interrupt-controller/irq.h" 1
+# 9 "/home/orange/OPEN_SOURCE/OrangePi_H5SDK/kernel/include/dt-bindings/interrupt-controller/arm-gic.h" 2
 # 17 "arch/arm64/boot/dts/sun50iw2p1.dtsi" 2
-# 1 "/home/orange/extend_space/H5/Linux/lichee/linux-3.10/include/dt-bindings/gpio/gpio.h" 1
+# 1 "/home/orange/OPEN_SOURCE/OrangePi_H5SDK/kernel/include/dt-bindings/gpio/gpio.h" 1
 # 18 "arch/arm64/boot/dts/sun50iw2p1.dtsi" 2
 # 1 "arch/arm64/boot/dts/sun50iw2p1-clk.dtsi" 1
 /{

@@ -1,0 +1,4 @@
+de_dcsc.c:39:5:de_dcsc_apply	136	static
+de_dcsc.c:109:5:de_dcsc_get_config	8	static
+de_dcsc.c:116:5:de_dcsc_update_regs	16	static
+de_dcsc.c:145:5:de_dcsc_init	48	static

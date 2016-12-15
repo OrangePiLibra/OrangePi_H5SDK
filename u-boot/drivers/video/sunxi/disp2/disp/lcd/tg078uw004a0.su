@@ -1,0 +1,11 @@
+tg078uw004a0.c:204:12:lcd_user_defined_func	0	static
+tg078uw004a0.c:210:12:lcd_set_bright	0	static
+tg078uw004a0.c:77:12:lcd_close_flow	8	static
+tg078uw004a0.c:107:13:lcd_power_off	8	static
+tg078uw004a0.c:193:13:lcd_panel_exit	8	static
+tg078uw004a0.c:144:13:lcd_backlight_close	8	static
+tg078uw004a0.c:67:12:lcd_open_flow	8	static
+tg078uw004a0.c:123:13:lcd_backlight_open	8	static
+tg078uw004a0.c:172:13:lcd_panel_init	32	static
+tg078uw004a0.c:87:13:lcd_power_on	8	static
+tg078uw004a0.c:20:13:lcd_cfg_panel_info	168	static

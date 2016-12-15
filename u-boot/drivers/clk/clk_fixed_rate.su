@@ -1,0 +1,2 @@
+clk_fixed_rate.c:17:22:clk_fixed_rate_recalc_rate	0	static
+clk_fixed_rate.c:27:13:clk_register_fixed_rate	48	static
