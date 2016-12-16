@@ -116,15 +116,3 @@ output/
 !/external/patch/*.patch
 /toolchain/
 /Image/
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-cheetah-p1.dtb.cmd
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-cheetah-p1.dtb.d.dtc.tmp
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-cheetah-p1.dtb.d.pre.tmp
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-cheetah-p1.dtb.dts
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-p1.dtb.cmd
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-p1.dtb.d.dtc.tmp
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-p1.dtb.d.pre.tmp
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-p1.dtb.dts
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-soc.dtb.cmd
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-soc.dtb.d.dtc.tmp
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-soc.dtb.d.pre.tmp
-!kernel/arch/arm64/boot/dts/.sun50iw2p1-soc.dtb.dts
