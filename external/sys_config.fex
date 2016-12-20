@@ -20,6 +20,7 @@ boot_clock   	= 1008
 storage_type    = -1
 burn_key        = 0
 dragonboard_test = 0
+power_mode = 1
 
 [power_sply]
 dcdcb_vol                  = 1001260

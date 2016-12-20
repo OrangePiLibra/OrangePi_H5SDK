@@ -331,6 +331,7 @@ static void sunxi_mmc_dump_errinfo(struct sunxi_mmc_host *host)
       return;
     */
 
+#if 0
 	dev_err(mmc_dev(host->mmc),
 		"smc %d p%d err, cmd %d,%s%s%s%s%s%s%s%s%s%s !!\n",
 		host->mmc->index, host->phy_index, cmd->opcode,
@@ -346,6 +347,7 @@ static void sunxi_mmc_dump_errinfo(struct sunxi_mmc_host *host)
 		host->int_sum & SDXC_END_BIT_ERROR ? " EBE" : "");
 	/*sunxi_mmc_dumphex32(host,"sunxi mmc",host->reg_base,0x180);*/
 	/*sunxi_mmc_dump_des(host,host->sg_cpu,PAGE_SIZE);*/
+#endif
 }
 
 /* Called in interrupt context! */
