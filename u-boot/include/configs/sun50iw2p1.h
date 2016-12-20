@@ -311,7 +311,7 @@
 	"bootenv_filename=uEnv.txt\0" \
 	"load_bootenv=" \
 		"echo Loading orangepi ${bootenv_filename} from ${load_addr} ...;" \
-                 "fatload nand 0:1 ${load_addr} ${bootenv_filename}\0" \
+                 "fatload mmc 0:1 ${load_addr} ${bootenv_filename}\0" \
 	"import_bootenv=" \
 		"env import -t ${load_addr} ${filesize}\0" \
 	"load_dtb=" \
@@ -319,21 +319,21 @@
 			"setenv fdt_filename ${fdt_filename_prefix}.dtb ; " \
 		"fi; " \
 		"echo Loading orangepi ${fdt_filename} from ${fdt_addr} ...;" \
-                "fatload nand 0:1 ${fdt_addr} ${fdt_filename}; " \
+                "fatload mmc 0:1 ${fdt_addr} ${fdt_filename}; " \
 		"fdt addr -c ${fdt_addr}; fdt resize\0" \
 	"load_kernel=" \
 		"echo Loading orangepi ${kernel_filename} from ${kernel_addr} ...;" \
-                "fatload nand 0:1 ${kernel_addr} ${kernel_filename}\0" \
+                "fatload mmc 0:1 ${kernel_addr} ${kernel_filename}\0" \
 	"boot_kernel=" \
                 "echo bootm kernel:${kernel_addr} initrd:${initrd_addr} ...;" \
                 "echo bootm initd_size:${initrd_size} fdt_addr:${fdt_addr} ...;" \
                 "bootm ${kernel_addr} ${initrd_addr}:${initrd_size} ${fdt_addr}\0" \
 	"load_initrd=" \
-		"fatload nand 0:1 ${initrd_addr} ${initrd_filename}; "\
+		"fatload mmc 0:1 ${initrd_addr} ${initrd_filename}; "\
 		"echo Loading orangepi ${initrd_filename} from ${initrd_addr} ...;" \
                 "setenv initrd_size ${filesize}\0" \
 	"load_bootscript=" \
-		"fatload nand 0:1 ${load_addr} ${script}\0" \
+		"fatload mmc 0:1 ${load_addr} ${script}\0" \
 	"scriptboot=source ${load_addr}\0" \
 	"set_cmdline=" \
 		"setenv bootargs console=${console} ${optargs} " \

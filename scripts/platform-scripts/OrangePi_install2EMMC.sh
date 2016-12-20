@@ -18,12 +18,12 @@ if [ ! -b ${sdcard}boot0 ]; then
     echo "Error: EMMC not found."
     exit 1
 fi
-if [ ! -f /opt/boot/boot0_nand.bin ]; then
-    echo "Error: /boot/boot0_nand.bin not found."
+if [ ! -f /opt/boot/boot0.bin ]; then
+    echo "Error: /boot/boot0.bin not found."
     exit 1
 fi
-if [ ! -f /opt/boot/uboot_nand.bin ]; then
-    echo "Error: uboot_nand.bin not found."
+if [ ! -f /opt/boot/uboot.bin ]; then
+    echo "Error: uboot.bin not found."
     exit 1
 fi
 
@@ -101,12 +101,12 @@ echo "  linux partition formated."
 #************************************************************************
 echo ""
 echo "Instaling u-boot to EMMC ..."
-dd if=/opt/boot/boot0_nand.bin of=${sdcard} bs=1k seek=8 > /dev/null 2>&1
+dd if=/opt/boot/boot0.bin of=${sdcard} bs=1k seek=8 > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "ERROR installing u-boot."
     exit 1
 fi
-dd if=/opt/boot/uboot_nand.bin of=${sdcard} bs=1k seek=16400 > /dev/null 2>&1
+dd if=/opt/boot/uboot.bin of=${sdcard} bs=1k seek=16400 > /dev/null 2>&1
 if [ $? -ne 0 ]; then
 echo "ERROR installing u-boot."
 exit 0

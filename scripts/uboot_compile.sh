@@ -57,7 +57,6 @@ cd $ROOT/scripts/pack/
 # Cpoy output file
 cp $ROOT/output/pack/out/boot0_sdcard.fex $ROOT/output/boot0.bin
 cp $ROOT/output/pack/out/boot_package.fex $ROOT/output/uboot.bin
-cp $ROOT/output/pack/out/boot0_nand.fex   $ROOT/output/boot0_nand.bin
 
 rm -rf $ROOT/output/pack/out
 
