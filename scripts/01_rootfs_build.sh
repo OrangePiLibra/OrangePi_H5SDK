@@ -27,5 +27,11 @@ LINUX=$(readlink -f "$LINUX")
 
 # Install Kernel modules
 make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLCHAIN modules_install INSTALL_MOD_PATH="$DEST"
+
+#Install mali driver
+MALI_MOD_DIR_REL=lib/modules/`cat $LINUX/include/config/kernel.release 2> /dev/null`/kernel/drivers/gpu
+install -d "$DEST"/"$MALI_MOD_DIR_REL"
+cp "$OUTPUT"/"$MALI_MOD_DIR_REL"/mali.ko "$DEST"/"$MALI_MOD_DIR_REL"
+
 # Install Kernel firmware
 make -C $LINUX ARCH=arm64 CROSS_COMPILE=$TOOLCHAIN firmware_install INSTALL_MOD_PATH="$DEST"

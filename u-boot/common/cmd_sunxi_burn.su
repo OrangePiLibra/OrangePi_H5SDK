@@ -1,0 +1,4 @@
+cmd_sunxi_burn.c:217:5:do_read_from_boot	4112	static
+cmd_sunxi_burn.c:276:5:do_probe_secure_storage	4128	static
+cmd_sunxi_burn.c:61:13:probe_usb_overtime	8	static
+cmd_sunxi_burn.c:90:5:do_burn_from_boot	40	static

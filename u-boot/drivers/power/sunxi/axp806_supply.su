@@ -1,0 +1,8 @@
+axp806_supply.c:1253:12:axp806_set_dcdc_output	32	static
+axp806_supply.c:1272:12:axp806_set_aldo_output	32	static
+axp806_supply.c:1287:12:axp806_set_bldo_output	32	static
+axp806_supply.c:1304:12:axp806_set_cldo_output	32	static
+axp806_supply.c:1319:5:axp806_set_supply_status	0	static
+axp806_supply.c:1346:5:axp806_set_supply_status_byname	16	static
+axp806_supply.c:1460:5:axp806_probe_supply_status	0	static
+axp806_supply.c:1466:5:axp806_probe_supply_status_byname	24	static

@@ -1,0 +1,3 @@
+asn1_put_object.c:11:6:ASN1_put_object	20	static
+asn1_put_object.c:70:5:ASN1_object_size	0	static
+asn1_put_object.c:100:5:ASN1_get_object	48	static

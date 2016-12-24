@@ -317,7 +317,7 @@
 		"env import -t ${load_addr} ${filesize}\0" \
 	"load_dtb=" \
 		"if test ${fdt_filename} = \"\"; then " \
-			"setenv fdt_filename ${fdt_filename_prefix}A64${fdt_filename_suffix}; " \
+			"setenv fdt_filename ${fdt_filename_prefix}{fdt_filename_suffix}; " \
 		"fi; " \
 		"echo Loading orangepi ${fdt_filename} from ${fdt_addr} ..." \
                 "fatload mmc 0:1 ${fdt_addr} ${fdt_filename}; " \

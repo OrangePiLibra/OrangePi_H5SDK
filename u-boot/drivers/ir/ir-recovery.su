@@ -1,0 +1,2 @@
+ir-recovery.c:97:5:ir_boot_recovery_mode_detect	8	static
+ir-recovery.c:111:5:check_ir_boot_recovery	64	static

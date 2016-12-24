@@ -1,0 +1,5 @@
+power_check.c:77:13:EnterAndroidChargeMode	8	static
+power_check.c:84:13:EnterNormalBootMode	8	static
+power_check.c:28:5:__sunxi_bmp_display	0	static
+power_check.c:96:5:ProbePreSystemMode	8	static
+power_check.c:224:5:PowerCheck	32	static

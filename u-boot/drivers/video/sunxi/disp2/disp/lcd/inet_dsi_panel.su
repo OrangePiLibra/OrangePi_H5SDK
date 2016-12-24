@@ -1,0 +1,10 @@
+inet_dsi_panel.c:408:12:LCD_user_defined_func	0	static
+inet_dsi_panel.c:85:12:LCD_close_flow	8	static
+inet_dsi_panel.c:110:13:LCD_power_off	8	static
+inet_dsi_panel.c:397:13:LCD_panel_exit	8	static
+inet_dsi_panel.c:131:13:LCD_bl_close	8	static
+inet_dsi_panel.c:75:12:LCD_open_flow	8	static
+inet_dsi_panel.c:124:13:LCD_bl_open	8	static
+inet_dsi_panel.c:371:13:LCD_panel_init	40	static
+inet_dsi_panel.c:95:13:LCD_power_on	8	static
+inet_dsi_panel.c:18:13:LCD_cfg_panel_info	168	static

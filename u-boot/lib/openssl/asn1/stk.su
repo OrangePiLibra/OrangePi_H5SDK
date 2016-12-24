@@ -1,0 +1,6 @@
+stk.c:17:8:sk_new	16	static
+stk.c:10:8:sk_new_null	0	static
+stk.c:41:5:sk_insert	16	static
+stk.c:76:5:sk_push	0	static
+stk.c:84:6:sk_free	8	static
+stk.c:94:6:sk_pop_free	0	static

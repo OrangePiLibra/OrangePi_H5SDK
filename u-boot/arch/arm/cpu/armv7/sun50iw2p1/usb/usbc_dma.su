@@ -1,0 +1,6 @@
+usbc_dma.c:46:5:USBC_Dma_Set_ChannalPara	0	static
+usbc_dma.c:82:5:USBC_Dma_Set_PktLen	0	static
+usbc_dma.c:121:5:USBC_Dma_Start	16	static
+usbc_dma.c:172:5:USBC_Dma_Int_Stop	0	static
+usbc_dma.c:206:5:USBC_Dma_Int_Query	0	static
+usbc_dma.c:235:5:USBC_Dma_Int_Clear	0	static

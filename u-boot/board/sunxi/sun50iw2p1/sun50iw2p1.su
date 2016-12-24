@@ -1,0 +1,12 @@
+sun50iw2p1.c:35:5:enable_smp	0	static
+sun50iw2p1.c:58:5:board_init	8	static
+sun50iw2p1.c:88:6:dram_init_banksize	0	static
+sun50iw2p1.c:109:5:dram_init	8	static
+sun50iw2p1.c:136:5:board_mmc_init	8	static
+sun50iw2p1.c:143:6:board_mmc_pre_init	0	static
+sun50iw2p1.c:153:5:board_mmc_get_num	0	static
+sun50iw2p1.c:159:6:board_mmc_set_num	0	static
+sun50iw2p1.c:176:5:cpu0_set_detected_paras	0	static
+sun50iw2p1.c:181:7:get_spare_head_size	0	static
+sun50iw2p1.c:195:5:platform_axp_probe	8	static
+sun50iw2p1.c:213:7:board_hardware_info	0	static

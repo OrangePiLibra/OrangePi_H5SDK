@@ -1,0 +1,8 @@
+de_gsu.c:22:5:de_gsu_init	48	static
+de_gsu.c:76:5:de_gsu_update_regs	32	static
+de_gsu.c:126:5:de_gsu_set_reg_base	0	static
+de_gsu.c:145:5:de_gsu_enable	0	static
+de_gsu.c:218:5:de_gsu_set_para	24	static
+de_gsu.c:286:5:de_gsu_calc_scaler_para	72	static
+de_gsu.c:342:5:de_calc_ovl_coord	0	static
+de_gsu.c:368:5:de_gsu_sel_ovl_scaler_para	40	static

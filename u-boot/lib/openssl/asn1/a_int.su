@@ -1,0 +1,7 @@
+a_int.c:64:6:ASN1_INTEGER_get	8	static
+a_int.c:94:5:ASN1_STRING_mem	0	static
+a_int.c:114:15:c2i_ASN1_INTEGER	48	static
+a_int.c:192:18:c2i_ASN1_BIT_STRING	40	static
+a_int.c:301:14:ASN1_OBJECT_new	16	static
+a_int.c:321:6:ASN1_OBJECT_free	8	static
+a_int.c:250:14:c2i_ASN1_OBJECT	40	static

@@ -93,19 +93,25 @@ ROOTFS_check()
 MENUSTR="Welcome to OrangePi Build System. Pls choose Platform."
 ##########################################
 OPTION=$(whiptail --title "OrangePi Build System" \
-	--menu "$MENUSTR" 10 60 2 --cancel-button Exit --ok-button Select \
+	--menu "$MENUSTR" 10 60 3 --cancel-button Exit --ok-button Select \
 	"0"  "OrangePi PC2" \
 	"1"  "OrangePi Prima(internal version)" \
+	"2"  "OrangePi Zero Plus2" \
 	3>&1 1>&2 2>&3)
 
 if [ $OPTION = "0" ]; then
 	export PLATFORM="OrangePiH5_PC2"
 elif [ $OPTION = "1" ]; then
 	export PLATFORM="OrangePiH5_Prima"
+elif [ $OPTION = "2" ]; then
+	export PLATFORM="OrangePiH5_Zero_Plus2"
 else
 	echo -e "\e[1;31m Pls select correct platform \e[0m"
 	exit 0
 fi
+cd $ROOT/scripts
+./Version_Change.sh $PLATFORM
+cd -
 
 ##########################################
 ## Root Password check
@@ -134,12 +140,22 @@ done
 echo $PASSWD | sudo ls &> /dev/null 2>&1
 
 ## Check cross tools
-if [ ! -d $ROOT/toolchain ]; then
+if [ ! -d $ROOT/toolchain -o ! -d $ROOT/toolchain/gcc-linaro-aarch/gcc-linaro/arm-linux-gnueabi ]; then
 	cd $SCRIPTS
 	./install_toolchain.sh
 	cd -
 fi
 
+## prepare development tools
+STATE=`tail -1 $ROOT/scripts/Prepare_toolchain.sh`
+if [ $STATE = "#0" ]; then
+	cd $SCRIPTS
+	sudo ./Prepare_toolchain.sh
+	cat >> Prepare_toolchain.sh << _EOF_
+#1
+_EOF_
+	cd -
+fi
 
 MENUSTR="Pls select build option"
 
@@ -181,11 +197,21 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		cd -
 	fi
 	if [ ! -d $ROOT/output/lib ]; then
+		if [ -f $ROOT/output/lib ]; then
+			rm $ROOT/output/lib
+		fi
+		mkdir $ROOT/output/lib
 		export BUILD_MODULE=1
 		cd $SCRIPTS
 		./kernel_compile.sh
 		cd -
 	fi
+	if [ ! -f $ROOT/output/uboot.bin -o ! -f $ROOT/output/boot0.bin ]; then
+	    cd $SCRIPTS
+		./uboot_compile.sh
+		cd -
+	fi
+
 	if [ $OPTION = "0" ]; then
 		TMP_DISTRO="arch"
 	elif [ $OPTION = "1" ]; then

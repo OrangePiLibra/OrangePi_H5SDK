@@ -1,0 +1,16 @@
+sprite_card.c:265:12:__download_normal_part	1080	static
+sprite_card.c:76:6:sprite_card_firmware_start	0	static
+sprite_card.c:96:5:sprite_card_firmware_probe	8	static
+sprite_card.c:123:5:sprite_card_fetch_download_map	16	static
+sprite_card.c:158:5:sprite_card_fetch_mbr	16	static
+sprite_card.c:664:5:sunxi_sprite_deal_part	72	static
+sprite_card.c:785:5:sunxi_sprite_deal_uboot	4194320	static
+sprite_card.c:848:5:sunxi_sprite_deal_boot0	1048592	static
+sprite_card.c:916:5:sunxi_sprite_deal_recorvery_boot	5242896	static
+sprite_card.c:1029:5:card_download_uboot	16	static
+sprite_card.c:1062:5:card_download_boot0	24	static
+sprite_card.c:1186:5:card_download_standard_mbr	544	static
+sprite_card.c:1280:5:card_erase	64	static
+sprite_card.c:1496:5:sunxi_card_fill_boot0_magic	33816	static
+sprite_card.c:1594:5:sunxi_sprite_deal_part_from_sysrevoery	32	static
+sprite_card.c:1701:5:__imagehd	0	static

@@ -1,0 +1,9 @@
+sprite_storage_crypt.c:242:12:post_cmd_wait_resp	24	static
+sprite_storage_crypt.c:139:6:__request_dump	0	static
+sprite_storage_crypt.c:144:6:__param_dump	0	static
+sprite_storage_crypt.c:149:5:__command_dump	0	static
+sprite_storage_crypt.c:276:5:sst_oem_item_id	16	static
+sprite_storage_crypt.c:431:5:smc_load_sst_encrypt	24	static
+sprite_storage_crypt.c:446:5:smc_load_sst_decrypt	32	static
+sprite_storage_crypt.c:458:5:smc_set_sst_crypt_name	16	static
+sprite_storage_crypt.c:477:5:smc_load_sst_test	8224	static

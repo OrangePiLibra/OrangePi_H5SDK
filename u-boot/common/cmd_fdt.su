@@ -1,0 +1,6 @@
+cmd_fdt.c:1063:12:do_fdt_test	304	static
+cmd_fdt.c:655:12:fdt_valid	16	static
+cmd_fdt.c:800:12:is_printable_string	0	static
+cmd_fdt.c:843:13:print_data	32	static
+cmd_fdt.c:37:5:save_fdt_to_flash	8	static
+cmd_fdt.c:91:12:do_fdt	136	static

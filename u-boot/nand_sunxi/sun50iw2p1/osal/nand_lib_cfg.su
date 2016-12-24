@@ -1,0 +1,7 @@
+nand_lib_cfg.c:36:5:nand_cfg_interface	0	static
+nand_lib_cfg.c:48:5:nand_wait_rb_before	0	static
+nand_lib_cfg.c:60:5:nand_wait_rb_mode	0	static
+nand_lib_cfg.c:72:5:nand_wait_dma_mode	0	static
+nand_lib_cfg.c:84:5:nand_support_two_plane	0	static
+nand_lib_cfg.c:96:5:nand_support_vertical_interleave	0	static
+nand_lib_cfg.c:108:5:nand_support_dual_channel	0	static

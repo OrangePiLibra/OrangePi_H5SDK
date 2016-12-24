@@ -1,0 +1,5 @@
+de_wb.c:425:5:wb_ebios_update_regs	0	static
+de_wb.c:430:5:wb_ebios_writeback_enable	0	static
+de_wb.c:435:5:wb_ebios_apply	0	static
+de_wb.c:440:5:wb_ebios_get_status	0	static
+de_wb.c:445:5:wb_ebios_init	0	static

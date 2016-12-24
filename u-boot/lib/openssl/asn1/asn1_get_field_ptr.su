@@ -1,0 +1,4 @@
+asn1_get_field_ptr.c:11:15:asn1_get_field_ptr	0	static
+asn1_get_field_ptr.c:38:5:asn1_enc_save	24	static
+asn1_get_field_ptr.c:61:22:asn1_do_adb	32	static
+asn1_get_field_ptr.c:110:6:asn1_enc_init	0	static

@@ -1,0 +1,2 @@
+cmd_irq.c:15:12:do_interrupts	8	static
+cmd_irq.c:48:5:do_memcpy_test	8	static

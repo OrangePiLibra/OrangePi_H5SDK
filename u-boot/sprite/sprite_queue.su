@@ -1,0 +1,9 @@
+sprite_queue.c:47:5:sunxi_queue_init	8	static
+sprite_queue.c:76:6:sunxi_queue_destroy	0	static
+sprite_queue.c:96:6:sunxi_queue_reset	0	static
+sprite_queue.c:116:5:sunxi_queue_isempty	0	static
+sprite_queue.c:136:5:sunxi_queue_isfull	0	static
+sprite_queue.c:156:5:sunxi_inqueue_query	0	static
+sprite_queue.c:176:5:sunxi_queue_in	0	static
+sprite_queue.c:196:5:sunxi_outqueue_query	0	static
+sprite_queue.c:216:5:sunxi_queue_out	0	static

@@ -1,0 +1,5 @@
+EVP_pkey.c:7:5:EVP_PKEY_type	0	static
+EVP_pkey.c:32:11:EVP_PKEY_new	8	static
+EVP_pkey.c:115:6:EVP_PKEY_free	0	static
+EVP_pkey.c:51:11:X509_PUBKEY_get	24	static
+EVP_pkey.c:103:11:X509_get_pubkey	0	static

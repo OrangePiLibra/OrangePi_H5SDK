@@ -1,0 +1,9 @@
+[Unit]
+Description=OrangePi Set Voltage
+
+[Service]
+ExecStart=/usr/local/sbin/OrangePi_Voltage.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

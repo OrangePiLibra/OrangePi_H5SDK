@@ -1,0 +1,11 @@
+queue.c:44:5:initqueue	16	static
+queue.c:91:5:destroyqueue	8	static
+queue.c:119:6:resetqueue	8	static
+queue.c:147:6:enqueue	0	static
+queue.c:167:6:outqueue	0	static
+queue.c:187:5:isqueueempty	0	static
+queue.c:207:5:isqueuefull	0	static
+queue.c:234:5:inqueue_query	0	static
+queue.c:270:5:inqueue_ex	0	static
+queue.c:304:5:outqueue_query	0	static
+queue.c:339:5:outqueue_ex	0	static

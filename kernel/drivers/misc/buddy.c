@@ -14,9 +14,6 @@
 
 #define DEV_NAME "orangepi_module"
 
-#ifdef pppppppp
-#endif
-
 /*
  * Mali device tree 
  * */
@@ -26,18 +23,12 @@ void Gpio_PowerKey_DT(void)
 	const char *string;
 	int ret;
 
-	node = of_find_compatible_node(NULL, NULL, "allwinner,gpio_power_key");
+	node = of_find_node_by_name(NULL, "gpio_power_key");
 	if (!node) {
-		printk("Can't get Mali450 device node\n");
+		printk("Can't get gpio_powerkey device node\n");
 		goto out;
 	}
-
-	ret = of_property_read_string(node, "device_type", &string);
-	if (ret) {
-		printk("Can't get string from DT\n");
-		return;
-	} else
-		printk("Mali Compatible: %s\n", string);
+	printk("SUCCEED!!!!!\n");
 
 	return;
 

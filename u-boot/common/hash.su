@@ -1,0 +1,7 @@
+hash.c:94:12:hash_finish_crc32	8	static
+hash.c:87:12:hash_update_crc32	8	static
+hash.c:79:12:hash_init_crc32	8	static
+hash.c:299:5:hash_lookup_algo	16	static
+hash.c:314:6:hash_show	16	static
+hash.c:323:5:hash_block	32	static
+hash.c:345:5:hash_command	24	static
