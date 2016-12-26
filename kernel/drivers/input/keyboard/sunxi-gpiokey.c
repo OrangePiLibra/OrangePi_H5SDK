@@ -84,7 +84,7 @@ static int sunxigk_script_init(void)
 	struct device_node *node;
 	unsigned int gpio;
 
-	node = of_find_node_by_name(NULL, "gpio_power_key");
+	node = of_find_node_by_type(NULL, "gpio_power_key");
 	if (!node) {
 		printk("GPIO_POWER: can't get device node.\n");
 		return -1;
