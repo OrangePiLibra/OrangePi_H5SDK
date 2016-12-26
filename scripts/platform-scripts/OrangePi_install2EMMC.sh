@@ -114,7 +114,6 @@ fi
 sync
 #************************************************************************
 
-exit 0
 # -------------------------------------------------------------------
     
 if [ ! -d $bootdir ]; then
@@ -136,11 +135,7 @@ sleep 1
 # MOUNT PARTITIONS
 # ================
 
-if [ "${_format}" = "btrfs" ] ; then
-    _mntopt="-o compress-force=lzo"
-else
-    _mntopt=""
-fi
+_mntopt=""
 
 echo ""
 echo "Mounting EMMC partitions..."
@@ -171,8 +166,6 @@ fi
 #-----------------------------------------------------------------------------------------
 sync
 
-rm $odir/usr/local/bin/fs_resize_warning > /dev/null 2>&1
-
 echo "  Creating \"fstab\""
 echo "# OrangePI fstab" > $odir/etc/fstab
 if [ "${_format}" = "btrfs" ] ; then
@@ -185,7 +178,7 @@ echo "tmpfs /tmp  tmpfs nodev,nosuid,mode=1777  0 0" >> $odir/etc/fstab
 sync
 
 #-----------------------------------------------------------------------------------------
-rsync -r -t -p -o -g -x --delete -l -H -D --numeric-ids -s --stats /media/boot/ $bootdir/ > /dev/null 2>&1
+rsync -r -t -p -o -g -x --delete -l -H -D --numeric-ids -s --stats /media/root/BOOT/ $bootdir/ > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "  ERROR."
 fi

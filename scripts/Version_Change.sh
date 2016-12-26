@@ -18,6 +18,7 @@ VERSION=$ROOT/scripts/version
 SYS_CONFIG=$ROOT/external/sys_config
 BUILD=$ROOT/external
 DTS=$ROOT/kernel/arch/arm64/boot
+UBOOT=$ROOT/u-boot/include/configs
 
 if [ ! -f $VERSION ]; then
 	echo 0 > $VERSION
@@ -63,3 +64,11 @@ if [ -f $ROOT/kernel/.config ]; then
 	mv $ROOT/kernel/.config $ROOT/kernel/arch/arm64/configs/${OLD_PLATFORM}_linux_defconfig > /dev/null  2>&1
 fi
 cp $ROOT/kernel/arch/arm64/configs/${PLATFORM}_linux_defconfig $ROOT/kernel/.config > /dev/null  2>&1
+
+# Backup uboot/include/configs/***.h
+if [ -f $UBOOT/${OLD_PLATFORM}_sun50iw2p1.h ]; then
+	rm -rfv $UBOOT/${OLD_PLATFORM}_sun50iw2p1.h 
+fi
+mv $UBOOT/sun50iw2p1.h $UBOOT/${OLD_PLATFORM}_sun50iw2p1.h
+# Change current DTS version 
+mv $UBOOT/${PLATFORM}_sun50iw2p1.h $UBOOT/sun50iw2p1.h

@@ -1,4 +1,4 @@
-
+/* OrangePi H5 Zero Plus2 */
 /*
  * (C) Copyright 2007-2011
  * Allwinner Technology Co., Ltd. <www.allwinnertech.com>
@@ -299,7 +299,6 @@
 	"script=boot.scr\0" \
 	"mmcboot=run load_dtb load_kernel load_initrd set_cmdline boot_kernel\0" \
 	"console=ttyS0,115200\0" \
-	"root=/dev/mmcblk0p2\0" \
 	"load_addr=40000000\0" \
 	"fdt_addr=44000000\0" \
 	"kernel_addr=4007ffc0\0" \

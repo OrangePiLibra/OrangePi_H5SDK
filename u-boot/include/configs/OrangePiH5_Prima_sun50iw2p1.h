@@ -1,4 +1,4 @@
-/* OrangePi H5 PC2 */
+/* OrangePi H5 Prima */
 /*
  * (C) Copyright 2007-2011
  * Allwinner Technology Co., Ltd. <www.allwinnertech.com>

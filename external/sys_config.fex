@@ -3,14 +3,16 @@
 ; 说明： 脚本中的字符串区分大小写，用户可以修改"="后面的数值，但是不要修改前面的字符串
 ; 描述gpio的形式：Port:端口+组内序号<功能分配><内部电阻状态><驱动能力><输出电平状态>
 ;---------------------------------------------------------------------------------------------------------
-; Platform: OrangePiH5 Zero Plus2
+; Platform: OrangePi PC2
 
 [product]
 version = "100"
 machine = "cheetah-p1"
 
 [platform]
-eraseflag   = 1
+debug_mode = 1
+;eraseflag   = 1
+
 ;----------------------------------------------------------------------------------
 ; burn_key:           0-do not use dragonKey   1-use dragonKey
 ; dragonboard_test:   0-build dragonboard for flash boot   1-build dragonboard for TF boot
@@ -20,7 +22,7 @@ boot_clock   	= 1008
 storage_type    = -1
 burn_key        = 0
 dragonboard_test = 0
-power_mode = 1
+power_mode      = 1
 
 [power_sply]
 dcdcb_vol                  = 1001260
@@ -62,7 +64,7 @@ recovery_key = port:PL04<0><default><default><default>
 [boot_init_gpio]
 boot_init_gpio_used	 = 1
 gpio0 =  port:PL10<1><default><default><1>
-;gpio1 =  port:PA20<1><default><default><1>
+gpio1 =  port:PA20<1><default><default><1>
 
 
 ;---------------------------------------------------------------------------------------------------------
@@ -195,7 +197,7 @@ dram_tpr13   = 0x4002910
 ;   rx-delay    --  receive clock delay:  0~31                                 ;
 ;------------------------------------------------------------------------------;
 [gmac0]
-gmac0_used         = 0
+gmac0_used         = 1
 phy-mode           = "rgmii"
 ;gmac_rxd3          = port:PD00<2><default><3><default>
 ;gmac_rxd2          = port:PD01<2><default><3><default>
@@ -323,7 +325,7 @@ uart3_cts        = port:PA16<7><1><default><default>
 ;SPI controller configuration
 ;----------------------------------------------------------------------------------
 [spi0]
-spi0_used       = 0
+spi0_used       = 1
 spi0_cs_number  = 1
 spi0_cs_bitmap  = 1
 spi0_cs0        = port:PC3<3><1><default><default>
@@ -438,7 +440,7 @@ motor_shake         = port:power3<1><default><default><1>
 [nand0_para]
 nand0_support_2ch    = 0
 
-nand0_used          = 1
+nand0_used          = 0
 nand0_we            = port:PC00<2><0><1><default>
 nand0_ale           = port:PC01<2><0><1><default>
 nand0_cle           = port:PC02<2><0><1><default>
@@ -730,7 +732,7 @@ csi0_dev0_dvdd_vol      = 1500000
 csi0_dev0_afvdd         = ""
 csi0_dev0_afvdd_vol     = 2800000
 ;csi0_dev0_power_en      = port:PB04<1><0><1><0>
-csi0_dev0_power_en      = port:PA08<1><0><1><0>
+csi0_dev0_power_en      = port:PA17<1><0><1><0>
 csi0_dev0_reset         = port:PE14<1><0><1><0>
 csi0_dev0_pwdn          = port:PE15<1><0><1><0>
 csi0_dev0_flash_used    = 0
@@ -834,7 +836,7 @@ vdmmc="vcc-sdcvd"
 
 
 [sdc1]
-sdc1_used          = 1
+sdc1_used          = 0
 bus-width	= 4
 sdc1_clk           = port:PG00<2><1><3><default>
 sdc1_cmd           = port:PG01<2><1><3><default>
@@ -852,7 +854,7 @@ ignore-pm-notify	=
 max-frequency	   = 150000000
 
 [sdc2]
-sdc2_used          = 1
+sdc2_used          = 0
 non-removable	=
 bus-width	 = 8
 sdc2_ds            = port:PC01<3><1><3><default>
@@ -885,8 +887,8 @@ sdc_tm4_sm3_freq1 = 0x00000405
 sdc_tm4_sm4_freq0 = 0x00050000
 sdc_tm4_sm4_freq1 = 0x00000408
 vmmc="vcc-emmcv"
-vqmmc="vcc-emmcvq33"
-;vqmmc="vcc-emmcvq18"
+;vqmmc="vcc-emmcvq33"
+vqmmc="vcc-emmcvq18"
 vdmmc="none"
 
 
@@ -927,7 +929,7 @@ compatible		= "allwinner,sunxi-init-gpio"
 gpio_used		= 1
 gpio_num		= 2
 gpio_pin_1		=  port:PL10<1><default><default><0>
-gpio_pin_2		=  port:PL06<1><default><default><1>
+gpio_pin_2		=  port:PA20<1><default><default><1>
 ;gpio_pin_3		=  port:PA13<1><default><default><1>
 normal_led		= "gpio_pin_1"
 standby_led		= "gpio_pin_2"
@@ -953,7 +955,7 @@ usb_detect_type     = 0
 usb_detect_mode     = 0
 usb_id_gpio         = port:PG12<0><1><default><default>
 usb_det_vbus_gpio   = port:PG12<0><1><default><default>
-usb_drv_vbus_gpio   = 
+usb_drv_vbus_gpio   = port:PL02<1><0><default><0>
 usb_host_init_state = 1
 usb_regulator_io    = "nocare"
 usb_wakeup_suspend  = 0
@@ -1047,15 +1049,15 @@ lsm303d                   = 0
 ;wlan_hostwake:     wlan to wake-up host
 ;--------------------------------------------------------------------------------
 [wlan]
-wlan_used           = 1
+wlan_used           = 0
 wlan_busnum         = 1
 wlan_usbnum         = 3
 clocks             = "&clk_losc_out"
 wlan_power          = "vcc-wifi"
 wlan_io_regulator   = "vcc-wifi-io"
 ;wlan_en             = port:PC14<1><default><default><0>
-wlan_regon          = port:PA09<1><default><default><0>
-wlan_hostwake       = port:PL07<6><default><default><0>
+wlan_regon          = port:PC14<1><default><default><0>
+wlan_hostwake       = port:PL07<0><default><default><0>
 
 ;--------------------------------------------------------------------------------
 ;bluetooth configuration
@@ -1066,11 +1068,11 @@ wlan_hostwake       = port:PL07<6><default><default><0>
 ;bt_rst_n:          power up/down internal regulators used by BT section
 ;--------------------------------------------------------------------------------
 [bt]
-bt_used             = 1
+bt_used             = 0
 ;clocks             = "&clk_losc_out"
 bt_power            = "vcc-wifi"
 bt_io_regulator     = "vcc-wifi-io"
-bt_rst_n            = port:PA10<1><default><default><0>
+bt_rst_n            = port:PC16<1><default><default><0>
 
 ;--------------------------------------------------------------------------------
 ;bluetooth lpm configuration
@@ -1080,10 +1082,10 @@ bt_rst_n            = port:PA10<1><default><default><0>
 ;bt_hostwake:       bt device wake-up host
 ;--------------------------------------------------------------------------------
 [btlpm]
-btlpm_used          = 1
+btlpm_used          = 0
 uart_index          = 1
-bt_wake             = port:PA20<1><default><default><1>
-bt_hostwake         = port:PL02<6><default><default><0>
+bt_wake             = port:PC15<1><default><default><1>
+bt_hostwake         = port:PL06<6><default><default><0>
 
 ;--------------------------------------------------------------------------------
 ;3G configuration
@@ -1469,7 +1471,7 @@ Vdevice_1           = port:PA02<5><1><2><default>
 ;----------------------------------------------------------------------------------
 [gpu_mali450_0]
 regulator_id      = "vdd-gpu"
-dvfs_status       = 0
+dvfs_status       = 1
 temp_ctrl_status  = 1
 scene_ctrl_status = 1
 
@@ -1506,7 +1508,7 @@ pmukey_used = 0
 ;---------------------------------------------------------------------------------
 [box_standby_led]
 gpio0		=  port:PL10<1><default><default><1>
-;gpio1		=  port:PA20<1><default><default><0>
+gpio1		=  port:PA20<1><default><default><0>
 
 ;--------------------------------------------------------------------------------
 ;
