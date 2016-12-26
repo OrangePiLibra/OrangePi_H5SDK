@@ -68,6 +68,9 @@ if [ $BUILD_MODULE = "1" ]; then
 
 	# Compile Mali450 driver
 	echo -e "\e[1;31m Compile Mali450 Module \e[0m"
+	if [ ! -d $BUILD/lib ]; then
+		mkdir -p $BUILD/lib
+	fi 
 	make -C ${LINUX}/modules/gpu ARCH=arm64 CROSS_COMPILE=$TOOLS LICHEE_KDIR=${LINUX} LICHEE_MOD_DIR=$BUILD/lib LICHEE_PLATFORM=linux
 	echo -e "\e[1;31m Build Mali450 succeed \e[0m"
 
