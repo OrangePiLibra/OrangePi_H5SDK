@@ -218,8 +218,8 @@ phy-mode           = "rgmii"
 gmac_power1        =  
 gmac_power2        =  
 gmac_power3        =  
-tx-delay           = 0
-rx-delay           = 0
+tx-delay           = 7
+rx-delay           = 31
 
 ;----------------------------------------------------------------------------------
 ;i2c configuration
