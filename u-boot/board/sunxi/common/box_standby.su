@@ -1,0 +1,9 @@
+box_standby.c:75:6:read_start_mode	0	static
+box_standby.c:99:6:write_start_mode	0	static
+box_standby.c:105:5:set_int_gate_onoff	16	static
+box_standby.c:130:5:set_int_mode	16	static
+box_standby.c:151:5:clean_int_pending	8	static
+box_standby.c:187:5:standby_led_control	88	static
+box_standby.c:224:5:init_standby_wakeup_src	104	static
+box_standby.c:303:5:sunxi_arisc_standby	8	static
+box_standby.c:326:5:do_box_standby	32	static

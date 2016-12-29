@@ -1,0 +1,8 @@
+twofish_new.c:90:1:qp	12	static
+twofish_new.c:111:1:gen_qtab	16	static
+twofish_new.c:125:6:gen_mtab	32	static
+twofish_new.c:150:6:h_fun	16	static
+twofish_new.c:200:7:gen_mk_tab	20	static
+twofish_new.c:275:6:mds_rem	0	static
+twofish_new.c:310:6:twofish_new_set_key	56	static
+twofish_new.c:386:6:twofish_new_decrypt	64	static

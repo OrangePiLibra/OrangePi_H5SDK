@@ -1,0 +1,8 @@
+cmd_sunxi_bmp.c:53:12:do_sunxi_bmp_info	88	static
+cmd_sunxi_bmp.c:514:12:1	168	static
+cmd_sunxi_bmp.c:186:5:show_bmp_on_fb	64	static
+cmd_sunxi_bmp.c:413:5:sunxi_bmp_decode	56	static
+cmd_sunxi_bmp.c:103:12:do_sunxi_bmp_display	104	static
+cmd_sunxi_bmp.c:612:5:sunxi_advert_display	536	static
+cmd_sunxi_bmp.c:277:5:sunxi_bmp_display	104	static
+cmd_sunxi_bmp.c:649:5:do_sunxi_logo	0	static

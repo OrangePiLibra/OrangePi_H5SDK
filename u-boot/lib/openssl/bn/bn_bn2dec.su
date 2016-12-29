@@ -1,0 +1,2 @@
+bn_bn2dec.c:7:5:BN_bn2bin	16	static
+bn_bn2dec.c:24:9:BN_bin2bn	32	static

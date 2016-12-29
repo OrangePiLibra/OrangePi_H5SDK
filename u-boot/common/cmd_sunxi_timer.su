@@ -1,0 +1,5 @@
+cmd_sunxi_timer.c:80:15:timer1_test_func	8	static
+cmd_sunxi_timer.c:33:15:timer0_test_func	8	static
+cmd_sunxi_timer.c:13:5:do_delay_test	16	static
+cmd_sunxi_timer.c:95:5:do_timer_test1	8	static
+cmd_sunxi_timer.c:47:5:do_timer_test	8	static

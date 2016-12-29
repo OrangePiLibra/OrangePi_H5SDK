@@ -1,4 +1,4 @@
-
+/* OrangePi H5 PC2 */
 /*
  * (C) Copyright 2007-2011
  * Allwinner Technology Co., Ltd. <www.allwinnertech.com>
@@ -317,11 +317,11 @@
 		"env import -t ${load_addr} ${filesize}\0" \
 	"load_dtb=" \
 		"if test ${fdt_filename} = \"\"; then " \
-			"setenv fdt_filename ${fdt_filename_prefix}A64${fdt_filename_suffix}; " \
+			"setenv fdt_filename ${fdt_filename_prefix}.dtb ; " \
 		"fi; " \
-		"echo Loading orangepi ${fdt_filename} from ${fdt_addr} ..." \
+		"echo Loading orangepi ${fdt_filename} from ${fdt_addr} ...;" \
                 "fatload mmc 0:1 ${fdt_addr} ${fdt_filename}; " \
-		"fdt addr ${fdt_addr}; fdt resize\0" \
+		"fdt addr -c ${fdt_addr}; fdt resize\0" \
 	"load_kernel=" \
 		"echo Loading orangepi ${kernel_filename} from ${kernel_addr} ...;" \
                 "fatload mmc 0:1 ${kernel_addr} ${kernel_filename}\0" \

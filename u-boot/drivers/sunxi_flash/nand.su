@@ -1,0 +1,10 @@
+nand.c:56:1:sunxi_flash_nand_force_erase	0	static
+nand.c:50:1:sunxi_flash_nand_flush	0	static
+nand.c:32:1:sunxi_flash_nand_size	0	static
+nand.c:26:1:sunxi_flash_nand_erase	0	static
+nand.c:18:1:sunxi_flash_nand_write	0	static
+nand.c:11:1:sunxi_flash_nand_read	0	static
+nand.c:44:1:sunxi_flash_nand_exit	0	static
+nand.c:38:1:sunxi_flash_nand_init	0	static
+nand.c:62:6:nand_init_for_boot	8	static
+nand.c:85:5:nand_init_for_sprite	16	static

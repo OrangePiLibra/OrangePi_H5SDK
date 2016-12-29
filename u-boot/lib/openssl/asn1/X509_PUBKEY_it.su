@@ -1,0 +1,6 @@
+X509_PUBKEY_it.c:6:12:pubkey_cb	8	static
+X509_PUBKEY_it.c:21:1:X509_PUBKEY_it	0	static
+X509_PUBKEY_it.c:23:1:d2i_X509_PUBKEY	0	static
+X509_PUBKEY_it.c:23:1:i2d_X509_PUBKEY	0	static
+X509_PUBKEY_it.c:23:1:X509_PUBKEY_new	0	static
+X509_PUBKEY_it.c:23:1:X509_PUBKEY_free	0	static

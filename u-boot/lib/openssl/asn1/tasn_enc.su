@@ -1,0 +1,5 @@
+tasn_enc.c:346:5:asn1_ex_i2c	32	static
+tasn_enc.c:296:12:asn1_i2d_ex_primitive	48	static
+tasn_enc.c:50:5:ASN1_item_ex_i2d	72	static
+tasn_enc.c:176:12:asn1_template_ex_i2d	72	static
+tasn_enc.c:18:5:ASN1_item_i2d	24	static

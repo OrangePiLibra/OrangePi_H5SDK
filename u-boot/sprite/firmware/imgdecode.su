@@ -1,0 +1,11 @@
+imgdecode.c:86:9:Img_Open	16	static
+imgdecode.c:163:8:Img_Fat_Open	16	static
+imgdecode.c:240:11:Img_GetSize	8	static
+imgdecode.c:273:13:Img_OpenItem	24	static
+imgdecode.c:354:11:Img_GetItemSize	8	static
+imgdecode.c:389:6:Img_GetItemStart	16	static
+imgdecode.c:410:6:Img_GetItemOffset	8	static
+imgdecode.c:508:6:Img_ReadItem	32	static
+imgdecode.c:553:6:Img_Fat_ReadItem	24	static
+imgdecode.c:955:5:Img_CloseItem	8	static
+imgdecode.c:988:7:Img_Close	8	static

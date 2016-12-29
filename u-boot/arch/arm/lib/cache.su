@@ -1,0 +1,3 @@
+cache.c:12:13:flush_cache	0	static
+cache.c:39:13:flush_dcache_all	0	static
+cache.c:48:13:enable_caches	0	static

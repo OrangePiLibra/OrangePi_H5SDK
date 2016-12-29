@@ -1,0 +1,8 @@
+usb_mass.c:496:13:sunxi_mass_reset	0	static
+usb_mass.c:517:14:sunxi_mass_usb_rx_dma_isr	0	static
+usb_mass.c:539:14:sunxi_mass_usb_tx_dma_isr	0	static
+usb_mass.c:681:12:sunxi_mass_state_loop	24	static
+usb_mass.c:562:12:sunxi_mass_standard_req_op	40	static
+usb_mass.c:466:12:sunxi_mass_exit	8	static
+usb_mass.c:632:12:sunxi_mass_nonstandard_req_op	8	static
+usb_mass.c:422:12:sunxi_mass_init	16	static

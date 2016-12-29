@@ -1,0 +1,11 @@
+gic.c:454:13:gic_cpuif_init	0	static
+gic.c:388:13:gic_distributor_init	0	static
+gic.c:60:13:default_isr	8	static
+gic.c:81:5:irq_enable	8	static
+gic.c:120:5:irq_disable	8	static
+gic.c:249:6:irq_install_handler	24	static
+gic.c:287:6:irq_free_handler	8	static
+gic.c:318:6:do_irq	8	static
+gic.c:350:5:do_irqinfo	32	static
+gic.c:497:5:arch_interrupt_init	8	static
+gic.c:533:5:arch_interrupt_exit	8	static

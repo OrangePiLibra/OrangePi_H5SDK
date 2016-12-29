@@ -1,0 +1,8 @@
+input.c:233:12:sort_array_by_ordering	48	dynamic
+input.c:114:5:input_tstc	8	static
+input.c:123:5:input_getc	8	static
+input.c:396:5:input_send_keycodes	64	dynamic
+input.c:433:5:input_add_table	12	static
+input.c:452:6:input_set_delays	0	static
+input.c:459:5:input_init	24	static
+input.c:476:5:input_stdio_register	16	static

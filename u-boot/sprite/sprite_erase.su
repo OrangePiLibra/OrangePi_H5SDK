@@ -1,0 +1,2 @@
+sprite_erase.c:49:5:sunxi_sprite_erase_flash	65560	static
+sprite_erase.c:167:5:sunxi_sprite_force_erase_key	65544	static

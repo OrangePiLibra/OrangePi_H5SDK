@@ -1,0 +1,5 @@
+nand_fspart.c:51:16:nand_write_uboot	16	static
+nand_fspart.c:42:16:nand_read_uboot	16	static
+nand_fspart.c:34:19:nand_get_dev	8	static
+nand_fspart.c:60:5:nand_erase_uboot	0	static
+nand_fspart.c:128:5:nand_init_uboot	0	static

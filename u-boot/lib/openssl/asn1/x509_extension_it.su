@@ -1,0 +1,2 @@
+x509_extension_it.c:11:1:X509_EXTENSION_it	0	static
+x509_extension_it.c:18:1:X509_ALGOR_it	0	static

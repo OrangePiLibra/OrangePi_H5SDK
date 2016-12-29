@@ -1,0 +1,3 @@
+sunxi_mmc.c:94:6:dumphex32	0	static
+sunxi_mmc.c:108:12:sunxi_mmc_init	8	static
+sunxi_mmc.c:115:12:sunxi_mmc_exit	0	static

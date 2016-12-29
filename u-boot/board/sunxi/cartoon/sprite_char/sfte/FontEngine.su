@@ -1,0 +1,6 @@
+FontEngine.c:107:15:draw_pixel	8	static
+FontEngine.c:31:7:open_font	32	static
+FontEngine.c:66:7:close_font	16	static
+FontEngine.c:83:7:check_change_line	16	static
+FontEngine.c:126:7:draw_bmp_ulc	104	static
+FontEngine.c:154:7:draw_cursor	104	static

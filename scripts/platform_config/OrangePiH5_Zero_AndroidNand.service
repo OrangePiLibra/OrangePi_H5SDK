@@ -1,0 +1,9 @@
+[Unit]
+Description=OrangePi rebuild NAND
+
+[Service]
+ExecStart=/usr/local/sbin/OrangePi_Format_Android_Nand.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

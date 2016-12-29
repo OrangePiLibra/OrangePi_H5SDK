@@ -1,0 +1,5 @@
+sprite_progressbar.c:46:6:sprite_cartoon_progressbar_create	24	static
+sprite_progressbar.c:103:5:sprite_cartoon_progressbar_config	0	static
+sprite_progressbar.c:136:5:sprite_cartoon_progressbar_active	16	static
+sprite_progressbar.c:172:5:sprite_cartoon_progressbar_destroy	16	static
+sprite_progressbar.c:207:5:sprite_cartoon_progressbar_upgrate	24	static

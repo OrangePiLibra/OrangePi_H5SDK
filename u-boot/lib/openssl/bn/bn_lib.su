@@ -1,0 +1,5 @@
+bn_lib.c:62:6:BN_free	8	static
+bn_lib.c:94:9:BN_copy	40	static
+bn_lib.c:76:9:BN_dup	16	static
+bn_lib.c:131:5:BN_set_word	16	static
+bn_lib.c:142:6:BN_set_negative	0	static

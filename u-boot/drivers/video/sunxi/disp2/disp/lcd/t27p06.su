@@ -1,0 +1,11 @@
+t27p06.c:185:12:LCD_user_defined_func	0	static
+t27p06.c:87:12:LCD_close_flow	8	static
+t27p06.c:104:13:LCD_power_off	8	static
+t27p06.c:133:13:LCD_panel_exit	16	static
+t27p06.c:117:13:LCD_bl_close	8	static
+t27p06.c:77:12:LCD_open_flow	8	static
+t27p06.c:111:13:LCD_bl_open	8	static
+t27p06.c:142:13:t27p06_spi_wr	16	static
+t27p06.c:123:13:LCD_panel_init	16	static
+t27p06.c:97:13:LCD_power_on	8	static
+t27p06.c:20:13:LCD_cfg_panel_info	168	static

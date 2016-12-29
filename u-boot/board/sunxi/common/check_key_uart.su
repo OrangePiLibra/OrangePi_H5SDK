@@ -1,0 +1,2 @@
+check_key_uart.c:132:5:check_update_key	32	static
+check_key_uart.c:179:5:check_uart_input	8	static

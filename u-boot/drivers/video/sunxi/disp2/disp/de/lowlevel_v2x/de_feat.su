@@ -1,0 +1,16 @@
+de_feat.c:417:5:de_feat_get_num_screens	0	static
+de_feat.c:422:5:de_feat_get_num_devices	0	static
+de_feat.c:427:5:de_feat_get_num_chns	0	static
+de_feat.c:432:5:de_feat_get_num_vi_chns	0	static
+de_feat.c:437:5:de_feat_get_num_ui_chns	0	static
+de_feat.c:443:5:de_feat_get_num_layers	24	static
+de_feat.c:461:5:de_feat_get_num_layers_by_chn	24	static
+de_feat.c:477:5:de_feat_is_support_vep	24	static
+de_feat.c:495:5:de_feat_is_support_vep_by_chn	24	static
+de_feat.c:511:5:de_feat_is_support_smbl	0	static
+de_feat.c:516:5:de_feat_is_supported_output_types	0	static
+de_feat.c:522:5:de_feat_is_support_wb	0	static
+de_feat.c:527:5:de_feat_is_support_scale	24	static
+de_feat.c:545:5:de_feat_is_support_scale_by_chn	24	static
+de_feat.c:561:5:de_feat_get_scale_linebuf	0	static
+de_feat.c:566:5:de_feat_init	0	static

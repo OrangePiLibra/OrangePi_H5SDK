@@ -1,0 +1,7 @@
+CRYPTO_malloc.c:9:6:OPENSSL_cleanse	8	static
+CRYPTO_malloc.c:25:7:CRYPTO_malloc	0	static
+CRYPTO_malloc.c:32:7:CRYPTO_realloc	0	static
+CRYPTO_malloc.c:42:7:CRYPTO_realloc_clean	16	static
+CRYPTO_malloc.c:67:6:CRYPTO_free	0	static
+CRYPTO_malloc.c:72:7:CRYPTO_remalloc	8	static
+CRYPTO_malloc.c:80:6:reset_CRYPTO_reset	0	static

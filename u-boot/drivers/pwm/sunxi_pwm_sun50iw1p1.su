@@ -1,0 +1,12 @@
+sunxi_pwm_sun50iw1p1.c:145:5:sunxi_pwm_set_polarity	0	static
+sunxi_pwm_sun50iw1p1.c:181:5:sunxi_pwm_config	120	static
+sunxi_pwm_sun50iw1p1.c:122:12:sunxi_pwm_pin_set_state	48	static
+sunxi_pwm_sun50iw1p1.c:339:6:sunxi_pwm_disable	40	static
+sunxi_pwm_sun50iw1p1.c:282:5:sunxi_pwm_enable	40	static
+sunxi_pwm_sun50iw1p1.c:399:6:sunxi_pwm_init	0	static
+sunxi_pwm_sun50iw1p1.c:567:5:pwm_config	8	static
+sunxi_pwm_sun50iw1p1.c:583:5:pwm_enable	8	static
+sunxi_pwm_sun50iw1p1.c:598:5:pwm_disable	8	static
+sunxi_pwm_sun50iw1p1.c:613:5:pwm_set_polarity	8	static
+sunxi_pwm_sun50iw1p1.c:628:5:pwm_init	0	static
+sunxi_pwm_sun50iw1p1.c:633:5:pwm_request	152	static

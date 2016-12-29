@@ -1,0 +1,3 @@
+key_deal.c:46:5:hdcp_key_parse	24	static
+key_deal.c:88:6:hdcp_key_convert	0	static
+key_deal.c:122:5:sunxi_deal_hdcp_key	4112	static

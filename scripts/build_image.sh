@@ -58,7 +58,7 @@ if [ -d $OUTPUT/orangepi ]; then
 fi
 mkdir $OUTPUT/orangepi
 cp -rfa $OUTPUT/uImage $OUTPUT/orangepi
-cp -rfa $OUTPUT/OrangePiH5.dtb $OUTPUT/orangepi/OrangePiH5orangepi.dtb
+cp -rfa $OUTPUT/OrangePiH5.dtb $OUTPUT/orangepi/OrangePiH5.dtb
 
 # Add boot support if there
 if [ -e "$OUTPUT/orangepi/uImage" -a -e "$OUTPUT/orangepi/OrangePiH5orangepi.dtb" ]; then

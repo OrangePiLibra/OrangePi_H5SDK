@@ -1,0 +1,6 @@
+cmd_sunxi_sprite.c:19:28:sunxi_usb_dev_register	0	static
+cmd_sunxi_sprite.c:23:28:sunxi_usb_main_loop	0	static
+cmd_sunxi_sprite.c:142:5:do_efex_test	8	static
+cmd_sunxi_sprite.c:123:5:do_mass_test	8	static
+cmd_sunxi_sprite.c:104:5:do_fastboot_test	8	static
+cmd_sunxi_sprite.c:28:5:do_sprite_test	8	static

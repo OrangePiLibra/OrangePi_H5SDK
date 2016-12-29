@@ -1,0 +1,9 @@
+sprite_secure_object.c:347:12:clear_secure_store	8	static
+sprite_secure_object.c:156:5:sunxi_secure_object_read	4120	static
+sprite_secure_object.c:369:12:sunxi_secure_object_list	4224	static
+sprite_secure_object.c:450:12:cmd_secure_object	16	static
+sprite_secure_object.c:185:5:sunxi_secure_object_set	16	static
+sprite_secure_object.c:195:5:sunxi_secure_object_write	4120	static
+sprite_secure_object.c:497:5:sunxi_secure_object_down	4192	static
+sprite_secure_object.c:551:5:sunxi_secure_object_up	4120	static
+sprite_secure_object.c:581:5:sunxi_widevine_keybox_install	4104	static

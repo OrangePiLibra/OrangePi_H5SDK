@@ -1,0 +1,17 @@
+sunxi_mmc_tuning.c:504:12:_skip_curr_freq	0	static
+sunxi_mmc_tuning.c:543:12:_get_best_sdly	208	static
+sunxi_mmc_tuning.c:135:5:gen_pat_bus4_1bit	28	static
+sunxi_mmc_tuning.c:170:5:gen_pat_bus8_1bit	28	static
+sunxi_mmc_tuning.c:205:5:gen_tuning_blk_bus8	24	static
+sunxi_mmc_tuning.c:265:5:gen_tuning_blk_bus4	24	static
+sunxi_mmc_tuning.c:326:5:sunxi_mmc_tuning_init	8	static
+sunxi_mmc_tuning.c:358:5:sunxi_mmc_tuning_exit	8	static
+sunxi_mmc_tuning.c:372:14:sunxi_select_freq	8	static
+sunxi_mmc_tuning.c:894:5:sunxi_need_rty	16	static
+sunxi_mmc_tuning.c:912:5:write_tuning_try_freq	32	static
+sunxi_mmc_tuning.c:1001:5:sunxi_write_tuning	16	static
+sunxi_mmc_tuning.c:1066:5:sunxi_execute_tuning	144	static
+sunxi_mmc_tuning.c:1137:5:sunxi_pack_tuning_result	48	static
+sunxi_mmc_tuning.c:1229:5:sunxi_bus_tuning	16	static
+sunxi_mmc_tuning.c:1308:5:sunxi_switch_to_best_bus	616	static
+sunxi_mmc_tuning.c:1489:5:mmc_write_info	80	static
