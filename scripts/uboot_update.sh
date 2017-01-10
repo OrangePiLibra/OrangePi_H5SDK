@@ -16,11 +16,11 @@ UBOOT=$ROOT/output/uboot.bin
 BOOT0=$ROOT/output/boot0.bin
 
 # Clean SD partition
-dd bs=1K seek=8 count=1015 if=/dev/zero of="$OUTPUT"
+sudo dd bs=1K seek=8 count=1015 if=/dev/zero of="$OUTPUT"
 # Update boot0
-dd bs=1K seek=8 if="$BOOT0" of="$OUTPUT"
+sudo dd bs=1K seek=8 if="$BOOT0" of="$OUTPUT"
 # Update uboot
-dd bs=1K seek=16400 if="$UBOOT" of="$OUTPUT"
+sudo dd bs=1K seek=16400 if="$UBOOT" of="$OUTPUT"
 
 sync
 clear
