@@ -117,7 +117,7 @@ cd -
 ## Root Password check
 for ((i = 0; i < 5; i++)); do
 	PASSWD=$(whiptail --title "OrangePi Build System" \
-		--passwordbox "Enter your root password. Note! Don't use root to run this scripts" \
+		--passwordbox "Enter your password. Note! Don't use root to run this scripts" \
 		10 60 3>&1 1>&2 2>&3)
 	
 	if [ $i = "4" ]; then
@@ -191,11 +191,25 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		3>&1 1>&2 2>&3)
 
 	if [ ! -f $ROOT/output/uImage ]; then
+		export BUILD_KERNEL=0
+		cd $SCRIPTS
+		./kernel_compile.sh
+		cd -
+	fi
+
+	if [ ! -f $ROOT/output/uboot.bin -o ! -f $ROOT/output/boot0.bin ]; then
+	    cd $SCRIPTS
+		./uboot_compile.sh
+		cd -
+
+	fi
+	if [ ! -f $ROOT/output/uImage ]; then
 		export BUILD_KERNEL=1
 		cd $SCRIPTS
 		./kernel_compile.sh
 		cd -
 	fi
+
 	if [ ! -d $ROOT/output/lib ]; then
 		if [ -f $ROOT/output/lib ]; then
 			rm $ROOT/output/lib
@@ -204,11 +218,6 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
 		export BUILD_MODULE=1
 		cd $SCRIPTS
 		./kernel_compile.sh
-		cd -
-	fi
-	if [ ! -f $ROOT/output/uboot.bin -o ! -f $ROOT/output/boot0.bin ]; then
-	    cd $SCRIPTS
-		./uboot_compile.sh
 		cd -
 	fi
 

@@ -61,7 +61,7 @@ cp -rfa $OUTPUT/uImage $OUTPUT/orangepi
 cp -rfa $OUTPUT/OrangePiH5.dtb $OUTPUT/orangepi/OrangePiH5.dtb
 
 # Add boot support if there
-if [ -e "$OUTPUT/orangepi/uImage" -a -e "$OUTPUT/orangepi/OrangePiH5orangepi.dtb" ]; then
+if [ -e "$OUTPUT/orangepi/uImage" -a -e "$OUTPUT/orangepi/OrangePiH5.dtb" ]; then
 	mcopy -sm -i ${IMAGE}1 ${OUTPUT}/orangepi ::
 	mcopy -m -i ${IMAGE}1 ${OUTPUT}/initrd.img :: || true
 	mcopy -m -i ${IMAGE}1 ${OUTPUT}/uEnv.txt :: || true
